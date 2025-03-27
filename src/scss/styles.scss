@@ -1,0 +1,45 @@
+@import "bootstrap/scss/bootstrap";
+
+$primary: #25201d;
+$secondary: #221d1d;
+$tertiary: #FFFFFF;
+
+$textPrimary: #dfd6c4;
+
+@media (min-width: 992px) {
+    .bd-layout {
+        display: grid;
+        grid-template-areas: "sidebar main";
+        grid-template-columns: 1fr 5fr;
+        gap: 1.5rem;
+    }
+
+    .bd-sidebar {
+        position: sticky !important;
+        top: 5rem;
+        display: block !important;
+        height: calc(100vh - 6rem);
+        overflow-y: auto;
+    }
+
+    .offcanvas-lg, .bd-offcanvas-body {
+        overflow-y: visible !important;
+    }
+}
+
+.bd-sidebar {
+    grid-area: sidebar;
+}
+
+.navbar {
+    background-color: $primary !important;
+}
+
+.nav-link, .navbar-brand {
+    color: $textPrimary !important;
+}
+
+body {
+    background-color: #221d1d !important;
+    color: $textPrimary !important;
+}

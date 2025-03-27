@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>World</title>
+    <link rel="icon" type="image/x-icon" href="vite.svg">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+    <!-- Javascript Entry Point -->
+    <script type="module" src="../js/main.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Killing Monsters</a>
+
+        <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="/index.html">World</a>
+            <a class="nav-link active" aria-current="page" href="/html/bestiary.html">Bestiary</a>
+            <a class="nav-link" href="/html/story.html">Story</a>
+            <a class="nav-link" href="/html/about.html">About</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
+    <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout">
+
+        <!-- Button that appears on small screens to toggle sidebar.-->
+        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
+
+        <!-- Bestiary sidebar. -->
+        <aside class="bd-sidebar">
+            <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+              <div class="list-group">
+                <a href="#bestiary3" class="list-group-item list-group-item-action"> Bestiary 1</a>
+
+              </div>
+
+                <!-- <ui>
+
+                    <ui> Necrophages
+                        <li> Ghoul</li>
+                        <li> Gravier</li>
+                        <li> Ghast</li>
+                    </ui>
+                    <ui> Hybrids
+                        <li> Manticore</li>
+                        <li> Chimera</li>
+                        <li> Harpy</li>
+                    </ui>
+
+                </ui> -->
+
+            </div>
+            </div>
+        </aside>
+
+        <!-- Main bestiary content. -->
+        <main class="bd-main order-1">
+            <p id="bestiary1"> Bestiary Page content goes here.
+                Donec tempus mi vel auctor vehicula. Sed finibus, dui ac suscipit maximus, nunc mauris imperdiet enim, eu facilisis felis quam sit amet ex. Etiam sollicitudin orci ut varius malesuada. Nullam blandit purus sed hendrerit eleifend. Ut nec rhoncus diam. Suspendisse elementum molestie erat, nec tincidunt sapien gravida sed. Nullam vestibulum, sem quis tempus semper, metus tellus pharetra enim, sit amet rhoncus quam massa ac eros. Nulla nec turpis nec libero volutpat accumsan quis vitae nisl. Proin et dui ornare, faucibus ligula id, pellentesque orci.
+                Etiam consequat justo quam, et consectetur est finibus in. Phasellus sagittis nibh nec sapien mollis pellentesque. Quisque et purus augue. Duis lobortis elit odio, non maximus magna ultricies vel. Aenean sed erat vestibulum, lobortis lacus in, aliquam ipsum. Etiam placerat scelerisque metus, in sodales velit. Sed vel lectus in odio volutpat aliquet id facilisis velit. Suspendisse potenti. Proin sit amet ipsum ante. </p>
+
+            <p id="bestiary2">
+
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit tincidunt tellus. Vestibulum vehicula facilisis tellus vel consequat. Phasellus sem mauris, sagittis ac eros sed, suscipit vestibulum est. Mauris mauris magna, malesuada a ornare a, fringilla sed elit. In accumsan lacus tellus, ac pellentesque odio auctor et. Donec mollis purus eu erat euismod, eu iaculis odio sagittis. Sed eget nibh facilisis, fermentum urna id, dapibus tellus.
+              
+              Phasellus tempor at tortor nec rhoncus. Aenean quis vehicula ipsum. Cras id metus quis tellus semper laoreet sit amet euismod nibh. Pellentesque at massa consequat, consequat lorem at, accumsan nisi. In gravida sem ut rutrum consectetur. Maecenas vel elit sit amet velit laoreet fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla fermentum erat in interdum convallis. Integer non consequat mi, a volutpat risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam at nunc leo. Duis eu augue interdum, finibus turpis non, venenatis neque. Donec in nisl leo. Aenean tincidunt nibh sed tellus laoreet euismod.
+              
+              Nullam ac turpis ultricies, laoreet lectus et, posuere justo. Fusce sit amet nunc augue. Donec bibendum elementum viverra. Integer rutrum velit et interdum tincidunt. Vestibulum posuere sit amet nisl sed pharetra. Aenean erat purus, gravida sed aliquet vel, lobortis vel sem. Nullam tellus orci, convallis vitae justo a, congue lacinia lectus. Nunc metus justo, auctor eu aliquam ut, dictum ac justo. Cras mollis nisi id mi pretium, eget interdum ipsum faucibus. Praesent dignissim ullamcorper viverra.
+              
+              Nulla malesuada congue nisl, eu hendrerit arcu dictum sit amet. Nam mi nunc, sodales in felis in, tempus consectetur leo. Donec sed semper tellus. Ut facilisis nulla et elit vestibulum scelerisque. Cras rhoncus eleifend arcu, et fermentum est posuere in. Vivamus semper semper sem, et semper risus ultrices ut. Phasellus vulputate, lorem eget euismod bibendum, dui dolor imperdiet leo, in euismod metus magna quis risus. Aliquam erat volutpat. Pellentesque commodo tristique ex vitae vehicula. Maecenas ac aliquet tortor. Integer a ultrices diam, eu consectetur mauris. Vestibulum lacinia ac felis eu tempus.
+              
+              Ut finibus, ipsum nec malesuada imperdiet, nunc turpis iaculis diam, ullamcorper sagittis nibh purus vel tellus. Phasellus consectetur lacus at ante placerat, in fringilla nunc bibendum. Suspendisse ullamcorper malesuada lorem non tincidunt. Maecenas accumsan pretium lacus pharetra condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat tincidunt sem, non viverra dolor pulvinar in. Quisque id aliquet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Cras a leo varius, maximus libero vitae, consectetur ante. Suspendisse aliquet, justo sit amet varius pharetra, magna eros accumsan felis, ut fermentum risus tellus at est. Fusce mi velit, lacinia non ante sed, varius elementum lectus. 
+            </p>
+
+            <p id="bestiary3">
+              Nam lectus lacus, varius non enim volutpat, ultricies mollis ligula. Aenean hendrerit gravida lorem, non imperdiet elit feugiat quis. Vivamus vulputate lacus eget ipsum blandit, suscipit iaculis ligula convallis. Ut a diam elit. Sed felis purus, suscipit eget tellus id, suscipit eleifend nulla. Ut eleifend interdum justo, vitae elementum lorem dignissim non. Nunc finibus tempus sapien sed ultricies. Vivamus ultrices lacus mauris, eget consectetur velit consectetur quis. Quisque finibus, erat ut finibus aliquet, ante nisl egestas tortor, a ultrices magna ex eget diam. Vestibulum vitae sapien consequat, suscipit dui ut, maximus quam. Curabitur leo augue, dignissim ut turpis sed, convallis gravida risus. Donec elit sem, gravida fermentum suscipit vel, elementum a neque. Sed id lacus quis mi venenatis facilisis. Sed eleifend metus vel ante viverra vulputate sit amet vel tortor.
+
+              Duis non egestas nisi, nec iaculis justo. Morbi mollis, eros at fringilla aliquam, ante ipsum finibus erat, eget pellentesque leo orci vel risus. Proin justo mi, egestas ut lobortis in, facilisis id ex. Pellentesque at dapibus nisi, vehicula condimentum mauris. Sed tempor pharetra lectus et pulvinar. Vivamus laoreet cursus metus, tempus iaculis enim luctus vel. Integer aliquam tincidunt odio, non tempus sem maximus in. Vivamus eget velit ut dolor rhoncus blandit. Quisque non consectetur felis, eu pellentesque odio. Donec quis nisi nec ipsum gravida commodo. Mauris est leo, lobortis ac velit at, congue consequat ipsum. Sed pretium non tortor luctus pharetra. Fusce mattis et elit congue ultricies. Cras neque erat, sodales finibus pellentesque vitae, volutpat vel elit. Mauris euismod finibus tincidunt. Ut lobortis tincidunt ante, aliquet tincidunt urna semper ut.
+              
+              Cras a odio at elit porta vestibulum sit amet quis massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc maximus bibendum enim, pharetra auctor enim condimentum vitae. Vestibulum rutrum, risus nec euismod consectetur, dui mauris pharetra lectus, at dictum mauris dolor vitae libero. Donec at accumsan lectus, in egestas orci. Ut molestie libero odio, a posuere arcu ultrices id. Vestibulum massa dolor, sagittis nec nisi at, aliquet pharetra est. Suspendisse aliquam faucibus varius. Ut malesuada, metus at laoreet malesuada, leo urna tempus nisi, sit amet fermentum sapien mauris quis enim. Morbi vitae sem eu mi imperdiet laoreet ac vel tortor. Praesent varius est ac consequat sodales. Fusce mattis felis odio, eu mollis neque sodales vel. Nulla mollis sapien lorem, placerat maximus erat bibendum vitae. Aenean ante nunc, porta id sem in, accumsan venenatis mauris. Nulla risus ante, imperdiet vitae nisl eu, tempor volutpat massa. Morbi rutrum libero erat, et mollis purus ultrices vitae. 
+            </p>
+
+        </main>
+
+
+
+    </div>
+    
+    
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+  </body>
+
+</html>
