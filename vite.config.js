@@ -19,7 +19,10 @@ export default {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "src/index.html"),
+                world: resolve(__dirname, "src/html/world.html"),
                 bestiary: resolve(__dirname, "src/html/bestiary.html"),
+                story: resolve(__dirname, "src/html/story.html"),
+                about: resolve(__dirname, "src/html/about.html"),
             }
         }
         
