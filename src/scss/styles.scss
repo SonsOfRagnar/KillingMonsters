@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
-$primary: #25201d;
-$secondary: #221d1d;
+$primary: #221d1d;
+$secondary: #25201d;
 $tertiary: #FFFFFF;
 
 $textPrimary: #dfd6c4;
@@ -32,7 +32,7 @@ $textPrimary: #dfd6c4;
 }
 
 .navbar {
-    background-color: $primary !important;
+    background-color: $secondary !important;
 }
 
 .nav-link, .navbar-brand {
@@ -40,6 +40,26 @@ $textPrimary: #dfd6c4;
 }
 
 body {
-    background-color: #221d1d !important;
+    background-color: $primary !important;
     color: $textPrimary !important;
+}
+
+.footer {
+    background-color: $secondary;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bestiary-heading2 {
+    border-bottom: 2px solid $textPrimary;
+    width: 100%;
+    display: block;
+}
+
+.bestiary-heading4 {
+    border-bottom: 1px solid $textPrimary;
+    width: 100%;
+    display: block;
 }
