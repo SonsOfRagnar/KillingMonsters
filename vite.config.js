@@ -1,5 +1,10 @@
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
+
+
 export default {
-    root: 'src/',
+    root: './src',
     publicDir: '../static/',
     base: './', 
     server:
@@ -10,6 +15,13 @@ export default {
     {
         outDir: '../docs',
         emptyOutDir: true,
-        sourcemap: true
+        sourcemap: true,
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, "src/index.html"),
+                html: resolve(__dirname, "src/html/bestiary.html"),
+            }
+        }
+        
     }
 }
