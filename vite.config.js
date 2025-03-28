@@ -6,7 +6,7 @@ import { defineConfig } from 'vite'
 export default {
     root: './src',
     publicDir: '../static/',
-    base: './', 
+    base: '/KillingMonstes/', 
     server:
     {
         host: true,
