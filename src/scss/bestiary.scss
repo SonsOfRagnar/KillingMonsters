@@ -1,1 +1,45 @@
 @import "bootstrap/scss/bootstrap";
+
+.bestiary-heading2 {
+    border-bottom: 2px solid $textSecondary;
+    width: 100%;
+    display: block;
+    color: $textSecondary;
+}
+
+.bestiary-heading4 {
+    border-bottom: 1px solid $textPrimary;
+    width: 100%;
+    display: block;
+}
+
+.bestiary-entry {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-family: "Kurale";
+}
+
+.bestiary-link {
+    padding: .1rem .5rem;
+    margin: .2rem;
+    text-decoration: none;
+    color: $textPrimary;
+}
+.bestiary-link.active {
+    background-color: $textPrimary; 
+    color: $primary;   
+}
+
+.bestiary-link-heading {
+    text-decoration: none;
+    color: $textPrimary;
+}
+.bestiary-link-heading.active {
+    background-color: $textPrimary; 
+    color: $primary;  
+}
+
+.bestiary-offcanvas {
+    background-color: $primary;
+    color: $textPrimary;
+}

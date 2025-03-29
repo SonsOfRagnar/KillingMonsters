@@ -5,6 +5,7 @@ $secondary: #25201d;
 $tertiary: #FFFFFF;
 
 $textPrimary: #dfd6c4;
+$textSecondary: #702a2a;
 
 @media (min-width: 992px) {
     .bd-layout {
@@ -40,6 +41,7 @@ $textPrimary: #dfd6c4;
 }
 
 body {
+    //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     background-color: $primary !important;
     color: $textPrimary !important;
 }
@@ -52,43 +54,6 @@ body {
     text-align: right;
 }
 
-.bestiary-heading2 {
-    border-bottom: 2px solid $textPrimary;
-    width: 100%;
-    display: block;
-}
-
-.bestiary-heading4 {
-    border-bottom: 1px solid $textPrimary;
-    width: 100%;
-    display: block;
-}
-
-.bestiary-entry {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.bestiary-link {
-    padding: .1rem .5rem;
-    margin: .2rem;
-    text-decoration: none;
-    color: $textPrimary;
-}
-.bestiary-link.active {
-    background-color: $textPrimary; 
-    color: $primary;   
-}
-
-.bestiary-link-heading {
-    text-decoration: none;
-    color: $textPrimary;
-}
-.bestiary-link-heading.active {
-    background-color: $textPrimary; 
-    color: $primary;  
-}
-
 .anchor {
     scroll-margin-top: 70px;
 }
@@ -96,3 +61,17 @@ body {
 .default-main-container {
     height: calc(100vh - 240px);
 }
+
+@font-face{
+    font-family: "Kurale";
+    src:local("Kurale-Regular"),
+    url('../assets/fonts/Kurale-Regular.ttf') 
+  }
+
+.kurale-regular {
+    font-family: "Kurale";
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@import "./bestiary.scss";
