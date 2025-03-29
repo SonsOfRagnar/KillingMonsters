@@ -63,3 +63,36 @@ body {
     width: 100%;
     display: block;
 }
+
+.bestiary-entry {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.bestiary-link {
+    padding: .1rem .5rem;
+    margin: .2rem;
+    text-decoration: none;
+    color: $textPrimary;
+}
+.bestiary-link.active {
+    background-color: $textPrimary; 
+    color: $primary;   
+}
+
+.bestiary-link-heading {
+    text-decoration: none;
+    color: $textPrimary;
+}
+.bestiary-link-heading.active {
+    background-color: $textPrimary; 
+    color: $primary;  
+}
+
+.anchor {
+    scroll-margin-top: 70px;
+}
+
+.default-main-container {
+    height: calc(100vh - 240px);
+}

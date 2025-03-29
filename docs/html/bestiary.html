@@ -10,8 +10,8 @@
 
     <!-- Javascript Entry Point -->
     <base href="/KillingMonsters/html/bestiary">
-    <script type="module" crossorigin src="/KillingMonsters/assets/main-BFG9VTXW.js"></script>
-    <link rel="stylesheet" crossorigin href="/KillingMonsters/assets/main-BxvJtSyL.css">
+    <script type="module" crossorigin src="/KillingMonsters/assets/main-CG1-d4Os.js"></script>
+    <link rel="stylesheet" crossorigin href="/KillingMonsters/assets/main-k6J_9InB.css">
   </head>
 
   <body>
@@ -45,7 +45,7 @@
 
 
       <!-- Bestiary sidebar. -->
-      <aside class="bd-sidebar">
+      <aside id="bestiary-sidebar" class="bd-sidebar">
         <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
           <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
@@ -54,8 +54,51 @@
           <div class="offcanvas-body">
 
             <nav class="bd-links w-100" aria-label="Docs navigation">
-              <a href="#bestiary-werewolf" class="list-group-item list-group-item-action"> Werewolf</a>
-              <a href="#bestiary3" class="list-group-item list-group-item-action"> Bestiary 1</a>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#bestiary-cursed-ones" class="bestiary-link-heading rounded">
+                    <strong>Cursed Ones</strong>
+                  </a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#bestiary-werewolf" class="bestiary-link d-inline-block rounded"> Werewolf</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-werewolf1" class="bestiary-link d-inline-block rounded"> Test Cursed One 1</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-werewolf2" class="bestiary-link d-inline-block rounded"> Test Cursed One 2</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-werewolf3" class="bestiary-link d-inline-block rounded"> Test Cursed One 3</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#bestiary-draconids" class="bestiary-link-heading rounded">
+                    <strong>Draconids</strong>
+                  </a>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#bestiary-wyvern" class="bestiary-link d-inline-block rounded"> Wyvern</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-wyvern1" class="bestiary-link d-inline-block rounded"> Test Draconid 1</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-wyvern2" class="bestiary-link d-inline-block rounded"> Test Draconid 2</a>
+                    </li>
+                    <li>
+                      <a href="#bestiary-wyvern3" class="bestiary-link d-inline-block rounded"> Test Draconid 3</a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+
 
             </nav>
 
@@ -65,10 +108,23 @@
 
 
       <!-- Main bestiary content. -->
-      <main class="bd-main order-1">
+      <main class="bd-main order-1" data-bs-spy="scroll" data-bs-target="#bestiary-sidebar" data-bs-smooth-scroll="true">
 
-        <div>
-          <h2 id="bestiary-werewolf" class="bestiary-heading2">Werewolf</h2>
+        <div id="bestiary-cursed-ones" class="bestiary-entry anchor">
+          <h1>Cursed Ones</h1>
+          <p>
+            These monsters were once men, or other natural folk, before a magical curse or ancient hex transformed them. In rare cases, their curse may have been passed on from parent to child, or from attacker to victim through a wound. Due to the powerfully magical nature of Cursed Ones, one should take care to approach each case individually, being wary of assumptions or past experiences. Some curses may follow reliable patterns - such as that of the Striga - but even then some details may vary, along with the strength of the curse.
+          </p>
+          <p>
+            Many cases can be cured through the proper dispelling of the curse. Some curses have known cures, although enacting them may be tricky, while others often require the meeting of certain conditions unique to the circumstances under which the afflicted was cursed. Gathering information on how they came to be cursed is often vital.
+          </p>
+          <p>
+            If all else fails, death is the surest cure, although it may not come easily to them, as their curses often bestow terrible strength upon them.
+          </p>
+        </div>
+
+        <div id="bestiary-werewolf" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Werewolf</h2>
 
           <img src="/KillingMonsters/images/bestiary/Werewolf.webp" class="img-fluid" alt="Werewolf">
 
@@ -116,24 +172,353 @@
           </p>
         </div>
 
-        <p id="bestiary1"> Bestiary Page content goes here.
-            Donec tempus mi vel auctor vehicula. Sed finibus, dui ac suscipit maximus, nunc mauris imperdiet enim, eu facilisis felis quam sit amet ex. Etiam sollicitudin orci ut varius malesuada. Nullam blandit purus sed hendrerit eleifend. Ut nec rhoncus diam. Suspendisse elementum molestie erat, nec tincidunt sapien gravida sed. Nullam vestibulum, sem quis tempus semper, metus tellus pharetra enim, sit amet rhoncus quam massa ac eros. Nulla nec turpis nec libero volutpat accumsan quis vitae nisl. Proin et dui ornare, faucibus ligula id, pellentesque orci.
-            Etiam consequat justo quam, et consectetur est finibus in. Phasellus sagittis nibh nec sapien mollis pellentesque. Quisque et purus augue. Duis lobortis elit odio, non maximus magna ultricies vel. Aenean sed erat vestibulum, lobortis lacus in, aliquam ipsum. Etiam placerat scelerisque metus, in sodales velit. Sed vel lectus in odio volutpat aliquet id facilisis velit. Suspendisse potenti. Proin sit amet ipsum ante. 
-        </p>
+        <div id="bestiary-werewolf1" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Werewolf Test 1</h2>
 
-        <p id="bestiary2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit tincidunt tellus. Vestibulum vehicula facilisis tellus vel consequat. Phasellus sem mauris, sagittis ac eros sed, suscipit vestibulum est. Mauris mauris magna, malesuada a ornare a, fringilla sed elit. In accumsan lacus tellus, ac pellentesque odio auctor et. Donec mollis purus eu erat euismod, eu iaculis odio sagittis. Sed eget nibh facilisis, fermentum urna id, dapibus tellus. 
-          Phasellus tempor at tortor nec rhoncus. Aenean quis vehicula ipsum. Cras id metus quis tellus semper laoreet sit amet euismod nibh. Pellentesque at massa consequat, consequat lorem at, accumsan nisi. In gravida sem ut rutrum consectetur. Maecenas vel elit sit amet velit laoreet fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla fermentum erat in interdum convallis. Integer non consequat mi, a volutpat risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam at nunc leo. Duis eu augue interdum, finibus turpis non, venenatis neque. Donec in nisl leo. Aenean tincidunt nibh sed tellus laoreet euismod.
-          Nullam ac turpis ultricies, laoreet lectus et, posuere justo. Fusce sit amet nunc augue. Donec bibendum elementum viverra. Integer rutrum velit et interdum tincidunt. Vestibulum posuere sit amet nisl sed pharetra. Aenean erat purus, gravida sed aliquet vel, lobortis vel sem. Nullam tellus orci, convallis vitae justo a, congue lacinia lectus. Nunc metus justo, auctor eu aliquam ut, dictum ac justo. Cras mollis nisi id mi pretium, eget interdum ipsum faucibus. Praesent dignissim ullamcorper viverra.
-          Nulla malesuada congue nisl, eu hendrerit arcu dictum sit amet. Nam mi nunc, sodales in felis in, tempus consectetur leo. Donec sed semper tellus. Ut facilisis nulla et elit vestibulum scelerisque. Cras rhoncus eleifend arcu, et fermentum est posuere in. Vivamus semper semper sem, et semper risus ultrices ut. Phasellus vulputate, lorem eget euismod bibendum, dui dolor imperdiet leo, in euismod metus magna quis risus. Aliquam erat volutpat. Pellentesque commodo tristique ex vitae vehicula. Maecenas ac aliquet tortor. Integer a ultrices diam, eu consectetur mauris. Vestibulum lacinia ac felis eu tempus.
-          Ut finibus, ipsum nec malesuada imperdiet, nunc turpis iaculis diam, ullamcorper sagittis nibh purus vel tellus. Phasellus consectetur lacus at ante placerat, in fringilla nunc bibendum. Suspendisse ullamcorper malesuada lorem non tincidunt. Maecenas accumsan pretium lacus pharetra condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum volutpat tincidunt sem, non viverra dolor pulvinar in. Quisque id aliquet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Cras a leo varius, maximus libero vitae, consectetur ante. Suspendisse aliquet, justo sit amet varius pharetra, magna eros accumsan felis, ut fermentum risus tellus at est. Fusce mi velit, lacinia non ante sed, varius elementum lectus. 
-        </p>
+          <img src="/KillingMonsters/images/bestiary/Werewolf.webp" class="img-fluid" alt="Werewolf">
 
-        <p id="bestiary3">
-          Nam lectus lacus, varius non enim volutpat, ultricies mollis ligula. Aenean hendrerit gravida lorem, non imperdiet elit feugiat quis. Vivamus vulputate lacus eget ipsum blandit, suscipit iaculis ligula convallis. Ut a diam elit. Sed felis purus, suscipit eget tellus id, suscipit eleifend nulla. Ut eleifend interdum justo, vitae elementum lorem dignissim non. Nunc finibus tempus sapien sed ultricies. Vivamus ultrices lacus mauris, eget consectetur velit consectetur quis. Quisque finibus, erat ut finibus aliquet, ante nisl egestas tortor, a ultrices magna ex eget diam. Vestibulum vitae sapien consequat, suscipit dui ut, maximus quam. Curabitur leo augue, dignissim ut turpis sed, convallis gravida risus. Donec elit sem, gravida fermentum suscipit vel, elementum a neque. Sed id lacus quis mi venenatis facilisis. Sed eleifend metus vel ante viverra vulputate sit amet vel tortor.
-          Duis non egestas nisi, nec iaculis justo. Morbi mollis, eros at fringilla aliquam, ante ipsum finibus erat, eget pellentesque leo orci vel risus. Proin justo mi, egestas ut lobortis in, facilisis id ex. Pellentesque at dapibus nisi, vehicula condimentum mauris. Sed tempor pharetra lectus et pulvinar. Vivamus laoreet cursus metus, tempus iaculis enim luctus vel. Integer aliquam tincidunt odio, non tempus sem maximus in. Vivamus eget velit ut dolor rhoncus blandit. Quisque non consectetur felis, eu pellentesque odio. Donec quis nisi nec ipsum gravida commodo. Mauris est leo, lobortis ac velit at, congue consequat ipsum. Sed pretium non tortor luctus pharetra. Fusce mattis et elit congue ultricies. Cras neque erat, sodales finibus pellentesque vitae, volutpat vel elit. Mauris euismod finibus tincidunt. Ut lobortis tincidunt ante, aliquet tincidunt urna semper ut.
-          Cras a odio at elit porta vestibulum sit amet quis massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc maximus bibendum enim, pharetra auctor enim condimentum vitae. Vestibulum rutrum, risus nec euismod consectetur, dui mauris pharetra lectus, at dictum mauris dolor vitae libero. Donec at accumsan lectus, in egestas orci. Ut molestie libero odio, a posuere arcu ultrices id. Vestibulum massa dolor, sagittis nec nisi at, aliquet pharetra est. Suspendisse aliquam faucibus varius. Ut malesuada, metus at laoreet malesuada, leo urna tempus nisi, sit amet fermentum sapien mauris quis enim. Morbi vitae sem eu mi imperdiet laoreet ac vel tortor. Praesent varius est ac consequat sodales. Fusce mattis felis odio, eu mollis neque sodales vel. Nulla mollis sapien lorem, placerat maximus erat bibendum vitae. Aenean ante nunc, porta id sem in, accumsan venenatis mauris. Nulla risus ante, imperdiet vitae nisl eu, tempor volutpat massa. Morbi rutrum libero erat, et mollis purus ultrices vitae. 
-        </p>
+          <h4>Medium Humanoid (Cursed One)</h4>
+          <p> 
+          Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite.
+          Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to non-silver weapons, cold damage; resistant to poison, necrotic, thunder, force damage, frightened, charmed. Excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast agressive attacks; intelligent
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Harmed by silver, vulnerable to a spear tipped with a sprig of Aconite, left under the full moon for an hour.
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Potion of Aconite, Hemlock, and silver powder can prevent transformation for one - four hours; some cases of lycanthropy may be cured by removing the curse that first transformed them; bites should be treated with a poultice of rue, wormwood, and silver powder, although chance of infection is low.
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Blood of a child under five years of age</li>
+              <li>Heart of one the werewolf loves</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Werewolf Teeth: valuable</li>
+              <li>Werewolf Blood: used in potions</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            A humanoid cursed with lycanthropy, instilling a thirst for blood and granting the ability to transform into a terrible wolf. Lycanthropes may be either direct results of a magical Curse, born as the offspring of two lycanthropes, or infected when bitten by one already afflicted by lycanthropy. However this last is far rarer than superstition would have you believe as most bites do not transmit the disease. However it is still a possibility and one especially relevant to those who may encounter and fight lycanthropes often.
+          </p>
+          <p>
+            In the case of cursed werewolves, there is a possibility of lifting the curse, although as with all curses, it will be likely be unique, and require a unique solution to lift it, if it is at all possible to lift.
+          </p>
+          <p>
+            Regardless of the source of their lycanthropy, each werewolf is invariably unique, as they are humanoids cursed or diseased with a terrible burden. Some may be unwilling hosts to the bloodlust, while others may embrace it, or even deliberately use it to their advantage. Some may be fully lucid during transformation, while others may remember only fragments, or believing the episodes to be vivid dreams.
+          </p>
+        </div>
+
+        <div id="bestiary-werewolf2" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Werewolf Test 2</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Werewolf.webp" class="img-fluid" alt="Werewolf">
+
+          <h4>Medium Humanoid (Cursed One)</h4>
+          <p> 
+          Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite.
+          Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to non-silver weapons, cold damage; resistant to poison, necrotic, thunder, force damage, frightened, charmed. Excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast agressive attacks; intelligent
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Harmed by silver, vulnerable to a spear tipped with a sprig of Aconite, left under the full moon for an hour.
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Potion of Aconite, Hemlock, and silver powder can prevent transformation for one - four hours; some cases of lycanthropy may be cured by removing the curse that first transformed them; bites should be treated with a poultice of rue, wormwood, and silver powder, although chance of infection is low.
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Blood of a child under five years of age</li>
+              <li>Heart of one the werewolf loves</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Werewolf Teeth: valuable</li>
+              <li>Werewolf Blood: used in potions</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            A humanoid cursed with lycanthropy, instilling a thirst for blood and granting the ability to transform into a terrible wolf. Lycanthropes may be either direct results of a magical Curse, born as the offspring of two lycanthropes, or infected when bitten by one already afflicted by lycanthropy. However this last is far rarer than superstition would have you believe as most bites do not transmit the disease. However it is still a possibility and one especially relevant to those who may encounter and fight lycanthropes often.
+          </p>
+          <p>
+            In the case of cursed werewolves, there is a possibility of lifting the curse, although as with all curses, it will be likely be unique, and require a unique solution to lift it, if it is at all possible to lift.
+          </p>
+          <p>
+            Regardless of the source of their lycanthropy, each werewolf is invariably unique, as they are humanoids cursed or diseased with a terrible burden. Some may be unwilling hosts to the bloodlust, while others may embrace it, or even deliberately use it to their advantage. Some may be fully lucid during transformation, while others may remember only fragments, or believing the episodes to be vivid dreams.
+          </p>
+        </div>
+
+        <div id="bestiary-werewolf3" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Werewolf Test 3</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Werewolf.webp" class="img-fluid" alt="Werewolf">
+
+          <h4>Medium Humanoid (Cursed One)</h4>
+          <p> 
+          Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite.
+          Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to non-silver weapons, cold damage; resistant to poison, necrotic, thunder, force damage, frightened, charmed. Excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast agressive attacks; intelligent
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Harmed by silver, vulnerable to a spear tipped with a sprig of Aconite, left under the full moon for an hour.
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Potion of Aconite, Hemlock, and silver powder can prevent transformation for one - four hours; some cases of lycanthropy may be cured by removing the curse that first transformed them; bites should be treated with a poultice of rue, wormwood, and silver powder, although chance of infection is low.
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Blood of a child under five years of age</li>
+              <li>Heart of one the werewolf loves</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Werewolf Teeth: valuable</li>
+              <li>Werewolf Blood: used in potions</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            A humanoid cursed with lycanthropy, instilling a thirst for blood and granting the ability to transform into a terrible wolf. Lycanthropes may be either direct results of a magical Curse, born as the offspring of two lycanthropes, or infected when bitten by one already afflicted by lycanthropy. However this last is far rarer than superstition would have you believe as most bites do not transmit the disease. However it is still a possibility and one especially relevant to those who may encounter and fight lycanthropes often.
+          </p>
+          <p>
+            In the case of cursed werewolves, there is a possibility of lifting the curse, although as with all curses, it will be likely be unique, and require a unique solution to lift it, if it is at all possible to lift.
+          </p>
+          <p>
+            Regardless of the source of their lycanthropy, each werewolf is invariably unique, as they are humanoids cursed or diseased with a terrible burden. Some may be unwilling hosts to the bloodlust, while others may embrace it, or even deliberately use it to their advantage. Some may be fully lucid during transformation, while others may remember only fragments, or believing the episodes to be vivid dreams.
+          </p>
+        </div>
+
+        <div id="bestiary-draconids" class="bestiary-entry anchor">
+          <h1>Draconids</h1>
+          <p>
+            Dragon. No other monster is as far-famed or feared as the Dragon. Peasants tell tales of their wrath, kings stitch them on their banners, all covet their legendary hoards of treasure. Despite their extreme lethality, the vast majority of true Dragons have been hunted to near extinction by royal armies, huge bands of hunters, and mages seeking their potent blood and organs.
+          </p>
+          <p>
+            Indeed, although they are related, the majority of Draconids are not true Dragons, and many are extremely different. They are however often confused or conflated with Dragons by the uneducated, and by braggarts quick to claim they have slain a Dragon. The Draconids are a broad family of quasi-reptiles that encompasses terrestrial, aerial, and aquatic species.
+          </p>
+          <p>
+            Aerial species are the most numerous - and often most dangerous - of these, roosting in mountain caves, rocky crags, cliff-faces, and occasionally ruined structures. Herd animals, particularly sheep, are their most common prey, and are snatched boldly from fields and pens.
+          </p>
+        </div>
+
+        <div id="bestiary-wyvern" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Wyvern</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Wyvern.webp" class="img-fluid" alt="Wyvern">
+
+          <h4>Medium Dragon (Draconid)</h4>
+          <p> 
+            Large Draconid (Dragon): Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.
+          </p>
+          <p>
+            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Live goat or sheep</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Wyvern Venom Gland: Used to make antivenom</li>
+              <li>Wyvern Skin: Valuable</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            Wyverns are voracious and highly aggressive winged draconids that prefer to dive down upon prey from a great height and snatch it in their claws. Much like a tortoise in the claws of an eagle, those caught by a wyvern will soon find themselves lifted to a great height and bourn away to some lofty nest where they are dropped to dash against the rocks. The wyvern can then pick the - often still living - victim apart at its leisure, feeding morsels to their hatchlings.
+          </p>
+          <p>
+            One of the wyvern's distinctive characteristics that set it apart from other draconids is their tail. The long tail of a wyvern ends in a foot-long razor sharp hollow spine, that can inject an excruciatingly painful venom into those it pierces. Should one be struck by the tail-spine, their death is almost certain, unless they have access to the correct antivenom.
+          </p>
+        </div>
+
+        <div  id="bestiary-wyvern1" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Test Draconid 1</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Wyvern.webp" class="img-fluid" alt="Wyvern">
+
+          <h4>Medium Dragon (Draconid)</h4>
+          <p> 
+            Large Draconid (Dragon): Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.
+          </p>
+          <p>
+            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Live goat or sheep</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Wyvern Venom Gland: Used to make antivenom</li>
+              <li>Wyvern Skin: Valuable</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            Wyverns are voracious and highly aggressive winged draconids that prefer to dive down upon prey from a great height and snatch it in their claws. Much like a tortoise in the claws of an eagle, those caught by a wyvern will soon find themselves lifted to a great height and bourn away to some lofty nest where they are dropped to dash against the rocks. The wyvern can then pick the - often still living - victim apart at its leisure, feeding morsels to their hatchlings.
+          </p>
+          <p>
+            One of the wyvern's distinctive characteristics that set it apart from other draconids is their tail. The long tail of a wyvern ends in a foot-long razor sharp hollow spine, that can inject an excruciatingly painful venom into those it pierces. Should one be struck by the tail-spine, their death is almost certain, unless they have access to the correct antivenom.
+          </p>
+        </div>
+
+        <div id="bestiary-wyvern2" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Test Draconid 2</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Wyvern.webp" class="img-fluid" alt="Wyvern">
+
+          <h4>Medium Dragon (Draconid)</h4>
+          <p> 
+            Large Draconid (Dragon): Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.
+          </p>
+          <p>
+            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Live goat or sheep</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Wyvern Venom Gland: Used to make antivenom</li>
+              <li>Wyvern Skin: Valuable</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            Wyverns are voracious and highly aggressive winged draconids that prefer to dive down upon prey from a great height and snatch it in their claws. Much like a tortoise in the claws of an eagle, those caught by a wyvern will soon find themselves lifted to a great height and bourn away to some lofty nest where they are dropped to dash against the rocks. The wyvern can then pick the - often still living - victim apart at its leisure, feeding morsels to their hatchlings.
+          </p>
+          <p>
+            One of the wyvern's distinctive characteristics that set it apart from other draconids is their tail. The long tail of a wyvern ends in a foot-long razor sharp hollow spine, that can inject an excruciatingly painful venom into those it pierces. Should one be struck by the tail-spine, their death is almost certain, unless they have access to the correct antivenom.
+          </p>
+        </div>
+
+        <div id="bestiary-wyvern3" class="bestiary-entry anchor">
+          <h2 class="bestiary-heading2">Test Draconid 3</h2>
+
+          <img src="/KillingMonsters/images/bestiary/Wyvern.webp" class="img-fluid" alt="Wyvern">
+
+          <h4>Medium Dragon (Draconid)</h4>
+          <p> 
+            Large Draconid (Dragon): Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.
+          </p>
+          <p>
+            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock.
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>Live goat or sheep</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>Wyvern Venom Gland: Used to make antivenom</li>
+              <li>Wyvern Skin: Valuable</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            Wyverns are voracious and highly aggressive winged draconids that prefer to dive down upon prey from a great height and snatch it in their claws. Much like a tortoise in the claws of an eagle, those caught by a wyvern will soon find themselves lifted to a great height and bourn away to some lofty nest where they are dropped to dash against the rocks. The wyvern can then pick the - often still living - victim apart at its leisure, feeding morsels to their hatchlings.
+          </p>
+          <p>
+            One of the wyvern's distinctive characteristics that set it apart from other draconids is their tail. The long tail of a wyvern ends in a foot-long razor sharp hollow spine, that can inject an excruciatingly painful venom into those it pierces. Should one be struck by the tail-spine, their death is almost certain, unless they have access to the correct antivenom.
+          </p>
+        </div>
 
       </main>
     </div>    
