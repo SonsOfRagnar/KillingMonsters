@@ -45,13 +45,6 @@ function GenerateBestiary()
 
 function GenerateBestiaryContent()
 {
-    // let bestiaryContainer = document.getElementById('bestiary-entries');
-    // if (bestiaryContainer == null)
-    // {
-    //     console.error("Cannot find bestiary entry container when generating content.")
-    //     return;
-    // }
-
     for (const [key, value] of Object.entries(BestiarySource)) 
     {
         if (!value.active || value.name == undefined) { continue; } // Skip entries that are not set to active or which have no valid name.
@@ -62,8 +55,6 @@ function GenerateBestiaryContent()
         if (entryContainer == null){console.log(sanitisedCategory); continue;}
 
         entryContainer.appendChild(GenerateBestiaryEntryHTML(key));
-
-        //console.log(key, value);
     }
 }
 
@@ -116,8 +107,6 @@ function GenerateBestiaryEntryHTML(entryName)
     `;
 
     entryElement.innerHTML = htmlTemplate;
-
-    //console.log(htmlTemplate);
     return entryElement;
 }
 
@@ -138,7 +127,6 @@ function ProcessArrayToList(arrayIn)
         }
     }
 
-    //console.log(html);
     return html;
 }
 
@@ -159,7 +147,6 @@ function ProcessArrayToParagraphs(arrayIn)
         }
     }
 
-    //console.log(html);
     return html;
 }
 
@@ -192,7 +179,6 @@ function GenerateBetiarySidebarCategories()
     for (const [key, value] of Object.entries(BestiaryCategories)) 
     {
         let sanitisedCategoryName = value.name.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
-        //console.log(sanitisedName);
 
         let categoryHTML = `
         <li>
@@ -222,7 +208,6 @@ function GenerateBetiarySidebarCategories()
         categoryContentContainer.innerHTML = categoryOverviewHTML;
     }
 
-    //console.log(sidebarHTML);
     bestiarySidebar.innerHTML = sidebarHTML;
 
     GenerateBestiarySidebarLinks();

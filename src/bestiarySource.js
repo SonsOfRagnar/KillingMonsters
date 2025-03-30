@@ -76,7 +76,7 @@ const entries =
     {
         active: true,
         name: "Catoblepas",
-        image: "../assets/images/bestiary/CatoblepasWoodcut.png",
+        image: "./assets/images/bestiary/CatoblepasWoodcut.png",
         category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
@@ -92,7 +92,7 @@ const entries =
     {
         active: true,
         name: "Ghast",
-        image: "../assets/images/bestiary/Ghast.webp",
+        image: "./assets/images/bestiary/Ghast.webp",
         category: categories.necrophage.name,
         type: types.aberration,
         size: sizes.medium,
@@ -108,7 +108,7 @@ const entries =
     {
         active: true,
         name: "Meijer's Basilisk",
-        image: "../assets/images/bestiary/MeijerBasilisk.png",
+        image: "/assets/images/bestiary/MeijerBasilisk.png",
         category: categories.draconid.name,
         type: types.monstrosity,
         size: sizes.medium,
@@ -124,7 +124,7 @@ const entries =
     {
         active: true,
         name: "Werewolf",
-        image: "../assets/images/bestiary/Werewolf.webp",
+        image: "/assets/images/bestiary/Werewolf.webp",
         category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
