@@ -1,8 +1,10 @@
+import wyvernImg from './assets/images/bestiary/Wyvern.webp';
 
 
 //import * as images from './assets/images/bestiary/*'
 //const images = import.meta.glob('./assets/images/bestiary/*');
 //const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, as: 'url' }));
+console.log(wyvernImg);
 
 const categories =
 {
@@ -82,7 +84,7 @@ const entries =
     {
         active: true,
         name: "Catoblepas",
-        image: "./images/bestiary/Catoblepas.png",
+        image: "../assets/images/bestiary/Catoblepas.png",
         category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
@@ -98,7 +100,7 @@ const entries =
     {
         active: true,
         name: "Ghast",
-        image: "./images/bestiary/Ghast.webp",
+        image: "/images/bestiary/Ghast.webp",
         category: categories.necrophage.name,
         type: types.aberration,
         size: sizes.medium,
@@ -114,7 +116,7 @@ const entries =
     {
         active: true,
         name: "Meijer's Basilisk",
-        image: "./images/bestiary/MeijerBasilisk.png",
+        image: "./assets/images/bestiary/MeijerBasilisk.png",
         category: categories.draconid.name,
         type: types.monstrosity,
         size: sizes.medium,
@@ -130,7 +132,7 @@ const entries =
     {
         active: true,
         name: "Werewolf",
-        image: "./images/bestiary/Werewolf.webp",
+        image: "/assets/images/bestiary/Werewolf.webp",
         category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
@@ -146,7 +148,7 @@ const entries =
     {
         active: true,
         name: "Wyvern",
-        image: "./images/bestiary/Wyvern.webp",
+        image: wyvernImg,
         category: categories.draconid.name,
         type: types.dragon,
         size: sizes.large,
