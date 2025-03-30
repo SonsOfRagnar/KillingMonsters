@@ -1,9 +1,29 @@
 const categories =
 {
-    cursed: "Cursed One",
-    draconid: "Draconid",
-    necrophage: "Necrophage",
-    relict: "Relict"
+    cursed: 
+    {
+        name: "Cursed One",
+        pluralName: "Cursed Ones",
+        overview: ["These monsters were once men, or other natural folk, before a magical curse or ancient hex transformed them. In rare cases, their curse may have been passed on from parent to child, or from attacker to victim through a wound. Due to the powerfully magical nature of Cursed Ones, one should take care to approach each case individually, being wary of assumptions or past experiences. Some curses may follow reliable patterns - such as that of the Striga - but even then some details may vary, along with the strength of the curse.", "Many cases can be cured through the proper dispelling of the curse. Some curses have known cures, although enacting them may be tricky, while others often require the meeting of certain conditions unique to the circumstances under which the afflicted was cursed. Gathering information on how they came to be cursed is often vital.", "If all else fails, death is the surest cure, although it may not come easily to them, as their curses often bestow terrible strength upon them."]
+    },
+    draconid:     
+    {
+        name: "Draconid",
+        pluralName: "Draconids",
+        overview: ["Dragon. No other monster is as far-famed or feared as the Dragon. Peasants tell tales of their wrath, kings stitch them on their banners, all covet their legendary hoards of treasure. Despite their extreme lethality, the vast majority of true Dragons have been hunted to near extinction by royal armies, huge bands of hunters, and mages seeking their potent blood and organs.", "Indeed, although they are related, the majority of Draconids are not true Dragons, and many are extremely different. They are however often confused or conflated with Dragons by the uneducated, and by braggarts quick to claim they have slain a Dragon. The Draconids are a broad family of quasi-reptiles that encompasses terrestrial, aerial, and aquatic species.", "Aerial species are the most numerous - and often most dangerous - of these, roosting in mountain caves, rocky crags, cliff-faces, and occasionally ruined structures. Herd animals, particularly sheep, are their most common prey, and are snatched boldly from fields and pens."]
+    },
+    necrophage:
+    {    
+        name: "Necrophage",
+        pluralName: "Necrophages",
+        overview: ["Translating literally as 'Corpse Eaters', these are monsters that feed on the dead, particularly humanoid corpses. Their presence in graveyards and on old battlefields - along with their name - has given rise to the erroneous belief that Necrophages themselves are dead creatures reanimated from the corpses of the slain. This is of course nonsense. Unlike Specters, Necrophages are living creatures that while preternatural, have found an ecological niche as scavengers and carrion-eaters.", "They are drawn to death, particularly large burial grounds, mass graves, and sites of battle, where they can sustain themselves for months on the corpses found there. Necrophages often tolerate others of their kind and many are able to display social behaviour when advantageous, hunting in packs when carrion is unavailable, and forming communal feeding grounds for mutual protection. Several species of Necrophage may coexist in a location, and sometimes Necrophages follow other monsters or beasts to scavenge from their discarded kills.", "As buried corpses are a common food source, digging or burrowing is a commonly reported behaviour. Necrophages are nourished by consuming rotting corpses, and when injured, have been observed to devour those who fall fighting them to recoup their strength and vigor. For this reason, it is often advisable to engage the creatures on ground of your choose, rather than in their carrion-filled lairs."]
+    },
+    relict:     
+    {
+        name: "Relict",
+        pluralName: "Relicts",
+        overview: ["Relicts are ancient beings, the last remains of dying species, driven to the brink of extinction by the long march of time, and the relentless expansion of civilisation. While they may once have been numerous, these creatures are now among the rarest monsters encountered, which combined with the mystery surrounding their origins, leads many simple folk to believe them to be gods ruling over deep woodlands, or demons sent up from some burning hell.", "There is great variety among relicts, with many of them being truly unique, and many of them sapient beings. Great caution is advised when hunting any relict, as even known species may have unique variations, skills, or knowledge from their long lives. Additionally, it is worth noting that there are many relicts that seem to pose little threat, and may even be benevolent in their own way, something worth considering before setting out to kill one.", "Despite their magical nature, relicts are incredibly resilient against both steel and silver weaponry, only being truly threatened by blades deeply imbued with magic."]
+    }
 }
 
 const types = 
@@ -41,7 +61,7 @@ const entries =
         active: false,
         name: "Template",
         image: "",
-        category: categories.cursed,
+        category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
         overview: [""],
@@ -56,8 +76,8 @@ const entries =
     {
         active: true,
         name: "Catoblepas",
-        image: "../assets/images/bestiary/Catoblepas.png",
-        category: categories.necrophage,
+        image: "../assets/images/bestiary/CatoblepasWoodcut.png",
+        category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["Stocky, shaggy-haired quadruped with cloven hooves and high shoulders. Long sagging neck with a head like a boar's. Curved tusks. Tail is long and ends in a heavy bone club. Tiny, wrinkled third eye nestled in skin folds on forehead.", "Most often found in Swamps, Battlegrounds, Graveyards"],
@@ -72,8 +92,8 @@ const entries =
     {
         active: true,
         name: "Ghast",
-        image: "../assets/images/bestiary/Ghast.png",
-        category: categories.necrophage,
+        image: "../assets/images/bestiary/Ghast.webp",
+        category: categories.necrophage.name,
         type: types.aberration,
         size: sizes.medium,
         overview: ["Pale, hairless biped on powerful hind legs with large flat, three-toed feet. Squat and heavyset below the waist, hunched and frail above. Small vestigial arms with tiny claws. Bony, protruding head with bulbous eyes and a wide mouth full of short teeth. Short fleshy tail.", "Found near or within inhabited settlements"],
@@ -89,7 +109,7 @@ const entries =
         active: true,
         name: "Meijer's Basilisk",
         image: "../assets/images/bestiary/MeijerBasilisk.png",
-        category: categories.draconid,
+        category: categories.draconid.name,
         type: types.monstrosity,
         size: sizes.medium,
         overview: ["Long-bodied eight-legged lizard with wide four-toed claws and a leathery hide, usually slate grey or blue. Reddish spines run the length of the back and thick tail. A blunt, wide head with strong jaws and triangular tearing teeth. Large blue eyes.", "Extremely adaptable with subspecies found in arid, temperate and tropical climes. All prefer rough terrain and mountainous areas. Not found in areas colder than temperate."],
@@ -105,7 +125,7 @@ const entries =
         active: true,
         name: "Werewolf",
         image: "../assets/images/bestiary/Werewolf.webp",
-        category: categories.cursed,
+        category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
         overview: ["Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite. Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra."],
@@ -121,7 +141,7 @@ const entries =
         active: true,
         name: "Wyvern",
         image: "../assets/images/bestiary/Wyvern.webp",
-        category: categories.draconid,
+        category: categories.draconid.name,
         type: types.dragon,
         size: sizes.large,
         overview: ["Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.", "            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],

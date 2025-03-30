@@ -6,9 +6,8 @@ console.log("Bestiary script running.");
 
 console.log(BestiarySource);
 
-// GenerateBestiaryEntryHTML("werewolf");
-GenerateBestiaryContent();
-GenerateBetiarySidebarCategories();
+GenerateBestiary();
+
 
 /**
  * Toggles the OffCanvas functionality in the bestiary when pressing the button. 
@@ -38,19 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function GenerateBestiary()
+{
+    GenerateBetiarySidebarCategories();
+    GenerateBestiaryContent();
+}
+
 function GenerateBestiaryContent()
 {
-    let bestiaryContainer = document.getElementById('bestiary-entries');
-    if (bestiaryContainer == null)
-    {
-        console.error("Cannot find bestiary entry container when generating content.")
-        return;
-    }
+    // let bestiaryContainer = document.getElementById('bestiary-entries');
+    // if (bestiaryContainer == null)
+    // {
+    //     console.error("Cannot find bestiary entry container when generating content.")
+    //     return;
+    // }
 
     for (const [key, value] of Object.entries(BestiarySource)) 
     {
         if (!value.active || value.name == undefined) { continue; } // Skip entries that are not set to active or which have no valid name.
-        bestiaryContainer.appendChild(GenerateBestiaryEntryHTML(key));
+
+        let sanitisedCategory = value.category.toLowerCase().split(" ").join("-");
+        let entryContainer = document.getElementById(`bestiary-content-category-${sanitisedCategory}`);
+
+        if (entryContainer == null){console.log(sanitisedCategory); continue;}
+
+        entryContainer.appendChild(GenerateBestiaryEntryHTML(key));
 
         //console.log(key, value);
     }
@@ -180,13 +191,13 @@ function GenerateBetiarySidebarCategories()
 
     for (const [key, value] of Object.entries(BestiaryCategories)) 
     {
-        let sanitisedCategoryName = value.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
+        let sanitisedCategoryName = value.name.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
         //console.log(sanitisedName);
 
         let categoryHTML = `
         <li>
             <a href="#bestiary-${sanitisedCategoryName}" class="bestiary-link-heading rounded">
-                <strong>${value}</strong>
+                <strong>${value.pluralName}</strong>
             </a>
             <ul id="bestiary-sidebar-${sanitisedCategoryName}" class="list-unstyled">
             </ul>
@@ -194,6 +205,21 @@ function GenerateBetiarySidebarCategories()
         `;
 
         sidebarHTML = sidebarHTML + categoryHTML;
+
+        let bestiaryContainer = document.getElementById('bestiary-entries');
+        let categoryContentContainer = document.createElement("div");
+        bestiaryContainer.appendChild(categoryContentContainer);
+
+        categoryContentContainer.id = `bestiary-content-category-${sanitisedCategoryName}`
+        
+        let categoryOverviewHTML = `
+        <div id="bestiary-${sanitisedCategoryName}" class="bestiary-entry anchor">
+            <h1>${value.pluralName}</h1>
+            ${ProcessArrayToParagraphs(value.overview)}
+        </div>
+        `
+
+        categoryContentContainer.innerHTML = categoryOverviewHTML;
     }
 
     //console.log(sidebarHTML);
