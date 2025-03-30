@@ -22,6 +22,8 @@ function ImportBestiaryImages()
 
 function GetImage(imageName)
 {
+    console.log("GetImage called for " + imageName);
+    console.log(images.get(imageName));
     return images.get(imageName);
 }
 
