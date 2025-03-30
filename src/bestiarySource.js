@@ -1,7 +1,12 @@
-// import wyvern from './assets/images/bestiary/Wyvern.webp'
+import wyvern from './assets/images/bestiary/Wyvern.webp'
+import basilisk from './assets/images/bestiary/MeijerBasilisk.png'
+import werewolf from './assets/images/bestiary/Werewolf.webp'
+import ghast from './assets/images/bestiary/Ghast.webp'
+import catoblepas from './assets/images/bestiary/CatoblepasWoodcut.png'
+
 //import * as images from './assets/images/bestiary/*'
 //const images = import.meta.glob('./assets/images/bestiary/*');
-const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG, webp}', { eager: true, as: 'url' }))
+// const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG, webp}', { eager: true, as: 'url' }))
 
 const categories =
 {
