@@ -44,13 +44,61 @@ const entries =
         category: categories.cursed,
         type: types.humanoid,
         size: sizes.medium,
-        overview: "",
+        overview: [""],
         strengths: "",
         weaknesses: "",
         peculiarities: "",
-        lures: "",
-        harvesting: "",
-        about: ""
+        lures: [""],
+        harvesting: [""],
+        about: [""]
+    },
+    catoblepas: 
+    {
+        active: true,
+        name: "Catoblepas",
+        image: "../assets/images/bestiary/Catoblepas.png",
+        category: categories.necrophage,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Stocky, shaggy-haired quadruped with cloven hooves and high shoulders. Long sagging neck with a head like a boar's. Curved tusks. Tail is long and ends in a heavy bone club. Tiny, wrinkled third eye nestled in skin folds on forehead.", "Most often found in Swamps, Battlegrounds, Graveyards"],
+        strengths: "Immune to necrosis and poison; resistant to non-silver weaponry, fire, force, cold, thunder, and acid damage; emanates a horrific stench that carries disease and poison; its third eye is extremely dangerous, necrotising the flesh of those it gazes upon, it is said to kill almost instantly; very strong club tail, shaggy hide provides some protection from missiles",
+        weaknesses: "Harmed by silver; vulnerable to radiant damage; its heavy head is slow to move, making it difficult for it to bring its third eye to bear quickly, especially when surprised; unintelligent, driven by instinct alone",
+        peculiarities: "A garland woven of glovewort picked under the noonday sun is said to protect one from the deadly gaze of the Catoblepas.",
+        lures: ["Stomach of a dog filled with rotten intestines", "Scent glands from another Catoblepas"],
+        harvesting: ["Catoblepas Eye: Ingredient in anti-necrotic potions, valuable to mages", "Catoblepas Tusks: Potion ingredient, peasants claim the tusks can ward off dark spirits.", "Catoblepas Scent Gland: Valuable to mages"],
+        about: ["The Catoblepas is a shambling Necrophage that roams swamps and sites of death, carrying disease and pestilence in its thick shaggy fur, which can range from black to dun. Although it possesses large tusks, these are for rooting through graves and corpses, looking for the choicest part, typically the large and small intestines.", "Instead the Catoblepas will use its powerful tail club to attack any who manage to approach, a difficult task in the first place due to the nauseating and disease-bearing stench that emanates from the beast. If this initial attack fails, the creature will rear its cumbersome neck and open its third eye, which can melt flesh from bone and necrotise tissue in an instant. Superstitious peasants say that its eye is a window into some distant hell, but more rational minds theorise that the Catoblepas simply possesses a powerful magical ability.", "While it lacks the natural burrowing abilities of many Necrophages, the Catoblepas is at home in swamps and marshes, and can sink deep into mud and murky pools to conceal itself while it sleeps between meals."]
+    },
+    ghast: 
+    {
+        active: true,
+        name: "Ghast",
+        image: "../assets/images/bestiary/Ghast.png",
+        category: categories.necrophage,
+        type: types.aberration,
+        size: sizes.medium,
+        overview: ["Pale, hairless biped on powerful hind legs with large flat, three-toed feet. Squat and heavyset below the waist, hunched and frail above. Small vestigial arms with tiny claws. Bony, protruding head with bulbous eyes and a wide mouth full of short teeth. Short fleshy tail.", "Found near or within inhabited settlements"],
+        strengths: "Immune to poison, charms, exhaustion; resistant to regular weapons, psychic, cold, and necrotic damage; resistant to being frightened, and effects targeting aberrations; able to take on the form, voice, and some memories of those it devours; emits a poisonous stench; agile, paralysing claws",
+        weaknesses: "Harmed by silver; dried thistles distress them when close, making them skittish, and their attacks more erratic; tea of banewort, thistle and elderflower laced with gravedirt counteracts the paralysis of its claws",
+        peculiarities: "Their true faces can be seen in a silver mirror polished with thistle sap",
+        lures: ["Clothes taken from one who died alone within the last month"],
+        harvesting: ["Ghast Grease: Contains paralytic agents", "Ghast Hide: Flexible and waterproof", "Tarnowski's Gland: Valuable to mages"],
+        about: ["Ghasts are strange, even for necrophages. They seem to have slipped through into our world later than their relatives, and possess human-level intellects. They also seem adapted for predation on human and non-human communities, able to take on the forms of most humanoid corpses that they consume. The ghast then lurks in the community for up to three months - the maximum extent of the transformation - before searching for a new victim. While still disguised, the ghast will often proactively seek out a suitable target, stalk them, and kill them, before taking on their shape and life.", "The ghast's transformation takes place over the course of an hour, during which the ghast's flesh bubbles and stretches, a new layer of skin growing over the old. The transformation is more than skin deep however, with the creature taking on the voice and some memories of the victim as well as their form. Once transformed, the ghast may shed its outer layer in an emergency, slithering out of it like a new-birthed foal.", "When in their natural shape, the ghast moves by hopping on its powerful hind legs, and can make incredible leaps for its size. Like many other necrophages, it emits a powerful corpse-stink, poisonous to those around it, while its claws secrete a paralytic grease that freezes the muscle of those it strikes. It is also unusually fearless, perhaps as a result of its intelligence, and cannot be easily frightened, save by bunches of dried thistles, which it desperately avoids."]
+    },
+    meijersBasilisk: 
+    {
+        active: true,
+        name: "Meijer's Basilisk",
+        image: "../assets/images/bestiary/MeijerBasilisk.png",
+        category: categories.draconid,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["Long-bodied eight-legged lizard with wide four-toed claws and a leathery hide, usually slate grey or blue. Reddish spines run the length of the back and thick tail. A blunt, wide head with strong jaws and triangular tearing teeth. Large blue eyes.", "Extremely adaptable with subspecies found in arid, temperate and tropical climes. All prefer rough terrain and mountainous areas. Not found in areas colder than temperate."],
+        strengths: "Immune to non-magical weaponry and petrification; resistant to fire, thunder, poison, acid, force, and lightning damage, charmed and frightened; gaze rapidly petrifies victim into stone; powerful jaws with a poisonous bite that often festers; good climber; can squeeze into very small gaps; can sense heat from nearby creatures",
+        weaknesses: "Vulnerable to cold damage; sluggish and slow; fairly passive when well fed, as it relies on its petrifying gaze to ward off most threats while it conserves energy; poor eyesight, avoiding its thermal sense leaves it almost blind",
+        peculiarities: "Prefers to hunt and eat other draconids, which it identifies by their usually high internal body temperature; Cold-blooded unlike many other species, so it prefers to hunt in the evening, after a long day of heating in the sun; the gullet of Meijer's basilisk contains oils that can be distilled into a poultice that prevents - and may partially cure - petrification; superstitions about the cockatrice and true basilisk assert that a mirror may be used to view the creature safely, or to trick it into attacking itself, however these tales have not been tested against Meijer's basilisk.",
+        lures: ["Draconid meat, heated over a fire until scorching hot"],
+        harvesting: ["Basilisk Eye", "Gullet Oil: Used to distil potions to prevent or cure petrification", "Pit Organ"],
+        about: ["Meijer's basilisk is not a true basilisk, and is named instead for its petrifying gaze, which is so often attributed to cockatrices and true basilisks by the uninformed. Unlike many of its draconid kin, Meijer's basilisk is cold-blooded, sluggish, and lazy. It prefers to bask through long days on hot rocks, shifting only in the evening to hunt. However, this should not be mistaken for an easy kill, the eyes of the creature are terrible, and should one look upon them, one's body shall rapidly begin to turn to stone.", "They can also be difficult to track, as they climb well, and prefer to stick to rocky outcrops where they may lie camouflaged against the stone. Their pit organs allow them to detect a creature's body heat, allowing them to avoid danger or stalk prey in any condition."]
     },
     werewolf: 
     {
@@ -76,7 +124,7 @@ const entries =
         category: categories.draconid,
         type: types.dragon,
         size: sizes.large,
-        overview: ["Large Draconid (Dragon): Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.", "            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],
+        overview: ["Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.", "            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],
         strengths: "Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened",
         weaknesses: "Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded",
         peculiarities: "Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead",

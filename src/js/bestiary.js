@@ -66,7 +66,8 @@ function GenerateBestiaryEntryHTML(entryName)
     let entryData = Object.getOwnPropertyDescriptor(BestiarySource, entryName).value;
 
     let entryElement = document.createElement("div");
-    entryElement.id = "bestiary-" + entryData.name.toLowerCase().split(" ").join("-");
+    let sanitisedCreatureName = entryData.name.toLowerCase().split(" ").join("-").split("'").join("");
+    entryElement.id = "bestiary-" + sanitisedCreatureName;
     entryElement.classList.add("bestiary-entry", "anchor");
 
     let htmlTemplate = `
@@ -156,13 +157,15 @@ function GenerateBestiarySidebarLinks()
 {
     for (const [key, value] of Object.entries(BestiarySource)) 
     {
+        if (!value.active) { continue; }
+
         let sanitisedCategory = value.category.toLowerCase().split(" ").join("-");
-        let sanitisedName = value.name.toLowerCase().split(" ").join("-");
+        let sanitisedCreatureName = value.name.toLowerCase().split(" ").join("-").split("'").join("");
 
         let sidebarCategoryList = document.getElementById(`bestiary-sidebar-${sanitisedCategory}`);
 
         let newListItem = document.createElement("li");
-        newListItem.innerHTML = `<a href="#bestiary-${sanitisedName}" class="bestiary-link d-inline-block rounded">${value.name}</a>`
+        newListItem.innerHTML = `<a href="#bestiary-${sanitisedCreatureName}" class="bestiary-link d-inline-block rounded">${value.name}</a>`
 
         sidebarCategoryList.appendChild(newListItem);
     }  
@@ -177,15 +180,15 @@ function GenerateBetiarySidebarCategories()
 
     for (const [key, value] of Object.entries(BestiaryCategories)) 
     {
-        let sanitisedName = value.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
+        let sanitisedCategoryName = value.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
         //console.log(sanitisedName);
 
         let categoryHTML = `
         <li>
-            <a href="#bestiary-${sanitisedName}" class="bestiary-link-heading rounded">
+            <a href="#bestiary-${sanitisedCategoryName}" class="bestiary-link-heading rounded">
                 <strong>${value}</strong>
             </a>
-            <ul id="bestiary-sidebar-${sanitisedName}" class="list-unstyled">
+            <ul id="bestiary-sidebar-${sanitisedCategoryName}" class="list-unstyled">
             </ul>
         </li>
         `;
