@@ -1,9 +1,9 @@
 const categories =
 {
-    cursed: "Cursed Ones",
-    draconids: "Draconids",
-    necrophages: "Necrophages",
-    relicts: "Relicts"
+    cursed: "Cursed One",
+    draconid: "Draconid",
+    necrophage: "Necrophage",
+    relict: "Relict"
 }
 
 const types = 
@@ -24,17 +24,28 @@ const types =
     undead: "Undead"    
 }
 
+const sizes = 
+{
+    tiny: "Tiny",
+    small: "Small",
+    medium: "Medium",
+    large: "Large",
+    huge: "Huge",
+    gargantuan: "Gargantuan"
+}
+
 const BestiarySource =
 {
     entries: 
     {
         template: 
         {
+            active: false,
             name: "Template",
             image: "",
             category: categories.cursed,
             type: types.humanoid,
-            size: "Medium",
+            size: sizes.medium,
             overview: "",
             strengths: "",
             weaknesses: "",
@@ -45,11 +56,12 @@ const BestiarySource =
         },
         werewolf: 
         {
+            active: true,
             name: "Werewolf",
-            image: "/images/bestiary/Werewolf.webp",
+            image: "../assets/images/bestiary/Werewolf.webp",
             category: categories.cursed,
             type: types.humanoid,
-            size: "Medium",
+            size: sizes.medium,
             overview: "Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite. Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra.",
             strengths: "Immune to non-silver weapons, cold damage; resistant to poison, necrotic, thunder, force damage, frightened, charmed. Excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast agressive attacks; intelligent",
             weaknesses: "Harmed by silver, vulnerable to a spear tipped with a sprig of Aconite, left under the full moon for an hour.",
@@ -60,7 +72,19 @@ const BestiarySource =
         },
         wyvern:
         {
-
+            active: true,
+            name: "Wyvern",
+            image: "../assets/images/bestiary/Wyvern.webp",
+            category: categories.draconid,
+            type: types.dragon,
+            size: sizes.large,
+            overview: "",
+            strengths: "Immune to poison, lightning damage; resistant to bludgeoning, slashing, thunder, fire damage; very fast flying speed; very dangerous tail stinger; long neck can dart down while flying to attack at long range; extremely aggressive when threatened",
+            weaknesses: "Vulnerable to cold damage; far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded",
+            peculiarities: "Although warm-blooded, wyverns are poorly insulated and prefer to hunt during the day, especially around midday; wyvern venom, birthwort and  white gull to create an antivenom; lacking true antivenom, golden oriole should be used instead",
+            lures: ["Live goat or sheep"],
+            harvesting: ["Wyvern Venom Gland: Used to make antivenom", "Wyvern Skin: Valuable"],
+            about: ["Wyverns are voracious and highly aggressive winged draconids that prefer to dive down upon prey from a great height and snatch it in their claws. Much like a tortoise in the claws of an eagle, those caught by a wyvern will soon find themselves lifted to a great height and bourn away to some lofty nest where they are dropped to dash against the rocks. The wyvern can then pick the - often still living - victim apart at its leisure, feeding morsels to their hatchlings.", "One of the wyvern's distinctive characteristics that set it apart from other draconids is their tail. The long tail of a wyvern ends in a foot-long razor sharp hollow spine, that can inject an excruciatingly painful venom into those it pierces. Should one be struck by the tail-spine, their death is almost certain, unless they have access to the correct antivenom."]
         }
     }
 

@@ -6,6 +6,9 @@ console.log("Bestiary script running.");
 
 console.log(BestiarySource);
 
+// GenerateBestiaryEntryHTML("werewolf");
+GenerateBestiaryContent();
+
 /**
  * Toggles the OffCanvas functionality in the bestiary when pressing the button. 
  * Used to prevent issue where closing the offcanvas scrolls back to the button.
@@ -33,3 +36,190 @@ document.addEventListener("DOMContentLoaded", function() {
         bsOffcanvas.toggle();
     });
 });
+
+function GenerateBestiaryContent()
+{
+    let bestiaryContainer = document.getElementById('bestiary-entries');
+    if (bestiaryContainer == null)
+    {
+        console.error("Cannot find bestiary entry container when generating content.")
+        return;
+    }
+
+    for (const [key, value] of Object.entries(BestiarySource.entries)) 
+    {
+        if (!value.active || value.name == undefined) { continue; } // Skip entries that are not set to active or which have no valid name.
+        bestiaryContainer.appendChild(GenerateBestiaryEntryHTML(key));
+
+        //console.log(key, value);
+    }
+
+    //let newEntryHTML = GenerateBestiaryEntryHTML("werewolf");
+    //let newEntryElement = document.createElement("div");
+    //newEntryElement.innerHTML = newEntryHTML
+
+    //bestiaryContainer.appendChild(GenerateBestiaryEntryHTML("werewolf"));
+
+}
+
+
+
+
+function GenerateBestiaryEntryHTML(entryName)
+{
+    if (entryName == null || entryName == "") { return; }
+
+    let entryData = Object.getOwnPropertyDescriptor(BestiarySource.entries, entryName).value;
+
+    let entryElement = document.createElement("div");
+    entryElement.id = "bestiary-" + entryData.name.toLowerCase();
+    entryElement.classList.add("bestiary-entry", "anchor");
+
+    ProcessArrayToList(entryData.lures);
+    ProcessArrayToParagraphs(entryData.about);
+
+    let htmlTemplate = `
+          <h2 class="bestiary-heading2">${entryData.name}</h2>
+
+          <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
+
+          <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
+          <p> 
+            ${entryData.overview}
+          </p>
+          
+          <h4 class="bestiary-heading4">Strengths</h4>
+          <p>
+            ${entryData.strengths}
+          </p>
+          <h4 class="bestiary-heading4">Weaknesses</h4>
+          <p>
+            ${entryData.weaknesses}
+          </p>
+          <h4 class="bestiary-heading4">Peculiarities</h4>
+          <p>
+            ${entryData.peculiarities}            
+          </p>
+          <h4 class="bestiary-heading4">Lures</h4>
+          <p>
+            <ul>
+              <li>${entryData.lures[0]}</li>
+              <li>${entryData.lures[1]}</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+          <p>
+            <ul>
+              <li>${entryData.harvesting[0]}</li>
+              <li>${entryData.harvesting[1]}</li>
+            </ul>
+          </p>
+          <h4 class="bestiary-heading4">About</h4>
+          <p>
+            ${entryData.about[0]}
+          </p>
+          <p>
+            ${entryData.about[1]}
+          </p>
+          <p>
+            ${entryData.about[2]}
+          </p>
+        `;
+
+    entryElement.innerHTML = htmlTemplate;
+
+    //console.log(htmlTemplate);
+    return entryElement;
+}
+
+function ProcessArrayToList(arrayIn)
+{
+    let html = ``;
+
+    for (let i = 0; i < arrayIn.length; i++)
+    {
+        // Add a new line for every list item except the first one.
+        if (i != 0)
+        {
+            html = html + `\n<li>${arrayIn[i]}</li>`; 
+        }
+        else
+        {
+            html = html + `<li>${arrayIn[i]}</li>`;
+        }
+    }
+
+    console.log(html);
+    return html;
+}
+
+function ProcessArrayToParagraphs(arrayIn)
+{
+    let html = ``;
+
+    for (let i = 0; i < arrayIn.length; i++)
+    {
+        // Add a new line for every list item except the first one.
+        if (i != 0)
+        {
+            html = html + `\n<p>\n  ${arrayIn[i]}\n</p>`; 
+        }
+        else
+        {
+            html = html + `<p>\n    ${arrayIn[i]}\n</p>`;
+        }
+    }
+
+    console.log(html);
+    return html;
+}
+
+// let htmlTemplate = `
+// <div id="bestiary-${entryData.name.toLowerCase()}" class="bestiary-entry anchor">
+//   <h2 class="bestiary-heading2">${entryData.name}</h2>
+
+//   <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
+
+//   <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
+//   <p> 
+//     ${entryData.overview}
+//   </p>
+  
+//   <h4 class="bestiary-heading4">Strengths</h4>
+//   <p>
+//     ${entryData.strengths}
+//   </p>
+//   <h4 class="bestiary-heading4">Weaknesses</h4>
+//   <p>
+//     ${entryData.weaknesses}
+//   </p>
+//   <h4 class="bestiary-heading4">Peculiarities</h4>
+//   <p>
+//     ${entryData.peculiarites}            
+//   </p>
+//   <h4 class="bestiary-heading4">Lures</h4>
+//   <p>
+//     <ul>
+//       <li>${entryData.lures[0]}</li>
+//       <li>${entryData.lures[1]}</li>
+//     </ul>
+//   </p>
+//   <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+//   <p>
+//     <ul>
+//       <li>${entryData.harvesting[0]}</li>
+//       <li>${entryData.harvesting[1]}</li>
+//     </ul>
+//   </p>
+//   <h4 class="bestiary-heading4">About</h4>
+//   <p>
+//     ${entryData.about[0]}
+//   </p>
+//   <p>
+//     ${entryData.about[1]}
+//   </p>
+//   <p>
+//     ${entryData.about[2]}
+//   </p>
+// </div>
+// `;
