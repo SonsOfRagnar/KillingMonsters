@@ -1,6 +1,6 @@
 import '../scss/styles.scss';
 import * as bootstrap from 'bootstrap';
-import BestiarySource from '../bestiarySource.js';
+import {BestiarySource, BestiaryCategories} from '../bestiarySource.js';
 
 console.log("Bestiary script running.");
 
@@ -8,6 +8,7 @@ console.log(BestiarySource);
 
 // GenerateBestiaryEntryHTML("werewolf");
 GenerateBestiaryContent();
+GenerateBetiarySidebarCategories();
 
 /**
  * Toggles the OffCanvas functionality in the bestiary when pressing the button. 
@@ -46,7 +47,7 @@ function GenerateBestiaryContent()
         return;
     }
 
-    for (const [key, value] of Object.entries(BestiarySource.entries)) 
+    for (const [key, value] of Object.entries(BestiarySource)) 
     {
         if (!value.active || value.name == undefined) { continue; } // Skip entries that are not set to active or which have no valid name.
         bestiaryContainer.appendChild(GenerateBestiaryEntryHTML(key));
@@ -62,49 +63,45 @@ function GenerateBestiaryEntryHTML(entryName)
 {
     if (entryName == null || entryName == "") { return; }
 
-    let entryData = Object.getOwnPropertyDescriptor(BestiarySource.entries, entryName).value;
+    let entryData = Object.getOwnPropertyDescriptor(BestiarySource, entryName).value;
 
     let entryElement = document.createElement("div");
-    entryElement.id = "bestiary-" + entryData.name.toLowerCase();
+    entryElement.id = "bestiary-" + entryData.name.toLowerCase().split(" ").join("-");
     entryElement.classList.add("bestiary-entry", "anchor");
 
     let htmlTemplate = `
-          <h2 class="bestiary-heading2">${entryData.name}</h2>
+    <h2 class="bestiary-heading2">${entryData.name}</h2>
 
-          <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
+    <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
 
-          <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
-          <p> 
-            ${ProcessArrayToParagraphs(entryData.overview)}
-          </p>
-          
-          <h4 class="bestiary-heading4">Strengths</h4>
-          <p>
-            ${entryData.strengths}
-          </p>
-          <h4 class="bestiary-heading4">Weaknesses</h4>
-          <p>
-            ${entryData.weaknesses}
-          </p>
-          <h4 class="bestiary-heading4">Peculiarities</h4>
-          <p>
-            ${entryData.peculiarities}            
-          </p>
-          <h4 class="bestiary-heading4">Lures</h4>
-          <p>
-            <ul>
-                ${ProcessArrayToList(entryData.lures)}
-            </ul>
-          </p>
-          <h4 class="bestiary-heading4">Ingredients & Materials</h4>
-          <p>
-            <ul>
-                ${ProcessArrayToList(entryData.harvesting)}
-            </ul>
-          </p>
-          <h4 class="bestiary-heading4">About</h4>
-            ${ProcessArrayToParagraphs(entryData.about)}
-        `;
+    <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
+        ${ProcessArrayToParagraphs(entryData.overview)}
+    
+    <h4 class="bestiary-heading4">Strengths</h4>
+    <p>
+        ${entryData.strengths}
+    </p>
+    <h4 class="bestiary-heading4">Weaknesses</h4>
+    <p>
+        ${entryData.weaknesses}
+    </p>
+    <h4 class="bestiary-heading4">Peculiarities</h4>
+    <p>
+        ${entryData.peculiarities}            
+    </p>
+    <h4 class="bestiary-heading4">Lures</h4>
+    <ul>
+        ${ProcessArrayToList(entryData.lures)}
+    </ul>
+
+    <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+    <ul>
+        ${ProcessArrayToList(entryData.harvesting)}
+    </ul>
+
+    <h4 class="bestiary-heading4">About</h4>
+        ${ProcessArrayToParagraphs(entryData.about)}
+    `;
 
     entryElement.innerHTML = htmlTemplate;
 
@@ -152,4 +149,52 @@ function ProcessArrayToParagraphs(arrayIn)
 
     //console.log(html);
     return html;
+}
+
+
+function GenerateBestiarySidebarLinks()
+{
+    for (const [key, value] of Object.entries(BestiarySource)) 
+    {
+        let sanitisedCategory = value.category.toLowerCase().split(" ").join("-");
+        let sanitisedName = value.name.toLowerCase().split(" ").join("-");
+
+        let sidebarCategoryList = document.getElementById(`bestiary-sidebar-${sanitisedCategory}`);
+
+        let newListItem = document.createElement("li");
+        newListItem.innerHTML = `<a href="#bestiary-${sanitisedName}" class="bestiary-link d-inline-block rounded">${value.name}</a>`
+
+        sidebarCategoryList.appendChild(newListItem);
+    }  
+}
+
+
+function GenerateBetiarySidebarCategories()
+{
+    let bestiarySidebar = document.getElementById('bestiary-sidebar-list');
+    bestiarySidebar.innerHTML = ``; //Empty sidebar of any placeholder data.
+    let sidebarHTML = ``;
+
+    for (const [key, value] of Object.entries(BestiaryCategories)) 
+    {
+        let sanitisedName = value.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
+        //console.log(sanitisedName);
+
+        let categoryHTML = `
+        <li>
+            <a href="#bestiary-${sanitisedName}" class="bestiary-link-heading rounded">
+                <strong>${value}</strong>
+            </a>
+            <ul id="bestiary-sidebar-${sanitisedName}" class="list-unstyled">
+            </ul>
+        </li>
+        `;
+
+        sidebarHTML = sidebarHTML + categoryHTML;
+    }
+
+    //console.log(sidebarHTML);
+    bestiarySidebar.innerHTML = sidebarHTML;
+
+    GenerateBestiarySidebarLinks();
 }
