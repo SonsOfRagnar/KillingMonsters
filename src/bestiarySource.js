@@ -1,12 +1,12 @@
-import wyvern from './assets/images/bestiary/Wyvern.webp'
-import basilisk from './assets/images/bestiary/MeijerBasilisk.png'
-import werewolf from './assets/images/bestiary/Werewolf.webp'
-import ghast from './assets/images/bestiary/Ghast.webp'
-import catoblepas from './assets/images/bestiary/CatoblepasWoodcut.png'
+// import wyvern from './assets/images/bestiary/Wyvern.webp'
+// import basilisk from './assets/images/bestiary/MeijerBasilisk.png'
+// import werewolf from './assets/images/bestiary/Werewolf.webp'
+// import ghast from './assets/images/bestiary/Ghast.webp'
+// import catoblepas from './assets/images/bestiary/CatoblepasWoodcut.png'
 
 //import * as images from './assets/images/bestiary/*'
-//const images = import.meta.glob('./assets/images/bestiary/*');
-// const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG, webp}', { eager: true, as: 'url' }))
+const images = import.meta.glob('./assets/images/bestiary/*');
+//const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, as: 'url' }));
 
 const categories =
 {
@@ -86,7 +86,7 @@ const entries =
     {
         active: true,
         name: "Catoblepas",
-        image: "./assets/images/bestiary/CatoblepasWoodcut.png",
+        image: "assets/images/bestiary/CatoblepasWoodcut.png",
         category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
@@ -134,7 +134,7 @@ const entries =
     {
         active: true,
         name: "Werewolf",
-        image: "/assets/images/bestiary/Werewolf.webp",
+        image: "assets/images/bestiary/Werewolf.webp",
         category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
@@ -167,5 +167,6 @@ const entries =
 export 
 {
     entries as BestiarySource,
-    categories as BestiaryCategories 
+    categories as BestiaryCategories
+    //images as images
 };

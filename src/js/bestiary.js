@@ -8,6 +8,7 @@ console.log(BestiarySource);
 
 GenerateBestiary();
 
+// console.log(images);
 
 /**
  * Toggles the OffCanvas functionality in the bestiary when pressing the button. 
