@@ -2,9 +2,7 @@ import '../scss/styles.scss';
 import * as bootstrap from 'bootstrap';
 import {BestiarySource, BestiaryCategories} from '../bestiarySource.js';
 
-//console.log("Bestiary script running.");
-//console.log(BestiarySource);
-
+let betiarySidebarCol = document.getElementById("bestiary-sidebar-col");
 GenerateBestiary();
 
 
@@ -24,15 +22,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
 
-    console.log("event listener added");
-
     document.getElementById("btn-open-bestiary-offcanvas").addEventListener('click',function (e) {
 
-        console.log("Event listner triggered.");
+        console.log("Offcanvas button clicked.");
 
         e.preventDefault();
         e.stopPropagation();
         bsOffcanvas.toggle();
+    });
+
+    document.getElementById("offcanvasResponsive-bestiary").addEventListener("hide.bs.offcanvas", function (e) {
+        console.log("Offcanvas hide event.")
+
+        betiarySidebarCol.classList.remove("show");
+        
     });
 });
 

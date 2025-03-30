@@ -1,6 +1,3 @@
-import wyvernImg from './assets/images/bestiary/Wyvern.webp';
-import catoblepasImg from './assets/images/bestiary/Catoblepas.png';
-
 let images = new Map();
 ImportBestiaryImages();
 

@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="vite.svg">
 
     <!-- Javascript Entry Point -->
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/story.js"></script>
     <base href="/KillingMonsters/html/story">
   </head>
 
@@ -19,6 +19,10 @@
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Killing Monsters</a>
+
+        <!-- Button that appears on small screens to toggle bestiary sidebar.-->
+        <button id="btn-open-bestiary-offcanvas" class="btn btn-primary d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#bestiary-sidebar-col" aria-controls="offcanvasResponsive-bestiary">Bestiary Index</button>
+
 
         <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,9 +40,25 @@
       </div>
     </nav>
 
-    <div class="default-main-container container-xxl bd-gutter mt-3 my-md-4">
-      <p> Session information here. </p>
-    </div>
+    <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
+    <div class="container-fluid default-main-container bd-gutter mt-3 my-md-4">
+
+      <div class="row justify-content-start">
+
+        <div class="col-2 d-none d-lg-block">
+
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block">
+          <!-- Placeholder column -->
+        </div>
+
+      </div>
+    </div>  
 
     <footer class="footer py-4 py-md-5 mt-5">
       <div class="container">
