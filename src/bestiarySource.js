@@ -14,9 +14,12 @@ function ImportBestiaryImages()
     imagesImport.forEach(element => {
         let splitURL = element.split("/");
         let imageName = splitURL[splitURL.length - 1];
+        let imageExtension = "." + imageName.split(".")[1]; // image .extension
+        imageName = imageName.split(".")[0]; // image name with no extension
+        let sanitisedImageName = imageName.split("-")[0] + imageExtension; // we remove any -id added by the vite build process to ensure our name matches the entries.
     
         // via map
-        images.set(imageName, element);
+        images.set(sanitisedImageName, element);
     }) 
 }
 
