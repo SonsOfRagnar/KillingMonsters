@@ -1,14 +1,14 @@
 @import "bootstrap/scss/bootstrap";
 
 .bestiary-heading2 {
-    border-bottom: 2px solid $textSecondary;
+    border-bottom: 2px solid $textHighlight;
     width: 100%;
     display: block;
-    color: $textSecondary;
+    color: $textHighlight;
 }
 
 .bestiary-heading4 {
-    border-bottom: 1px solid $textPrimary;
+    border-bottom: 1px solid $textSecondary;
     width: 100%;
     display: block;
 }
@@ -45,7 +45,8 @@
 }
 
 .bestiary-entry-container {
-    //background-color: #554230;
+    background-color: $tertiary;
+    color: $textSecondary;
     padding-right: .5rem;
     padding-left: .5rem;
 }

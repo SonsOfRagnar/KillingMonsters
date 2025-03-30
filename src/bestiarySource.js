@@ -4,6 +4,9 @@ import catoblepasImg from './assets/images/bestiary/Catoblepas.png';
 let images = new Map();
 ImportBestiaryImages();
 
+console.log("Import Bestiary images.");
+console.log(images);
+
 function ImportBestiaryImages()
 {
     const imagesImport = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, query: '?url', import: 'default' }));
@@ -24,6 +27,12 @@ function GetImage(imageName)
 
 const categories =
 {
+    beast:
+    {
+        name: "Beast",
+        pluralName: "Beasts",
+        overview: []
+    },
     cursed: 
     {
         name: "Cursed One",
@@ -36,17 +45,53 @@ const categories =
         pluralName: "Draconids",
         overview: ["Dragon. No other monster is as far-famed or feared as the Dragon. Peasants tell tales of their wrath, kings stitch them on their banners, all covet their legendary hoards of treasure. Despite their extreme lethality, the vast majority of true Dragons have been hunted to near extinction by royal armies, huge bands of hunters, and mages seeking their potent blood and organs.", "Indeed, although they are related, the majority of Draconids are not true Dragons, and many are extremely different. They are however often confused or conflated with Dragons by the uneducated, and by braggarts quick to claim they have slain a Dragon. The Draconids are a broad family of quasi-reptiles that encompasses terrestrial, aerial, and aquatic species.", "Aerial species are the most numerous - and often most dangerous - of these, roosting in mountain caves, rocky crags, cliff-faces, and occasionally ruined structures. Herd animals, particularly sheep, are their most common prey, and are snatched boldly from fields and pens."]
     },
+    elementa:
+    {
+        name: "Elemental",
+        pluralName: "Elementa",
+        overview: []
+    },
+    hybrid:
+    {
+        name: "Hybrid",
+        pluralName: "Hybrids",
+        overview: []
+    },
+    insectoid:
+    {
+        name: "Insectoid",
+        pluralName: "Insectoids",
+        overview: []
+    },
     necrophage:
     {    
         name: "Necrophage",
         pluralName: "Necrophages",
         overview: ["Translating literally as 'Corpse Eaters', these are monsters that feed on the dead, particularly humanoid corpses. Their presence in graveyards and on old battlefields - along with their name - has given rise to the erroneous belief that Necrophages themselves are dead creatures reanimated from the corpses of the slain. This is of course nonsense. Unlike Specters, Necrophages are living creatures that while preternatural, have found an ecological niche as scavengers and carrion-eaters.", "They are drawn to death, particularly large burial grounds, mass graves, and sites of battle, where they can sustain themselves for months on the corpses found there. Necrophages often tolerate others of their kind and many are able to display social behaviour when advantageous, hunting in packs when carrion is unavailable, and forming communal feeding grounds for mutual protection. Several species of Necrophage may coexist in a location, and sometimes Necrophages follow other monsters or beasts to scavenge from their discarded kills.", "As buried corpses are a common food source, digging or burrowing is a commonly reported behaviour. Necrophages are nourished by consuming rotting corpses, and when injured, have been observed to devour those who fall fighting them to recoup their strength and vigor. For this reason, it is often advisable to engage the creatures on ground of your choose, rather than in their carrion-filled lairs."]
     },
+    ogroid:
+    {
+        name: "Ogroid",
+        pluralName: "Ogroids",
+        overview: []
+    },
     relict:     
     {
         name: "Relict",
         pluralName: "Relicts",
         overview: ["Relicts are ancient beings, the last remains of dying species, driven to the brink of extinction by the long march of time, and the relentless expansion of civilisation. While they may once have been numerous, these creatures are now among the rarest monsters encountered, which combined with the mystery surrounding their origins, leads many simple folk to believe them to be gods ruling over deep woodlands, or demons sent up from some burning hell.", "There is great variety among relicts, with many of them being truly unique, and many of them sapient beings. Great caution is advised when hunting any relict, as even known species may have unique variations, skills, or knowledge from their long lives. Additionally, it is worth noting that there are many relicts that seem to pose little threat, and may even be benevolent in their own way, something worth considering before setting out to kill one.", "Despite their magical nature, relicts are incredibly resilient against both steel and silver weaponry, only being truly threatened by blades deeply imbued with magic."]
+    },
+    spectre:
+    {
+        name: "Spectre",
+        pluralName: "Spectres",
+        overview: []
+    },
+    vampire:
+    {
+        name: "Vampire",
+        pluralName: "Vampires",
+        overview: []
     }
 }
 
