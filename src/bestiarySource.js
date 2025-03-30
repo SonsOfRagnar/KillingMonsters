@@ -1,3 +1,7 @@
+// import wyvern from './assets/images/bestiary/Wyvern.webp'
+//import * as images from './assets/images/bestiary/*'
+const images = import.meta.glob('./assets/images/bestiary/*');
+
 const categories =
 {
     cursed: 
