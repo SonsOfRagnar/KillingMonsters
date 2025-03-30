@@ -1,6 +1,7 @@
 // import wyvern from './assets/images/bestiary/Wyvern.webp'
 //import * as images from './assets/images/bestiary/*'
-const images = import.meta.glob('./assets/images/bestiary/*');
+//const images = import.meta.glob('./assets/images/bestiary/*');
+const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))
 
 const categories =
 {
