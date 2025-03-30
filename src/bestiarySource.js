@@ -1,11 +1,26 @@
 import wyvernImg from './assets/images/bestiary/Wyvern.webp';
 import catoblepasImg from './assets/images/bestiary/Catoblepas.png';
 
+let images = new Map();
+ImportBestiaryImages();
 
-//import * as images from './assets/images/bestiary/*'
-//const images = import.meta.glob('./assets/images/bestiary/*');
-//const images = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, as: 'url' }));
-// console.log(wyvernImg);
+function ImportBestiaryImages()
+{
+    const imagesImport = Object.values(import.meta.glob('./assets/images/bestiary/*.{png,jpg,jpeg,PNG,JPEG,webp}', { eager: true, query: '?url', import: 'default' }));
+
+    imagesImport.forEach(element => {
+        let splitURL = element.split("/");
+        let imageName = splitURL[splitURL.length - 1];
+    
+        // via map
+        images.set(imageName, element);
+    }) 
+}
+
+function GetImage(imageName)
+{
+    return images.get(imageName);
+}
 
 const categories =
 {
@@ -69,7 +84,7 @@ const entries =
     {
         active: false,
         name: "Template",
-        image: "",
+        image: GetImage(""),
         category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
@@ -85,7 +100,7 @@ const entries =
     {
         active: true,
         name: "Catoblepas",
-        image: catoblepasImg,
+        image: GetImage("Catoblepas.png"),
         category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
@@ -101,7 +116,7 @@ const entries =
     {
         active: true,
         name: "Ghast",
-        image: "/assets/images/bestiary/Ghast.webp",
+        image: GetImage("Ghast.webp"),
         category: categories.necrophage.name,
         type: types.aberration,
         size: sizes.medium,
@@ -117,7 +132,7 @@ const entries =
     {
         active: true,
         name: "Meijer's Basilisk",
-        image: "./assets/images/bestiary/MeijerBasilisk.png",
+        image: GetImage("MeijerBasilisk.png"),
         category: categories.draconid.name,
         type: types.monstrosity,
         size: sizes.medium,
@@ -133,7 +148,7 @@ const entries =
     {
         active: true,
         name: "Werewolf",
-        image: "../assets/images/bestiary/Werewolf.webp",
+        image: GetImage("Werewolf.webp"),
         category: categories.cursed.name,
         type: types.humanoid,
         size: sizes.medium,
@@ -149,7 +164,7 @@ const entries =
     {
         active: true,
         name: "Wyvern",
-        image: wyvernImg,
+        image: GetImage("Wyvern.webp"),
         category: categories.draconid.name,
         type: types.dragon,
         size: sizes.large,

@@ -1,15 +1,12 @@
 import '../scss/styles.scss';
 import * as bootstrap from 'bootstrap';
 import {BestiarySource, BestiaryCategories} from '../bestiarySource.js';
-import wyvernImg from '../assets/images/bestiary/Wyvern.webp';
 
-console.log("Bestiary script running.");
-
-console.log(BestiarySource);
+//console.log("Bestiary script running.");
+//console.log(BestiarySource);
 
 GenerateBestiary();
 
-// console.log(images);
 
 /**
  * Toggles the OffCanvas functionality in the bestiary when pressing the button. 
