@@ -53,13 +53,6 @@ function GenerateBestiaryContent()
 
         //console.log(key, value);
     }
-
-    //let newEntryHTML = GenerateBestiaryEntryHTML("werewolf");
-    //let newEntryElement = document.createElement("div");
-    //newEntryElement.innerHTML = newEntryHTML
-
-    //bestiaryContainer.appendChild(GenerateBestiaryEntryHTML("werewolf"));
-
 }
 
 
@@ -75,9 +68,6 @@ function GenerateBestiaryEntryHTML(entryName)
     entryElement.id = "bestiary-" + entryData.name.toLowerCase();
     entryElement.classList.add("bestiary-entry", "anchor");
 
-    ProcessArrayToList(entryData.lures);
-    ProcessArrayToParagraphs(entryData.about);
-
     let htmlTemplate = `
           <h2 class="bestiary-heading2">${entryData.name}</h2>
 
@@ -85,7 +75,7 @@ function GenerateBestiaryEntryHTML(entryName)
 
           <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
           <p> 
-            ${entryData.overview}
+            ${ProcessArrayToParagraphs(entryData.overview)}
           </p>
           
           <h4 class="bestiary-heading4">Strengths</h4>
@@ -103,27 +93,17 @@ function GenerateBestiaryEntryHTML(entryName)
           <h4 class="bestiary-heading4">Lures</h4>
           <p>
             <ul>
-              <li>${entryData.lures[0]}</li>
-              <li>${entryData.lures[1]}</li>
+                ${ProcessArrayToList(entryData.lures)}
             </ul>
           </p>
           <h4 class="bestiary-heading4">Ingredients & Materials</h4>
           <p>
             <ul>
-              <li>${entryData.harvesting[0]}</li>
-              <li>${entryData.harvesting[1]}</li>
+                ${ProcessArrayToList(entryData.harvesting)}
             </ul>
           </p>
           <h4 class="bestiary-heading4">About</h4>
-          <p>
-            ${entryData.about[0]}
-          </p>
-          <p>
-            ${entryData.about[1]}
-          </p>
-          <p>
-            ${entryData.about[2]}
-          </p>
+            ${ProcessArrayToParagraphs(entryData.about)}
         `;
 
     entryElement.innerHTML = htmlTemplate;
@@ -149,7 +129,7 @@ function ProcessArrayToList(arrayIn)
         }
     }
 
-    console.log(html);
+    //console.log(html);
     return html;
 }
 
@@ -170,56 +150,6 @@ function ProcessArrayToParagraphs(arrayIn)
         }
     }
 
-    console.log(html);
+    //console.log(html);
     return html;
 }
-
-// let htmlTemplate = `
-// <div id="bestiary-${entryData.name.toLowerCase()}" class="bestiary-entry anchor">
-//   <h2 class="bestiary-heading2">${entryData.name}</h2>
-
-//   <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
-
-//   <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
-//   <p> 
-//     ${entryData.overview}
-//   </p>
-  
-//   <h4 class="bestiary-heading4">Strengths</h4>
-//   <p>
-//     ${entryData.strengths}
-//   </p>
-//   <h4 class="bestiary-heading4">Weaknesses</h4>
-//   <p>
-//     ${entryData.weaknesses}
-//   </p>
-//   <h4 class="bestiary-heading4">Peculiarities</h4>
-//   <p>
-//     ${entryData.peculiarites}            
-//   </p>
-//   <h4 class="bestiary-heading4">Lures</h4>
-//   <p>
-//     <ul>
-//       <li>${entryData.lures[0]}</li>
-//       <li>${entryData.lures[1]}</li>
-//     </ul>
-//   </p>
-//   <h4 class="bestiary-heading4">Ingredients & Materials</h4>
-//   <p>
-//     <ul>
-//       <li>${entryData.harvesting[0]}</li>
-//       <li>${entryData.harvesting[1]}</li>
-//     </ul>
-//   </p>
-//   <h4 class="bestiary-heading4">About</h4>
-//   <p>
-//     ${entryData.about[0]}
-//   </p>
-//   <p>
-//     ${entryData.about[1]}
-//   </p>
-//   <p>
-//     ${entryData.about[2]}
-//   </p>
-// </div>
-// `;
