@@ -1,0 +1,65 @@
+@import "bootstrap/scss/bootstrap";
+
+@font-face{
+    font-family: "Kurale";
+    src:local("Kurale-Regular"),
+    url('../assets/fonts/Kurale-Regular.ttf') 
+  }
+
+
+@font-face {
+    font-family: "KronaOne-Regular";
+    src: url("KronaOne-Regular"),
+    url('../assets/fonts/KronaOne-Regular.ttf')
+}
+
+@font-face {
+    font-family: "PaytoneOne-Regular";
+    src: url("PaytoneOne-Regular"),
+    url('../assets/fonts/PaytoneOne-Regular.ttf')
+}
+
+@font-face {
+    font-family: "PirataOne-Regular";
+    src:local("PirateOne-Regular"),
+    url('../assets/fonts/PirataOne-Regular.ttf')
+}
+
+@font-face{
+    font-family: "RobotoCondensed";
+    src:local("RobotoCondensed-Regular"),
+    url('../assets/fonts/RobotoCondensed.ttf') 
+}
+
+@font-face {
+    font-family: "FiraSansCondensed-Regular";
+    src: url("FiraSansCondensed-Regular.ttf"),
+    url('../assets/fonts/FiraSansCondensed-Regular.ttf')
+}
+@font-face {
+    font-family: "FiraSansCondensed-Thin";
+    src: url("FiraSansCondensed-Thin.ttf"),
+    url('../assets/fonts/FiraSansCondensed-Thin.ttf')
+}
+
+@font-face {
+    font-family: "MartelSans-Regular";
+    src: url("MartelSans-Regular.ttf"),
+    url("../assets/fonts/MartelSans-Regular.ttf")
+}
+@font-face {
+    font-family: "MartelSans-Thin";
+    src: url("MartelSans-Thin.ttf"),
+    url("../assets/fonts/MartelSans-Light.ttf")
+}
+
+@font-face {
+    font-family: "WorkSans-Regular";
+    src: url("WorkSans-Regular.ttf"),
+    url("../assets/fonts/WorkSans-Regular.ttf")
+}
+@font-face {
+    font-family: "WorkSans-Light";
+    src: url("WorkSans-Light.ttf"),
+    url("../assets/fonts/WorkSans-Light.ttf")
+}

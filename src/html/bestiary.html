@@ -40,10 +40,10 @@
     </nav>
 
     <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
-    <div class="container-fluid bd-gutter mt-3 my-md-4">
+    <div class="container-fluid bd-gutter">
 
       <div class="row justify-content-start">
-        <div id="bestiary-sidebar-col" class="col-2 collapse d-lg-block">
+        <div id="bestiary-sidebar-col" class="col-2 collapse d-lg-block test-border">
           <!-- Bestiary sidebar. -->
           <aside id="bestiary-sidebar" class="bd-sidebar">
             <div class="bestiary-offcanvas offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive-bestiary" aria-labelledby="offcanvasResponsiveLabel">
@@ -108,9 +108,9 @@
           </aside>
         </div>
 
-        <div class="col">
+        <div class="col test-border">
           <!-- Main bestiary content. -->
-          <main id="bestiary-entries" class="bestiary-entry-container bd-main order-1" data-bs-spy="scroll" data-bs-target="#bestiary-sidebar" data-bs-smooth-scroll="true">
+          <main id="bestiary-entries" class="bestiary-entry-container bd-main h-100 order-1" data-bs-spy="scroll" data-bs-target="#bestiary-sidebar" data-bs-smooth-scroll="true">
 
             <!-- <div id="bestiary-cursed-ones" class="bestiary-entry anchor">
               <h1>Cursed Ones</h1>
@@ -237,14 +237,14 @@
           </main>
         </div>
 
-        <div class="col-2 d-none d-lg-block">
+        <div class="col-2 d-none d-lg-block test-border">
           <!-- Placeholder column -->
         </div>
 
       </div>
     </div>    
 
-    <footer class="footer py-4 py-md-5 mt-5">
+    <footer class="footer py-4 py-md-5">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-3 mb-3"> Killing Monsters</div>

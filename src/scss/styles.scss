@@ -8,6 +8,19 @@ $textPrimary: #dfd6c4;
 $textHighlight: #702a2a;
 $textSecondary: #48392e;
 
+// $fontMenu: "KronaOne-Regular"; //No
+// $fontMenu: "PaytoneOne-Regular"; // No
+// $fontMenu: "RobotoCondensed"; //Maybe
+$fontMenu: "FiraSansCondensed-Regular"; // Maybe
+// $fontMenu: "FiraSansCondensed-Thin"; // NO
+// $fontMenu: "MartelSans-Regular"; //Maybe
+// $fontMenu: "MartelSans-Thin"; //Maybe, very similar to regular
+// $fontMenu: "WorkSans-Regular"; // Maybe, bit short
+// $fontMenu: "WorkSans-Light"; // No
+
+$fontBestiary: "Kurale";
+$fontBranding: "PirataOne-Regular";
+
 @media (min-width: 992px) {
     .bd-layout {
         display: grid;
@@ -22,6 +35,8 @@ $textSecondary: #48392e;
         display: block !important;
         height: calc(100vh - 6rem);
         overflow-y: auto;
+        padding-left: 4rem;
+        //padding-top: 1.5rem;
         //background-color: $tertiary;
     }
 
@@ -36,10 +51,21 @@ $textSecondary: #48392e;
 
 .navbar {
     background-color: $secondary !important;
+    border-bottom: 4px solid $textHighlight;
+    //box-shadow: -4px -4px 0px 4px $textHighlight inset;
+    //font-family: "KronaOne-Regular";
+    //box-shadow: 0 -4px 8px 12px #0000008a;
+    box-shadow: 0 -4px 8px 12px #221d1d, 0 -4px 18px 20px #0000008a;
 }
 
-.nav-link, .navbar-brand {
+.nav-link {
     color: $textPrimary !important;
+    font-family: $fontMenu;
+}
+.navbar-brand {
+    color: $textPrimary !important;
+    font-family: $fontBranding;
+    //font-size: 2rem !important;
 }
 
 body {
@@ -49,7 +75,13 @@ body {
 }
 
 .footer {
+    position: relative;
+    // bottom: 0;
+    // left: 0;
+    // width: 100%;
     background-color: $secondary;
+    border-top: 4px solid $textHighlight;
+    box-shadow: 0 4px 8px 12px #221d1d, 0 4px 18px 20px #0000008a;
 }
 
 .text-right {
@@ -61,19 +93,18 @@ body {
 }
 
 .default-main-container {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 192px); //-240
 }
 
-@font-face{
-    font-family: "Kurale";
-    src:local("Kurale-Regular"),
-    url('../assets/fonts/Kurale-Regular.ttf') 
-  }
+.test-border {
+    //border-style: dashed !important;
+    border: #702a2a;
+    border-width: 1px;
+}
 
-.kurale-regular {
-    font-family: "Kurale";
-    font-weight: 400;
-    font-style: normal;
-  }
+.box-shadow-standard {
+    box-shadow: 5px 10px 5px 10px;
+}
 
+@import "./fonts.scss";
 @import "./bestiary.scss";

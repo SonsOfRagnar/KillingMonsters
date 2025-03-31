@@ -33,7 +33,7 @@ const categories =
     {
         name: "Beast",
         pluralName: "Beasts",
-        overview: []
+        overview: ["Beasts are natural creatures, evolved over time due to natural selection and mutation, without magical aid or outside influence. As such, silver as no effect on them.", "Common animals such as wolves, bears, birds, et al. are themselves beasts, but are omitted from this bestiary for brevity, since they are of a common nature, and easily warded off by fire, and other ordinary means.", "There are however divers beasts both strange and monstrous, whom by virtue of their rarity, natural ferocity, or incredible strengths are oft the subject of contracts for monster hunters. They are set down within this section."]
     },
     cursed: 
     {
@@ -63,7 +63,7 @@ const categories =
     {
         name: "Insectoid",
         pluralName: "Insectoids",
-        overview: []
+        overview: ["A broad family of large and dangerous arthropods, which often resemble outsized versions of their more mundane relatives. Like smaller insects, Insectoid monsters often form large colonies and display complex organisational behaviours, often seperated by caste: drones, warriors, queens, etc. Although some Insectoids are solitary creatures, one would always be wise to assume there may be others. If one is lax in exterminating a colony, they can quickly repair their numbers and become far more aggressive than before.", "Apart from their strength in numbers, the vast majority of Insectoids are protected by strong, chitinous exoskeletons that can resist even the sharpest blades. Many can survive the loss of limbs, and some have secondary organs and decentralised nervous systems that make them exceptionally resilient. Fire is often effective against them, although it is not a foolproof solution.", "Most insectoids burrow and climb exceptionally well, are fast, hardy, and blindly obedient to their colony, making them highly dangerous."]
     },
     necrophage:
     {    
@@ -175,6 +175,22 @@ const entries =
         harvesting: ["Ghast Grease: Contains paralytic agents", "Ghast Hide: Flexible and waterproof", "Tarnowski's Gland: Valuable to mages"],
         about: ["Ghasts are strange, even for necrophages. They seem to have slipped through into our world later than their relatives, and possess human-level intellects. They also seem adapted for predation on human and non-human communities, able to take on the forms of most humanoid corpses that they consume. The ghast then lurks in the community for up to three months - the maximum extent of the transformation - before searching for a new victim. While still disguised, the ghast will often proactively seek out a suitable target, stalk them, and kill them, before taking on their shape and life.", "The ghast's transformation takes place over the course of an hour, during which the ghast's flesh bubbles and stretches, a new layer of skin growing over the old. The transformation is more than skin deep however, with the creature taking on the voice and some memories of the victim as well as their form. Once transformed, the ghast may shed its outer layer in an emergency, slithering out of it like a new-birthed foal.", "When in their natural shape, the ghast moves by hopping on its powerful hind legs, and can make incredible leaps for its size. Like many other necrophages, it emits a powerful corpse-stink, poisonous to those around it, while its claws secrete a paralytic grease that freezes the muscle of those it strikes. It is also unusually fearless, perhaps as a result of its intelligence, and cannot be easily frightened, save by bunches of dried thistles, which it desperately avoids."]
     },
+    gorgon: 
+    {
+        active: true,
+        name: "Gorgon",
+        image: GetImage("GorgonClean.webp"),
+        category: categories.beast.name,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Large Beast (Monstrosity); Muscular bovine quadruped with cloven hooves. Covered in overlapping iron scales. Massive shoulders supporting a stocky neck and short, heavy head. Usually possesses horns, which may range in size and shape. Smooth muscular tail.", "Most often found in Forests, Grasslands, Hills"],
+        strengths: "Immune to petrification; natural iron scales provide resistance against non-magical weapons; resistant to acid, poison, fire, and cold; strong and tireless; breath can petrify its prey.",
+        weaknesses: "Vulnerable to lightning; eyes and nostrils are unarmoured; petrifying breath neutralised by a powder of goat's horn and vermilion, cast upon the snout before it has exhaled",
+        peculiarities: "Highly sensitive to magnetism, even gentle magnets can cause discomfort while strong magnetic fields can cause aggression, pain, and spasming of the scales, leaving the gorgon vulnerable.",
+        lures: ["Raw red meat rolled in iron powder."],
+        harvesting: ["Gorgon Scales: High-quality iron"],
+        about: ["Once thought to be magical in nature, these large bovines merely have unique natural adaptations. They have evolved hard iron scales that protect them from harm, which they maintain by ingesting magnetite deposits inside caves. While their sharp horns and strong kicks are usually enough to deter or maim any that threaten them, they can also exhale petrifying fumes from a sac deep inside the throat. These vapours will rapidly turn any caught within them to stone.", "Due to their iron scales, the Gorgon is extremely sensitive to magnetic fields."]
+    },
     meijersBasilisk: 
     {
         active: true,
@@ -190,6 +206,22 @@ const entries =
         lures: ["Draconid meat, heated over a fire until scorching hot"],
         harvesting: ["Basilisk Eye", "Gullet Oil: Used to distil potions to prevent or cure petrification", "Pit Organ"],
         about: ["Meijer's basilisk is not a true basilisk, and is named instead for its petrifying gaze, which is so often attributed to cockatrices and true basilisks by the uninformed. Unlike many of its draconid kin, Meijer's basilisk is cold-blooded, sluggish, and lazy. It prefers to bask through long days on hot rocks, shifting only in the evening to hunt. However, this should not be mistaken for an easy kill, the eyes of the creature are terrible, and should one look upon them, one's body shall rapidly begin to turn to stone.", "They can also be difficult to track, as they climb well, and prefer to stick to rocky outcrops where they may lie camouflaged against the stone. Their pit organs allow them to detect a creature's body heat, allowing them to avoid danger or stalk prey in any condition."]
+    },
+    umberHulk: 
+    {
+        active: true,
+        name: "Umber Hulk",
+        image: GetImage("UmberHulkHead.png"),
+        category: categories.insectoid.name,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Large Insectoid (Monstrosity): Burrowing biped with large spade-like feet. Usually moves with the knuckles of the forelimbs on the ground, like a great ape. Chitinous armour plating and sparse short hairs. Distinctive head with bulbous eyes, huge curved mandibles and smaller psychic organs on the forehead.", "Found where underground caves and tunnels surface, or intersect with cellars. They dislike water and marshy terrain."],
+        strengths: "Immune to slashing weaponry; resistant to bludgeoning, fire, psychic, radiant, and poison damage; excellent darkvision; antennae pick up vibrations to sense surroundings and nearby creatures even in total absence of light or through cover; hypnotic gaze.",
+        weaknesses: "Vulnerable to thunder damage; cutting off antennae removes it's ability to sense vibrations and disorients the creature.",
+        peculiarities: "They dislike bright light and will prefer to avoid it unless enraged; chewing Valerian root makes it easier to resist the hypnotic gaze.",
+        lures: ["Gnome Meat", "Deep Mushrooms soaked in mead"],
+        harvesting: ["Chitin", "Corpora Cardiaca (Psychic Gland): used in potions", "Mandibles"],
+        about: ["An umber hulk is a solitary creature and fiercely territorial, aggressively defending a large underground network of tunnels and chambers. It can burrow through soil, sand, and sedimentary rock at an alarming rate leaving behind large tunnels, approximately five foot wide by eight foot high. This behaviour is responsible for much of the contact between humans and this creature. An umber hulk will often burrow through the walls of basements and cellars, finding a warm, dry chamber filled with food. Any poor fool who stumbles upon the creature, or finds their way into the tunnels does not last long.", "When attacking, the hulk uses the short but powerful claws on its forelimbs to harass its victim, while moving in to finish them with its huge mandibles. The most dangerous part of the creature however, is the eyes, as these can generate a powerful hypnotic effect that muddles even keen minds. Simply averting one's eyes is enough to avoid this, however that in turn makes fighting the beast difficult. Chewing on valerian root fortifies the mind against the creatures psychic powers, although the danger remains present."]
     },
     werewolf: 
     {
