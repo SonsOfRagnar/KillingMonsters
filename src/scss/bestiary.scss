@@ -29,7 +29,7 @@
     color: $textPrimary;
     display: block;
 }
-.bestiary-link:hover {
+.bestiary-link:hover:not(.active) {
     font-weight: 300 !important;
 }
 .bestiary-link.active {
@@ -49,7 +49,7 @@
     display: block;
     font-weight: 600;
 }
-.bestiary-link-heading:hover {
+.bestiary-link-heading:hover:not(.active) {
     font-weight: 500 !important;
 }
 .bestiary-link-heading.active {

@@ -20,7 +20,8 @@ $fontMenu: "FiraSans"; // Maybe
 // $fontMenu: "WorkSans-Light"; // No
 
 $fontBestiary: "Kurale";
-$fontBranding: "PirataOne-Regular";
+$fontBranding: "Kurale";
+//$fontBranding: "PirataOne-Regular";
 
 @media (min-width: 992px) {
     .bd-layout {
@@ -71,7 +72,7 @@ $fontBranding: "PirataOne-Regular";
     padding-bottom: 1.125rem !important;
     padding-top: 1.125rem !important;
 }
-.nav-link:hover {
+.nav-link:hover:not(.active) {
     box-shadow: 0px -3px 0px 0px $textHighlight inset;
     font-weight: 300 !important;
 }
@@ -119,7 +120,7 @@ body {
     //height: calc(100vh - 60px);
 }
 @media (max-width: 992px) {
-    .main-container {
+    .main-container, .row {
         --bs-gutter-x: 0px !important; // Force remove x-gutters from the columns when on small screens, to hide any gaps at the edges.
     }
 }
