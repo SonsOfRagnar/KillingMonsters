@@ -165,7 +165,8 @@ function GenerateBestiarySidebarLinks()
         let sidebarCategoryList = document.getElementById(`bestiary-sidebar-${sanitisedCategory}`);
 
         let newListItem = document.createElement("li");
-        newListItem.innerHTML = `<a href="#bestiary-${sanitisedCreatureName}" class="bestiary-link d-inline-block rounded">${value.name}</a>`
+        newListItem.classList.add("bestiary-category-sublist");
+        newListItem.innerHTML = `<a href="#bestiary-${sanitisedCreatureName}" class="bestiary-link rounded">${value.name}</a>` //d-inline-block
 
         sidebarCategoryList.appendChild(newListItem);
     }  
@@ -185,7 +186,7 @@ function GenerateBetiarySidebarCategories()
         let categoryHTML = `
         <li>
             <a href="#bestiary-${sanitisedCategoryName}" class="bestiary-link-heading rounded">
-                <strong>${value.pluralName}</strong>
+                ${value.pluralName}
             </a>
             <ul id="bestiary-sidebar-${sanitisedCategoryName}" class="list-unstyled">
             </ul>

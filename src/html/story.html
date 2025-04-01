@@ -20,10 +20,6 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Killing Monsters</a>
 
-        <!-- Button that appears on small screens to toggle bestiary sidebar.-->
-        <button id="btn-open-bestiary-offcanvas" class="btn btn-primary d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#bestiary-sidebar-col" aria-controls="offcanvasResponsive-bestiary">Bestiary Index</button>
-
-
         <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +37,7 @@
     </nav>
 
     <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
-    <div class="container-fluid default-main-container bd-gutter">
+    <div class="container-fluid main-container bd-gutter">
 
       <div class="row h-100 justify-content-start">
 
@@ -50,7 +46,9 @@
         </div>
 
         <div class="col test-border">
-
+          <main class="main-content">
+            Session logs, contract results, characater information.
+          </main>
         </div>
 
         <div class="col-2 d-none d-lg-block test-border">

@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Killing Monsters</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -34,24 +34,44 @@
 
       </div>
     </nav>
+    
+    <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
+    <div class="container-fluid main-container bd-gutter">
 
-    <div class="default-main-container container-xxl bd-gutter mt-3 my-md-4">
-      <p> World description, maps, etc. </p>
-    </div>
+      <div class="row h-100 justify-content-start">
 
+        <div class="col-2 d-none d-lg-block test-border">
 
+        </div>
 
+        <div class="col test-border">
+          <main class="main-content world-content h-100">
+            <h1>Killing Monsters</h1>
+            <p>
+              A Monster of the Week style game of Dungeons & Dragons 5e, heavily inspired by the Witcher series by Andrzej Sapkowski, and the games of the same name by CD Projeckt Red. The players are a group of professional, itinerant monster hunters, roving from place to place looking for work, slaying beasts, haggling with distrustful locals, and occasionally tangling with court politics. Each contract they take involves investigating the area, speaking to witnesses, and identifying their quarry, before preparing themselves for the hunt.
+            </p>
+            <p>
+              To represent their combined experience and knowledge of monsters, the players have access to a Bestiary of the creatures they may face, describing their strengths, weaknesses, folklore, and other information that may be used when hunting them. Armed with this knowledge, the players must narrow down the potential danger to decide how best to prepare, collecting ingredients, brewing potions, and choosing their equipment wisely.
+            </p>
+          </main>
+        </div>
 
+        <div class="col-2 d-none d-lg-block test-border">
+          <!-- Placeholder column -->
+        </div>
 
-    <footer class="footer py-4 py-md-5 mt-5">
+      </div>
+    </div>  
+
+    <footer class="footer py-4 py-md-5">
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col-lg-3 mb-3"> Killing Monsters</div>
-          <div class="col-lg-3 mb-3 .text-right"> TMGilchrist</div>
+          <div class="col-lg-3 mb-3  test-border"> Killing Monsters</div>
+          <div class="col-lg-3 mb-3 .text-right  test-border"> TMGilchrist</div>
         </div>
       </div>
     </footer>
-   
+
   </body>
 
 </html>

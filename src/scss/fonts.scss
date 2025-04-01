@@ -7,59 +7,58 @@
   }
 
 
-@font-face {
-    font-family: "KronaOne-Regular";
-    src: url("KronaOne-Regular"),
-    url('../assets/fonts/KronaOne-Regular.ttf')
-}
-
-@font-face {
-    font-family: "PaytoneOne-Regular";
-    src: url("PaytoneOne-Regular"),
-    url('../assets/fonts/PaytoneOne-Regular.ttf')
-}
-
+// @font-face {
+//     font-family: "PirataOne-Regular";
+//     src:local("PirateOne-Regular"),
+//     url('../assets/fonts/PirataOne-Regular.ttf')
+// }
 @font-face {
     font-family: "PirataOne-Regular";
     src:local("PirateOne-Regular"),
-    url('../assets/fonts/PirataOne-Regular.ttf')
+        url('../assets/fonts/PirataOne-Regular.ttf');
 }
 
-@font-face{
-    font-family: "RobotoCondensed";
-    src:local("RobotoCondensed-Regular"),
-    url('../assets/fonts/RobotoCondensed.ttf') 
-}
 
 @font-face {
-    font-family: "FiraSansCondensed-Regular";
-    src: url("FiraSansCondensed-Regular.ttf"),
-    url('../assets/fonts/FiraSansCondensed-Regular.ttf')
+    font-family: "FiraSans";
+    src: local("FiraSans-Thin.ttf") format('truetype'),
+        url("../assets/fonts/FiraSans/FiraSans-Thin.ttf");
+    font-weight: 100;
+    font-style: normal;
 }
 @font-face {
-    font-family: "FiraSansCondensed-Thin";
-    src: url("FiraSansCondensed-Thin.ttf"),
-    url('../assets/fonts/FiraSansCondensed-Thin.ttf')
+    font-family: "FiraSans", sans-serif;
+    src: local("FiraSans-ExtraLight.ttf"),
+        url("../assets/fonts/FiraSans/FiraSans-ExtraLight.ttf") format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FiraSans", sans-serif;
+    src: local("FiraSans-Light.ttf"),
+        url("../assets/fonts/FiraSans/FiraSans-Light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FiraSans";
+    src: local("FiraSans-Regular.ttf"),
+        url("../assets/fonts/FiraSans/FiraSans-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FiraSans";
+    src: local("FiraSans-Medium.ttf"),
+        url("../assets/fonts/FiraSans/FiraSans-Medium.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "FiraSans", sans-serif;
+    src: local("FiraSans-SemiBold.ttf"),
+        url("../assets/fonts/FiraSans/FiraSans-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: "MartelSans-Regular";
-    src: url("MartelSans-Regular.ttf"),
-    url("../assets/fonts/MartelSans-Regular.ttf")
-}
-@font-face {
-    font-family: "MartelSans-Thin";
-    src: url("MartelSans-Thin.ttf"),
-    url("../assets/fonts/MartelSans-Light.ttf")
-}
-
-@font-face {
-    font-family: "WorkSans-Regular";
-    src: url("WorkSans-Regular.ttf"),
-    url("../assets/fonts/WorkSans-Regular.ttf")
-}
-@font-face {
-    font-family: "WorkSans-Light";
-    src: url("WorkSans-Light.ttf"),
-    url("../assets/fonts/WorkSans-Light.ttf")
-}

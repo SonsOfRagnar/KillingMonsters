@@ -11,7 +11,8 @@ $textSecondary: #48392e;
 // $fontMenu: "KronaOne-Regular"; //No
 // $fontMenu: "PaytoneOne-Regular"; // No
 // $fontMenu: "RobotoCondensed"; //Maybe
-$fontMenu: "FiraSansCondensed-Regular"; // Maybe
+$fontMenu: "FiraSans"; // Maybe
+// $fontMenu: "FiraSansCondensed-Regular"; // Yes
 // $fontMenu: "FiraSansCondensed-Thin"; // NO
 // $fontMenu: "MartelSans-Regular"; //Maybe
 // $fontMenu: "MartelSans-Thin"; //Maybe, very similar to regular
@@ -56,16 +57,35 @@ $fontBranding: "PirataOne-Regular";
     //font-family: "KronaOne-Regular";
     //box-shadow: 0 -4px 8px 12px #0000008a;
     box-shadow: 0 -4px 8px 12px #221d1d, 0 -4px 18px 20px #0000008a;
+
+    padding-bottom: 0px !important; // is there a way to not have to use !important here?
+    padding-top: 0px !important;
 }
 
 .nav-link {
     color: $textPrimary !important;
     font-family: $fontMenu;
+    //font-family: "FiraSans";
+    font-weight: 400 !important;
+
+    padding-bottom: 1.125rem !important;
+    padding-top: 1.125rem !important;
 }
+.nav-link:hover {
+    box-shadow: 0px -3px 0px 0px $textHighlight inset;
+    font-weight: 300 !important;
+}
+.nav-link.active {
+    box-shadow: 0px -5px 0px 0px $textHighlight inset;
+    font-weight: 600 !important;
+    //font-size: 20px;
+}
+
 .navbar-brand {
     color: $textPrimary !important;
     font-family: $fontBranding;
     //font-size: 2rem !important;
+    //font-weight: 600;
 }
 
 body {
@@ -92,13 +112,38 @@ body {
     scroll-margin-top: 70px;
 }
 
-.default-main-container {
-    height: calc(100vh - 192px); //-240
+// The container that holds the entire page minus header/footer. Grid rows/columns are all children of this container.
+.main-container {
+    // height: 1px; // We must apply a height value for the min-height to work correctly.
+    min-height: calc(100vh - 60px); // Full page height minus the combined height of the header and footer.
+    //height: calc(100vh - 60px);
+}
+@media (max-width: 992px) {
+    .main-container {
+        --bs-gutter-x: 0px !important; // Force remove x-gutters from the columns when on small screens, to hide any gaps at the edges.
+    }
+}
+
+// Applied to the <main> section. Usually the central column of the 3 primary columns. 
+// We apply top padding here, rather than a margin on the main-container, so that background colours can meet the navbar/footer.
+.main-content {
+    padding-top: 2rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.world-content {
+    text-align: center;
+    font-family: $fontMenu;
+}
+
+.world-content h1 {
+    font-family: $fontBranding;
 }
 
 .test-border {
     //border-style: dashed !important;
-    border: #702a2a;
+    border: white;
     border-width: 1px;
 }
 

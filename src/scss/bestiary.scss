@@ -20,10 +20,17 @@
 }
 
 .bestiary-link {
-    padding: .1rem .5rem;
-    margin: .2rem;
+    //padding: .1rem .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: .7rem;
+
     text-decoration: none;
     color: $textPrimary;
+    display: block;
+}
+.bestiary-link:hover {
+    font-weight: 300 !important;
 }
 .bestiary-link.active {
     background-color: $textPrimary; 
@@ -31,13 +38,37 @@
 }
 
 .bestiary-link-heading {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+
     text-decoration: none;
     color: $textPrimary;
+    display: block;
+    font-weight: 600;
+}
+.bestiary-link-heading:hover {
+    font-weight: 500 !important;
 }
 .bestiary-link-heading.active {
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+
     background-color: $textPrimary; 
     color: $primary;  
 }
+
+
+.bestiary-category-sublist {
+    padding: 0px, 0px;
+}
+
+.bestiary-category-sublist + .bestiary-category-sublist {
+    //margin-top: 1px;
+}
+
 
 .bestiary-offcanvas {
     background-color: $primary;
@@ -48,8 +79,15 @@
 .bestiary-entry-container {
     background-color: $tertiary;
     color: $textSecondary;
-    padding-right: .5rem;
-    padding-left: .5rem;
+    // padding-right: .5rem;
+    // padding-left: .5rem;
     padding-top: 1rem;
     box-shadow: 0 9px 0px 0px $secondary, 8px 0 8px 2px #00000052, -8px 0 8px 2px #00000052, 24px 0 15px -2px #00000044, -24px 0 15px -2px #00000044; // 3a3131 inset 12px 0 15px 4px #c4baa1ad, inset -12px 0 8px 4px #c4baa1ad;
+}
+
+#btn-open-bestiary-offcanvas {
+    background-color: transparent;
+    border: none;
+    color: $textPrimary;
+    font-family: $fontMenu;
 }
