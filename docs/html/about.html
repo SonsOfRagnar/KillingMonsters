@@ -10,9 +10,9 @@
 
     <!-- Javascript Entry Point -->
     <base href="/KillingMonsters/html/about">
-    <script type="module" crossorigin src="/KillingMonsters/assets/bootstrap.esm-C73qBPBy.js"></script>
-    <script type="module" crossorigin src="/KillingMonsters/assets/main-C3gDy3cd.js"></script>
-    <link rel="stylesheet" crossorigin href="/KillingMonsters/assets/bootstrap-DgfSeDK4.css">
+    <script type="module" crossorigin src="/KillingMonsters/assets/bootstrap.esm-BYeTwia7.js"></script>
+    <script type="module" crossorigin src="/KillingMonsters/assets/main-3MkLrOfu.js"></script>
+    <link rel="stylesheet" crossorigin href="/KillingMonsters/assets/bootstrap-q9fwl-qT.css">
   </head>
 
   <body>
@@ -37,11 +37,29 @@
       </div>
     </nav>
 
-    <div class="default-main-container container-xxl bd-gutter mt-3 my-md-4">
-      <p> Info about the recordings, the sessions, software etc. </p>
-    </div>
+    <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
+    <div class="container-fluid main-container bd-gutter">
 
-    <footer class="footer py-4 py-md-5 mt-5">
+      <div class="row h-100 justify-content-start">
+
+        <div class="col-2 d-none d-lg-block test-border">
+
+        </div>
+
+        <div class="col test-border">
+          <main class="main-content">
+            Information about channel/podcast, addributions & credits.
+          </main>
+        </div>
+
+        <div class="col-2 d-none d-lg-block test-border">
+          <!-- Placeholder column -->
+        </div>
+
+      </div>
+    </div>  
+
+    <footer class="footer py-4 py-md-5">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-3 mb-3"> Killing Monsters</div>
