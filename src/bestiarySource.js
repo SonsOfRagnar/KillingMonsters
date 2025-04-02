@@ -168,12 +168,12 @@ const entries =
     chort: 
     {
         active: true,
-        name: "chort",
+        name: "Chort",
         image: GetImage("Chort.png"),
         category: categories.relict.name,
         type: types.fiend,
         size: sizes.large,
-        overview: ["Large Relict (Monstrosity); Bristle-furred biped on cloven-hoofed hind legs, often walks on all fours, with claw-like hands. Curling horns like a ram's above three yellow eyes like those of a goat. The third is set into the forehead. A long, furry tail.", "Found in deep forests, old hills, and near settlements built on crossroads."],
+        overview: ["Bristle-furred biped on cloven-hoofed hind legs, often walks on all fours, with claw-like hands. Curling horns like a ram's above three yellow eyes like those of a goat. The third is set into the forehead. A long, furry tail.", "Found in deep forests, old hills, and near settlements built on crossroads."],
         strengths: "Immune to psychic damage, charmed, and frightened; resistant to non-magical weapons, fire, cold, thunder, and lightning damage; thick hide provides protection against spells; very strong; agile, and cunning; powerful third eye, variably said to bestow curses, charm the unwary, blind those who see it, etc.",
         weaknesses: "Vulnerable to poison; a net woven of dodder cast backwards over the left shoulder may be able to hold the chort for a handful of seconds; likewise a dodder vine stretched across a road may trip the chort and send it sprawling; a potion of mulberry root and vitriol may impart some resistance to its third eye",
         peculiarities: "Chorts are intelligent monsters that can hold conversation, however unlike Sylvans (whom they are often mistake for) the chort is usually malevolent and extremely dangerous; its third eye is strongest during the dark of the moon, and weakest during the full moon - as such the chort often remains sleeping in its lair during the full moon",
@@ -221,7 +221,7 @@ const entries =
         category: categories.necrophage.name,
         type: types.monstrosity,
         size: sizes.large,
-        overview: ["Large Necrophage (Monstrosity); Short-furred quadruped with cloven hooves and a long tail. Blunt head with short snout like an ugly dog, and a thick hairless skull. Sharp, ridged bone plates instead of teeth.", "Most often found in Graveyards, Swamps, Forests, Caves."],
+        overview: ["Short-furred quadruped with cloven hooves and a long tail. Blunt head with short snout like an ugly dog, and a thick hairless skull. Sharp, ridged bone plates instead of teeth.", "Most often found in Graveyards, Swamps, Forests, Caves."],
         strengths: "Immune to necrosis; resistant to regular weapons, poison, and cold damage; resistant to restrained and grappled; emanates a poisonous stench; able to mimic the call of any beast, or the voice of a humanoid; fast and agile; dangerous bite that aims for vital arteries",
         weaknesses: "Harmed by silver; vulnerable to acid damage; hearing the yowl of a cat frightens the leucrotta",
         peculiarities: "Often accompanied by packs of lesser necrophages with whom the leucrotta has a symbiotic relationship - the leucrotta lures victims with its mimicry, and the pack kills them; it cannot mimic the sound of a cat",
