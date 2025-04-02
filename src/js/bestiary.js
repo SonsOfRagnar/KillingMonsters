@@ -76,36 +76,41 @@ function GenerateBestiaryEntryHTML(entryName)
 
     let htmlTemplate = `
     <h2 class="bestiary-heading2">${entryData.name}</h2>
+    <div class="row">
+        <div class="col-lg order-lg-2 test-border">
+            <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
+        </div>
 
-    <img src="${entryData.image}" class="img-fluid" alt="${entryData.name}">
+        <div class="col-lg order-lg-1 test-border">
+            <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
+                ${ProcessArrayToParagraphs(entryData.overview)}
+            
+            <h4 class="bestiary-heading4">Strengths</h4>
+            <p>
+                ${entryData.strengths}
+            </p>
+            <h4 class="bestiary-heading4">Weaknesses</h4>
+            <p>
+                ${entryData.weaknesses}
+            </p>
+            <h4 class="bestiary-heading4">Peculiarities</h4>
+            <p>
+                ${entryData.peculiarities}            
+            </p>
+            <h4 class="bestiary-heading4">Lures</h4>
+            <ul>
+                ${ProcessArrayToList(entryData.lures)}
+            </ul>
 
-    <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
-        ${ProcessArrayToParagraphs(entryData.overview)}
-    
-    <h4 class="bestiary-heading4">Strengths</h4>
-    <p>
-        ${entryData.strengths}
-    </p>
-    <h4 class="bestiary-heading4">Weaknesses</h4>
-    <p>
-        ${entryData.weaknesses}
-    </p>
-    <h4 class="bestiary-heading4">Peculiarities</h4>
-    <p>
-        ${entryData.peculiarities}            
-    </p>
-    <h4 class="bestiary-heading4">Lures</h4>
-    <ul>
-        ${ProcessArrayToList(entryData.lures)}
-    </ul>
+            <h4 class="bestiary-heading4">Ingredients & Materials</h4>
+            <ul>
+                ${ProcessArrayToList(entryData.harvesting)}
+            </ul>
 
-    <h4 class="bestiary-heading4">Ingredients & Materials</h4>
-    <ul>
-        ${ProcessArrayToList(entryData.harvesting)}
-    </ul>
-
-    <h4 class="bestiary-heading4">About</h4>
-        ${ProcessArrayToParagraphs(entryData.about)}
+            <h4 class="bestiary-heading4">About</h4>
+                ${ProcessArrayToParagraphs(entryData.about)}
+        </div>
+    </div>
     `;
 
     entryElement.innerHTML = htmlTemplate;
@@ -205,15 +210,15 @@ function GenerateBetiarySidebarCategories()
         
         let categoryOverviewHTML = `
         <div id="bestiary-${sanitisedCategoryName}" class="bestiary-entry bestiary-category-entry anchor">
+            <h1 class="bestiary-heading1 text-center">${value.pluralName}</h1>    
             <div class="divider bottom-arrow div-transparent"></div>    
             <div id="bestiary-overview-row" class="row">
-                <div class="col test-border">
-                    <h1 class="bestiary-heading1">${value.pluralName}</h1>
-                    ${ProcessArrayToParagraphs(value.overview)}
-                </div>
-
-                <div class="col test-border">
+                <div class="col-lg order-lg-1 test-border">
                     <img src="${value.image}" class="img-fluid" alt="${value.pluralName}"> 
+                </div>
+            
+                <div class="col-lg order-lg-2 test-border">
+                    ${ProcessArrayToParagraphs(value.overview)}
                 </div>
             </div>
             <div class="divider top-arrow div-transparent"></div>
