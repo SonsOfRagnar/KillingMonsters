@@ -110,7 +110,10 @@ body {
 }
 
 .anchor {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 1.5rem + 3.75rem; // 3.75 is the header bar.
+}
+.bestiary-category-entry.anchor {
+    scroll-margin-top: 5.5rem + 3.75rem;;
 }
 
 // The container that holds the entire page minus header/footer. Grid rows/columns are all children of this container.
@@ -154,3 +157,4 @@ body {
 
 @import "./fonts.scss";
 @import "./bestiary.scss";
+@import "./dividers.scss";

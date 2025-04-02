@@ -175,6 +175,7 @@ function GenerateBestiarySidebarLinks()
 
 function GenerateBetiarySidebarCategories()
 {
+    /* Generate the sidebar cateogry header. */
     let bestiarySidebar = document.getElementById('bestiary-sidebar-list');
     bestiarySidebar.innerHTML = ``; //Empty sidebar of any placeholder data.
     let sidebarHTML = ``;
@@ -195,6 +196,7 @@ function GenerateBetiarySidebarCategories()
 
         sidebarHTML = sidebarHTML + categoryHTML;
 
+        /* Generate category header + overview in the main bestiary content. */
         let bestiaryContainer = document.getElementById('bestiary-entries');
         let categoryContentContainer = document.createElement("div");
         bestiaryContainer.appendChild(categoryContentContainer);
@@ -202,9 +204,19 @@ function GenerateBetiarySidebarCategories()
         categoryContentContainer.id = `bestiary-content-category-${sanitisedCategoryName}`
         
         let categoryOverviewHTML = `
-        <div id="bestiary-${sanitisedCategoryName}" class="bestiary-entry anchor">
-            <h1>${value.pluralName}</h1>
-            ${ProcessArrayToParagraphs(value.overview)}
+        <div id="bestiary-${sanitisedCategoryName}" class="bestiary-entry bestiary-category-entry anchor">
+            <div class="divider bottom-arrow div-transparent"></div>    
+            <div id="bestiary-overview-row" class="row">
+                <div class="col test-border">
+                    <h1 class="bestiary-heading1">${value.pluralName}</h1>
+                    ${ProcessArrayToParagraphs(value.overview)}
+                </div>
+
+                <div class="col test-border">
+                    <img src="${value.image}" class="img-fluid" alt="${value.pluralName}"> 
+                </div>
+            </div>
+            <div class="divider top-arrow div-transparent"></div>
         </div>
         `
 

@@ -1,5 +1,11 @@
 @import "bootstrap/scss/bootstrap";
 
+.bestiary-heading1 {
+    width: 100%;
+    display: block;
+    color: $textHighlight;
+}
+
 .bestiary-heading2 {
     border-bottom: 2px solid $textHighlight;
     width: 100%;
@@ -17,6 +23,9 @@
     // margin-top: 80px;
     margin-bottom: 120px;
     font-family: $fontBestiary;
+}
+.bestiary-category-entry > .img-fluid {
+    max-width: 50%;
 }
 
 .bestiary-link {
@@ -70,11 +79,17 @@
 }
 
 
-.bestiary-offcanvas {
-    background-color: $primary;
-    color: $textPrimary;
-    font-family: $fontMenu;
-}
+// .bestiary-offcanvas {
+//     background-color: $primary !important;
+//     color: $textPrimary;
+//     font-family: $fontMenu;
+// }
+
+#offcanvasResponsive-bestiary {
+        background-color: $primary;
+        color: $textPrimary;
+        font-family: $fontMenu;
+    }
 
 .bestiary-entry-container {
     background-color: $tertiary;
@@ -90,4 +105,19 @@
     border: none;
     color: $textPrimary;
     font-family: $fontMenu;
+}
+
+#bestiary-overview-row {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#bestiary-intro {
+    text-align: center;
+    margin-top: 2rem;
+}
+#bestiary-intro-text {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 1rem;
 }
