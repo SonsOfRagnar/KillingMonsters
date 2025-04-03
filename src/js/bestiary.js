@@ -106,7 +106,8 @@ function GenerateBestiaryEntryHTML(entryName)
             <ul>
                 ${ProcessArrayToList(entryData.harvesting)}
             </ul>
-
+        </div>
+        <div class="order-lg-3">
             <h4 class="bestiary-heading4">About</h4>
                 ${ProcessArrayToParagraphs(entryData.about)}
         </div>
