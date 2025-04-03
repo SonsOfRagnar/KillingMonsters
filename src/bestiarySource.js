@@ -31,6 +31,7 @@ const categories =
 {
     beast:
     {
+        active: true,
         name: "Beast",
         pluralName: "Beasts",
         image: GetImage("BeastsDiagram.png"),
@@ -38,6 +39,7 @@ const categories =
     },
     cursed: 
     {
+        active: true,
         name: "Cursed One",
         pluralName: "Cursed Ones",
         image: GetImage("CursedOnesDiagram.png"),
@@ -45,6 +47,7 @@ const categories =
     },
     draconid:     
     {
+        active: true,
         name: "Draconid",
         pluralName: "Draconids",
         image: GetImage("DraconidDiagram.png"),
@@ -52,18 +55,21 @@ const categories =
     },
     elementa:
     {
+        active: false,
         name: "Elemental",
         pluralName: "Elementa",
         overview: []
     },
     hybrid:
     {
+        active: false,
         name: "Hybrid",
         pluralName: "Hybrids",
         overview: []
     },
     insectoid:
     {
+        active: true,
         name: "Insectoid",
         pluralName: "Insectoids",
         image: GetImage("InsectoidsDiagram.png"),
@@ -71,6 +77,7 @@ const categories =
     },
     necrophage:
     {    
+        active: true,
         name: "Necrophage",
         pluralName: "Necrophages",
         image: GetImage("NecrophagesDiagram.png"),
@@ -78,12 +85,14 @@ const categories =
     },
     ogroid:
     {
+        active: false,
         name: "Ogroid",
         pluralName: "Ogroids",
         overview: []
     },
     relict:     
     {
+        active: true,
         name: "Relict",
         pluralName: "Relicts",
         image: GetImage("RelictsDiagram.png"),
@@ -91,12 +100,14 @@ const categories =
     },
     spectre:
     {
+        active: false,
         name: "Spectre",
         pluralName: "Spectres",
         overview: []
     },
     vampire:
     {
+        active: false,
         name: "Vampire",
         pluralName: "Vampires",
         overview: []

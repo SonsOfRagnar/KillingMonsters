@@ -188,6 +188,7 @@ function GenerateBetiarySidebarCategories()
 
     for (const [key, value] of Object.entries(BestiaryCategories)) 
     {
+        if (value.active == false) { continue; };
         let sanitisedCategoryName = value.name.toLowerCase().split(" ").join("-"); // Replace spaces with dashes to make it html/css compatible.
 
         let categoryHTML = `
