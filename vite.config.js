@@ -22,6 +22,7 @@ export default {
                 world: resolve(__dirname, "src/html/world.html"),
                 bestiary: resolve(__dirname, "src/html/bestiary.html"),
                 story: resolve(__dirname, "src/html/story.html"),
+                rules: resolve(__dirname, "src/html/rules.html"),
                 about: resolve(__dirname, "src/html/about.html"),
             }
         }
