@@ -1,0 +1,1 @@
+{"version":3,"file":"main-CsJYQXQk.js","sources":["../../src/js/main.js"],"sourcesContent":["import '../scss/styles.scss';\r\n\r\nimport * as bootstrap from 'bootstrap'\r\n\r\nconsole.log(\"JavaScript working!\");\r\n\r\n"],"names":[],"mappings":"oCAIA,QAAQ,IAAI,qBAAqB"}
