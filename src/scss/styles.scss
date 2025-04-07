@@ -1,12 +1,63 @@
 @import "bootstrap/scss/bootstrap";
 
+
+
 $primary: #221d1d;
 $secondary: #25201d;
 $tertiary: #f1e4c4;
 
 $textPrimary: #dfd6c4;
+$textPrimarySubdued: #dfd6c4c2;
 $textHighlight: #702a2a;
 $textSecondary: #48392e;
+
+// Dark
+// $card-cap-bg: $textHighlight;
+// $card-cap-color: $textPrimary;
+// $card-bg: $secondary;
+// $card-border-color: $textHighlight;
+// $card-color: $textPrimary;
+
+// Light
+$card-cap-bg: $textHighlight;
+$card-cap-color: $textPrimary;
+$card-bg: $tertiary;
+$card-border-color: $textHighlight;
+$card-color: $textSecondary;
+
+.rules-heading {
+    color: $textHighlight;
+    font-family: "Kurale";    
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.card {
+    //--bs-card-bg: #{$secondary};
+}
+
+.card-footer {
+    --bs-card-cap-color: #{$textPrimarySubdued};
+}
+
+.km-card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 8px 2px #000000, 0 0 15px 2px #000000a4; //box-shadow: 0 0 8px 2px #00000052, 0 0 15px 2px #00000044;
+
+  //box-shadow: 0 9px 0px 0px $secondary, 8px 0 8px 2px #00000052, -8px 0 8px 2px #00000052, 24px 0 15px -2px #00000044, -24px 0 15px -2px #00000044;
+}
+
+.card > .list-group {
+    // Dark
+    // --bs-list-group-bg: #{$secondary} !important;
+    // --bs-list-group-border-color: #{$textHighlight};
+    // --bs-list-group-color: #{$textPrimary};
+
+    // Light
+    --bs-list-group-bg: #{$tertiary} !important;
+    --bs-list-group-border-color: #{$textHighlight};
+    --bs-list-group-color: #{$textSecondary};
+}
 
 // $fontMenu: "KronaOne-Regular"; //No
 // $fontMenu: "PaytoneOne-Regular"; // No
@@ -168,3 +219,4 @@ body {
 @import "./fonts.scss";
 @import "./bestiary.scss";
 @import "./dividers.scss";
+@import "./hyperlinks.scss";

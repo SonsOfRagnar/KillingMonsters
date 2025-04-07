@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon" href="vite.svg">
 
     <!-- Javascript Entry Point -->
-    <script type="module" src="../js/story.js"></script>
-    <base href="/KillingMonsters/html/story">
+    <script type="module" src="../js/rules.js"></script>
+    <base href="/KillingMonsters/html/rules">
   </head>
 
   <body>
@@ -19,6 +19,10 @@
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Killing Monsters</a>
+
+        <!-- Button that appears on small screens to toggle bestiary sidebar.-->
+        <button id="btn-open-bestiary-offcanvas" class="btn btn-primary d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#bestiary-sidebar-col" aria-controls="offcanvasResponsive-bestiary">Bestiary Index</button>
+
 
         <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,16 +42,236 @@
     </nav>
 
     <!-- We use a wrapper with bd-layout to apply a grid when on full size screens to display sidebar and main content side by side. -->
-    <div class="container-fluid main-container bd-gutter">
-      <div class="row h-100 justify-content-start">
+    <div class="container-fluid main-container">
+      <div class="row justify-content-start">
 
-        <div class="col-2 d-none d-lg-block test-border">
+        <div id="bestiary-sidebar-col" class="col-2 collapse d-lg-block test-border">
+          <!-- Bestiary sidebar. -->
+          <aside id="bestiary-sidebar" class="bd-sidebar">
+            <div class="bestiary-offcanvas offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive-bestiary" aria-labelledby="offcanvasResponsiveLabel">
+              <div class="offcanvas-header" data-bs-theme="dark" >
+                  <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Bestiary Index</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive-bestiary" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
 
+                <nav class="bd-links w-100" aria-label="Docs navigation">
+
+                  <ul id="bestiary-sidebar-list" class="list-unstyled">
+
+                    <li>
+                      <a href="#rules-intro" class="bestiary-link-heading rounded">
+                        <strong>Rules</strong>
+                      </a>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#rules-resting" class="bestiary-link d-inline-block rounded" >Resting, Wounds, and Death</a>
+                        </li>
+                        <li>
+                          <a href="#rules-inventory" class="bestiary-link d-inline-block rounded">Inventory & Items</a>
+                        </li>
+                        <li>
+                          <a href="#rules-light" class="bestiary-link d-inline-block rounded">Light & Dark</a>
+                        </li>
+                        <li>
+                          <a href="#rules-magic" class="bestiary-link d-inline-block rounded">Magic</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#items-intro" class="bestiary-link-heading rounded">
+                        <strong>Items</strong>
+                      </a>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#items-potions" class="bestiary-link d-inline-block rounded">Potions</a>
+                        </li>
+                        <li>
+                          <a href="#items-oils" class="bestiary-link d-inline-block rounded">Oils</a>
+                        </li>
+                        <li>
+                          <a href="#items-bombs" class="bestiary-link d-inline-block rounded">Bombs</a>
+                        </li>
+                        <li>
+                          <a href="#items-other" class="bestiary-link d-inline-block rounded">Other</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </aside>
         </div>
 
         <div class="col test-border">
-          <main class="main-content">
-            Homebrew rules, custom items, new economy
+          <main id="bestiary-entries" class="main-content h-100 order-1" data-bs-spy="scroll" data-bs-target="#bestiary-sidebar" data-bs-smooth-scroll="false">
+            
+            <!--Resting, Wounds, and Death-->
+            <div id="rules-resting" class="card km-card anchor">
+              <div class="card-header">
+                <h4>Resting, Wounds, and Death</h4>
+              </div>
+              <div class="card-body">
+                <!-- <h class="card-title">Special title treatment</h5> -->
+                <p class="card-text">The world is a dangerous place full of monsters, and death lurks around every corner. Taking damage should be a serious concern and dropping to 0hp represents a near-death experience. These rules are intended to raise the stakes in combat by making injury more serious, and death more likely than in RAW 5e, encouraging players to prepare carefully for each encounter and avoid unecessary risks. </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h5 class="rules-heading">Rests:</h5>Short rests take 8 hours. Long rests take 1 week and require a safe space such as a friendly village, town, or castle.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Bloodied:</h5>After gaining the Bloodied condition (half hp), a character needs to expend a bandage to be able to spend hit dice during a short rest.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Lingering Injuries:</h5>When reduced to 0hp, characters gain a lingering injury that causes exhastion and prevents spending hit dice to heal. Lingering injuries must be treated with medical supplies and a medicine check to patch them up, removing their penalties. However the injury persists, and may reopend when taking damage in combat, until healed during a long rest.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Permanent Injuries:</h5>Being reduced to 0hp by particuarly dangerous, violent attacks may inflict permanent injuries such as loss of limbs.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Dying:</h5>When a character drops to 0hp, they no longer fall unconcious. Instead they are Dying. You can utter a few words per turn, but do nothing else.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Death Saves:</h5>Death saves are rolled as usual, however succeeding a Death Save no longer counts as a success towards stabilisation, it simply avoids a failure. You must be stabilised by someone else, using a medicine check, otherwise you will eventually die.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Resurrection:</h5>Resurrection spells are no longer available to players, and as a general rule does not exist in an accessible way in the world. Resurrection may still exist in the world, but only as extremely rare or powerful magic, dangerous bargains, as the byproduct of a terrible curse, etc. If the players really want to resurrect someone, it may be possible but should be a grueling, once-in-a-lifetime quest, and is generally discouraged.</li>
+              </ul> 
+              <div class="card-footer">                
+                <a href="https://giffyglyph.com/darkerdungeons/grimoire/4.0.0/en/wounds_and_injuries.html">Giffyglyph's Darker Dungeons: Life & Death</a>
+                <br>
+                D&D 5e DMG: Adventuring Options
+              </div>
+            </div>
+
+            <!-- Inventory & Items -->
+            <div id="rules-inventory" class="card km-card anchor">
+              <div class="card-header">
+                <h4>Inventory & Items</h4>
+              </div>
+              <div class="card-body">
+                <!-- <h class="card-title">Special title treatment</h5> -->
+                <p class="card-text">Life on the road isn't easy, and equipment is an important part of every character. These rules are intended to draw more attention and care to which items each player is carrying, and force them to make decisions about what is worth bringing with them on a hunt, and what will just get in their way.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h5 class="rules-heading">Slots:</h5>Item weight has been replaced with Slots, an abstracted unit of measurement that represents a combination of weight and size.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Inventory Grid:</h5>Characters' max carry weight is now defined in terms of a grid, where each grid cell is one Slot's worth of items.
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>Str Mod</th>
+                        <th>Max Slots</th>
+                        <th>Grid Size</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>0</th>
+                        <th>18</th>
+                        <th>3 x 6</th>
+                      </tr>
+                      <tr>
+                        <th>1</th>
+                        <th>20</th>
+                        <th>4 x 5</th>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <th>24</th>
+                        <th>4 x 6</th>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <th>25</th>
+                        <th>5 x 5</th>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <th>28</th>
+                        <th>4 x 7</th>
+                      </tr>
+                      <tr>
+                        <th>5</th>
+                        <th>30</th>
+                        <th>4 x 7</th>
+                      </tr>
+                      <th>0</th>
+                      <th>35</th>
+                      <th>5 x 6</th>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <th>36</th>
+                      <th>5 x 7</th>
+                    </tr>
+                    <tr>
+                      <th>7</th>
+                      <th>36</th>
+                      <th>6 x 6</th>
+                    </tr>
+                    <tr>
+                      <th>8</th>
+                      <th>40</th>
+                      <th>5 x 8</th>
+                    </tr>
+                    <tr>
+                      <th>9</th>
+                      <th>42</th>
+                      <th>6 x 7</th>
+                    </tr>
+                    <tr>
+                      <th>10</th>
+                      <th>45</th>
+                      <th>5 x 9</th>
+                    </tr>
+                    </tbody>
+                  </table>
+                </li>
+              </ul> 
+              <div class="card-footer">                
+                <a href="https://giffyglyph.com/darkerdungeons/grimoire/4.0.0/en/active_inventory.html">Giffyglyph's Darker Dungeons: Your Inventory</a>
+                <br>
+                <a href="https://github.com/xaukael/griddy">Griddy Module by Xaukael</a>
+                <br>
+                D&D 5e DMG: Adventuring Options
+              </div>
+            </div>
+
+            <!-- Light & Dark -->
+            <div id="rules-light" class="card km-card anchor">
+              <div class="card-header">
+                <h4>Light & Dark</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Monsters lurk in the dark, and the dark draws close as night falls. In a world without light pollution, the day ends when the sun goes down. Simple roads become treacherous, benign forests become mazes, city alleys are pitch-black caves. These rules are intended to reduce player options for easily dealing with darkness, to make the dark a more significant hazard.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h5 class="rules-heading">Darkvision:</h5>Darkvision becomes Low-Light vision, granting 30ft. of bright light vision in dim light, while remaining blind in darkness. Superior Darkvision becomes Darkvision, granting 5ft. colourless, dim-light vision in darkness.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Blinded Conditions:</h5>Slightly updated conditions for Blinded and Partially blinded. Must update this as don't have info currently.</li>
+                <li class="list-group-item"><h5 class="rules-heading">Light Spells:</h5>Many Cantrips and Spells which generate light have been tweaked slightly, generally requiring Concentration if they did not already. Spells affected include:
+                  <ul>
+                    <li>Continual Flame: 8 hours max duration.</li>
+                    <li>Daylight: Requires concentration.</li>
+                    <li>Light: Requires concentration.</li>
+                    <li>Produce Flame: Requires concentration.</li>
+                    <li>Control Flames: Requires concentration.</li>
+                    <li>Control Flames: Requires concentration.</li>
+                  </ul>
+                </li>
+              </ul> 
+              <div class="card-footer">                
+                <a href="https://giffyglyph.com/darkerdungeons/grimoire/4.0.0/en/feature_changes.html#feature-changes-darkvision">Giffyglyph's Darker Dungeons: Your Character</a>
+                <br>
+                <a href="https://giffyglyph.com/darkerdungeons/grimoire/4.0.0/en/light_and_shadow.html">Giffyglyph's Darker Dungeons: Exploration</a>
+              </div>
+            </div>
+
+            <!-- Magic -->
+            <div id="rules-magic" class="card km-card anchor">
+              <div class="card-header">
+                <h4>Magic</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text">The Art Magic is difficult, rare, and dangerous, drawing on the half-understood Power which runs in the veins of the world. Those who wield it incite both reverance and fear, and may be respected or shunned by turns. Many people may go their whole lives without witnessing true magic, and those who pracice the Art Magic dedicate decades or centuries to its study. These rules represent the inherent danger and uncertainly in drawing on the Power, and are intended to encourage players to be judicious in their usage of magic. Currently, these rules only apply to Cantrips and Spells and do not include magical effects from traits, feats, or class abilities.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h5 class="rules-heading">Spell Burnout:</h5>Casting cantrips and spells requires rolling a Spell Burnout die, triggering unintended magical side effects on a roll of 1 or 2. Although most effects are negative, there are some positive effects that can occur. When an effect triggers the die shrinks one size. The die shrinks as follows: 1d12 -> 1d10 -> 1d8 -> 1d6 -> 1d4. The burnout die increases by one step after a short rest, and additional hit dice can be spent during a short rest, each increasing the burnout die by another step. The burnout die resets to its max after a long rest. Currently all classes have a max burnout die of 1d12.</li>
+              </ul> 
+              <div class="card-footer">                
+                <a href="https://giffyglyph.com/darkerdungeons/grimoire/4.0.0/en/dangerous_magic.html">Giffyglyph's Darker Dungeons: Dangerous Magic</a>
+              </div>
+            </div>
+
           </main>
         </div>
 
