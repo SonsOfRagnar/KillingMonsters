@@ -107,7 +107,7 @@ const categories =
     },
     vampire:
     {
-        active: false,
+        active: true,
         name: "Vampire",
         pluralName: "Vampires",
         overview: []
@@ -160,6 +160,38 @@ const entries =
         harvesting: [""],
         about: [""]
     },
+    aeschna: 
+    {
+        active: true,
+        name: "Aeschna",
+        image: GetImage(""),
+        category: categories.insectoid.name,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["An aquatic arthropod, up to twelve feet long, with ten sharp, pointed legs, the front two of which are adapted into large grasping pincers like those of a crab. Thick, mottled shell plating on the top of its body, with a long, flat tail. Jaws are large and flanked by sickle-shaped mandibles.", "Found in slow-flowing or stagnant water, river deltas, swamps, and other wetlands. Often found in areas frequented by boats and fishermen, where refuse and waste products provide accessible food."],
+        strengths: "Shell is immune to all weaponry; resistant to poison, acid,  necrotic damage; strong swimmers but can also haul their body up onto boats or riverbanks with claws; claws are very strong and can grab prey; sharp mandibles rapidly shred anything brought close to them, causing massive bleeding; when inactive, very hard to distinguish from floating logs or other detritus",
+        weaknesses: "Vulnerable to piercing damage; soft underbelly can be exposed if knocked prone, or attacked from underneath in the water",
+        peculiarities: "Aeschna prefer to hunt during the dawn, when morning mists conceal them from their prey, and they are much more wary of emerging from the water during the rest of the day; their eyes are placed near the top of their heads and see far better upwards out of the water than downwards into the water below",
+        lures: ["Porpoise or seal meat rubbed in fermented fish guts"],
+        harvesting: ["Chitin", "Aeschna Claws"],
+        about: ["The Aeschna - known more colloquially as the Glustyworp - is a large, aquatic arthropod resembling in many ways an overgrown prawn. From above, they are easily mistaken for floating logs, as their shells are usually overgrown with moss and weeds, and they drift lazily in the water when not active. Their shell provides protection as well as camouflage, being incredibly resilient. The creatures possess a soft underbelly however, and if one is able to reach it, a spear or other thrusting weapon can easily penetrate their vital organs.", "They hunt primarily with their enlarged forelimbs, which end in sharp claws which can grip with vice-like strength. Once prey is grasped, it is brought to the creatures jaws, where two pairs of mandibles, razor-sharp and sickle-like eviscerate the victim so the creature can feed. Despite their size, they are surprisingly fast and can burst from the water to catch prey on boats, bridges, and riverbanks. If caught in the creature's grip, one's first priority should be escape, as the Aeschna will ignore any futile attacks on its hard shell, and simply devour you.", "Although their primary prey has traditionally been river porpoises, as cities have expanded and overfishing has reduced porpoise numbers, Aeschna have learned to hunt livestock, as well as human passengers on boats crossing crowded waterways. In between actively hunting, Aeschna also feed off sewage and waste from cities, growing larger and larger each year."]
+    },
+    bruxa: 
+    {
+        active: true,
+        name: "Bruxa",
+        image: GetImage(""),
+        category: categories.vampire.name,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["Greater vampire appearing as either a pale humanoid or large bat. Most commonly they appear as female, although this is not guaranteed. They live in the wild, usually in forests, although they may be drawn nearer to inhabited areas in order to prey on dreamers."],
+        strengths: "Immune to non-silver weaponry, cold, necrotic, psychic, poison, and thunder damage; resistant to slashing damage; completely unaffected by the sun; strong, and extremely fast; their shrill screams can fracture bones and leave those who hear it stunned; able to shape-shift into a large bat; ability to hypnotise people during their dreams, inducing sleepwalking",
+        weaknesses: "Application of Moon Dust can dampen their regenerative abilities; they are averse to monkshood - also called wolfsbane - especially when burnt on a fire; some of the effect of their screams may be mitigated if one cannot hear it, although the sheer force can still cause damage; massive piercing damage with a wooden object - especially rowan wood - may weaken them",
+        peculiarities: "Though they are intelligent, and in theory capable of speech, Bruxae rarely do so, instead preferring to sing after they feed, usually in their own language; they love birds, and birds seem undaunted by their presence; they possess a form of telepathy and can project their words or song directly into one's mind",
+        lures: ["Sleeping Humanoid - Bruxae are individuals, and what draws them to a potential victim is unique. Some might prefer the rich and powerful for their value as thralls, others might take pleasure in draining the life from strong warriors. If a Bruxa already has a favourite victim however, they can be used much more reliably as a lure, for the Bruxa will likely return to them regularly to feed and reestablish their bond."],
+        harvesting: ["Vampire Dust"],
+        about: ["Perhaps the most dangerous of the Greater Vampires, excepting of course the Higher Vampire, Bruxae are at first glance very similar to many of their kindred, especially Alps and Mulas. Bruxae are extremely durable, and difficult to kill and even silver weaponry may have a minimal effect on them. Luckily they are rare creatures, even for Vampires, and are very wary, preferring to stay hidden and only engaging on their own terms, or when their territory is threatened.", "They usually appear in humanoid form - typically that of a pale young woman - although they can more rarely appear as male. When they need to travel longer distances, or when threatened, they may transform into a large, bat-like form, able to fly and climb with ease - an ability they share with Katakans and Nosferats. Unlike these however, Bruxae are completely unaffected by the sun, and are active during both the day and the night, although they prefer to feed during the night. Unlike some other Vampires, Bruxae also change form extremely quickly, and can easily shift back and forth between bat and humanoid with little delay.", "Their ability to infiltrate the dreams of sleeping people is used to ensure a victim stays sleeping while the Bruxa feeds, but can also be used to bend the individual to their will, causing them to sleepwalk and do the Bruxa's bidding, awaking the next morning completely unaware of their actions during the night, although they may find their feet muddy and leaf-covered. A Bruxa's motivations can be hard to quantify due to their secretive nature, though access to a ready supply of humanoid blood is always a likely possibility. Some may seek more power however, and use their dreaming thralls to exert their influence over a village or town, a terrifying prospect.", "Like many Vampires, they detest Wolfsbane, especially when dried and burnt, and they prefer to avoid it when possible. However, unlike lesser Vampires, it does not weaken them and will not prevent a determined attack."]
+    },
     catoblepas: 
     {
         active: true,
@@ -191,6 +223,22 @@ const entries =
         lures: ["A baby (two years or younger) left at a crossroads on a moonless night"],
         harvesting: ["Chort Eye: Potent magical powers. Valuable to mages.", "Chort Horn: Powdered as an alchemy ingredient, aphrodisiac."],
         about: ["Chorts are highly dangerous and very old creatures, close brethren to bies - or fiends as they are commonly known - and bukavacs, these monsters are often believed to be evil gods or demons of the deep forests. This is obviously untrue, for a chort can be slain sure as any monster, however the tales of their power are not to be dismissed. While not as deadly as bies, the chort is extremely strong while still displaying remarkable agility, able to leap upon their victims with alarming speed. It is also very hard to kill, with even magic seeming to glance off its bristly hide, and the third eye is capable of bewitching or cursing those it falls upon.", "Chorts are particularly reviled for their love of stealing babies, something they seem to take great delight in. In is unknown why they do this, as they do not seem to eat them. Nevertheless, an infant taken by a chort has never been found. Villages build near crossroads seem to be disproportionally affected by this behaviour. When not taking children, a chort is often secretive and elusive, only rarely attacking humanoids for food, preferring to survive off large game such as deer and boar. A chort will use their third eye to charm targets, and quickly finish them with their claws.", "Some claim that chorts do not steal children, but are in fact given them by evil souls who wish to bargain with the monster for terrible powers."]
+    },
+    forktail:
+    {
+        active: true,
+        name: "Forktail",
+        image: GetImage(""),
+        category: categories.draconid.name,
+        type: types.dragon,
+        size: sizes.large,
+        overview: ["Aerial biped with sharp, three-toed claws. Short, heavy neck and large blunt head with conical teeth. Extremely long, whip-like tail with forked end. Females are larger with longer tails, while males have coloured neck-frills.", "Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],
+        strengths: "Immune to lightning, slashing damage; resistant to poison, bludgeoning damage; tail is very fast and sharp, often causing copious bleeding; strong bite that can be very hard to release; hunt in pairs or groups",
+        weaknesses: "Vulnerable to thunder damage;  far slower and more vulnerable while on the ground; weighted nets or firmly anchored bear traps may be able to keep it grounded; Pairs or groups are led by the oldest, largest female, killing them may cause the group to lose cohesion",
+        peculiarities: "Often found in mated pairs, although larger groups may also form; they dislike thunderstorms and fly poorly in them, preferring to stay on the ground",
+        lures: ["Live goat or sheep"],
+        harvesting: ["Draconid Scales", "Draconid Claws"],
+        about: ["The Forktail is a winged Draconid that is often mistaken for their close kin the Wyvern. They derive their name from their tails, which split into two very long, whip-like sections of sharp, scaly ridges. These whips can measure up to six feet long, and strike with deadly, accuracy, opening terrible slashing wounds and cause horrible bleeding. Strikes with this tail is the Forktail's preferred method of attack, usually severing a vital artery, allowing the Forktail to remain airborne until the prey has bled out.", "Unlike Wyverns, the Forktail has a short neck and legs, and they rarely carry their prey aloft, instead alighting nearby once their prey is dead and tearing chunks from the carcass. They are also more social animals than many Draconids, commonly forming mated pairs, or even larger groups, which hunt together and share kills. In a given pair or group, the largest, oldest female is the leader and eats first after kills are made. She coordinates hunting efforts and keeps younger members in line, preventing infighting. In a mated pair, the female is always the more dangerous and fearless of the two."]
     },
     ghast: 
     {
@@ -224,6 +272,22 @@ const entries =
         harvesting: ["Gorgon Scales: High-quality iron"],
         about: ["Once thought to be magical in nature, these large bovines merely have unique natural adaptations. They have evolved hard iron scales that protect them from harm, which they maintain by ingesting magnetite deposits inside caves. While their sharp horns and strong kicks are usually enough to deter or maim any that threaten them, they can also exhale petrifying fumes from a sac deep inside the throat. These vapours will rapidly turn any caught within them to stone.", "Due to their iron scales, the Gorgon is extremely sensitive to magnetic fields."]
     },
+    kruthik: 
+    {
+        active: true,
+        name: "Kruthik",
+        image: GetImage(""),
+        category: categories.insectoid.name,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["Small - Large Insectoid (Monstrosity): Communal burrowing hexapod. Front and rear leg pairs are long and very sharp, while central leg pair is shorter and more dextrous. Legs and upper side of body covered in dark blue-black chitin, underbelly is softer. Long, narrow head with needle-like teeth.", "Found in mountains, hills, deserts, and underground cave systems. Prefers hot climates, but can inhabit temperate ones."],
+        strengths: "Immune to bludgeoning damage; Resistant to piercing, poison, acid damage; attack in coordinated groups using superior numbers; fast, agile, and exceptional climbers; adults can shoot spines up to sixty feet away; larger specimens may be able to spray corrosive acid",
+        weaknesses: "Vulnerable to slashing damage; collapsing tunnel entrances can delay them, or divert their paths; killing the queen will send them into a confused and uncoordinated frenzy where they are easier to hunt down; large quantities of smoke from burning bay leaves and bark can be used to send the young, and some adults into a stupor if it can be concentrated enough",
+        peculiarities: "Rely on pheromones from their queen, and from other hive members, to navigate. Kruthik pheromones can be used to lead them astray or confuse the hive for a short time; smearing oneself in Kruthik pheromones can also disguise oneself for up to an hour, preventing unprovoked aggression; a powder of dried stapelia, cloves, and saltpetre can also cover the scent of their pheromones",
+        lures: ["Poultry rolled in cane sugar", "Kruthik pheromones, especially those of a queen"],
+        harvesting: ["Chitin", "Acid Sac", "Pheromone Gland"],
+        about: ["Like their cousins, the Endrega, Kruthik are hive creatures that live in extensive tunnel networks surrounding a large central chamber containing a queen. Communicating via pheromones, large numbers of Kruthik cooperate to forage food, build tunnels, and defend the hive. Unlike Endrega, the Kruthik do not have rigid castes, but are instead divided by age, with the newly hatched young digging new tunnels and secreting resins to reinforce the hive walls. Adult Kruthik venture out of the hive to search for food and kill prey, while large, older Kruthik remain within the hive, ready to defend it at any moment.", "Individually, a Kruthik poses little threat to a professional, however even a small nest can contain overwhelming numbers of the creatures. It is advised to use every trick at your disposal to even the odds against them, before attempting to kill the queen. Smoke from the bay tree can be used to subdue the younger members of a hive, while clever use of traps, lures, bombs, and other tactics may be able to give you an edge before the hive can overwhelm you."]
+    },
     leucrotta:
     {
         active: true,
@@ -255,6 +319,38 @@ const entries =
         lures: ["Draconid meat, heated over a fire until scorching hot"],
         harvesting: ["Basilisk Eye", "Gullet Oil: Used to distil potions to prevent or cure petrification", "Pit Organ"],
         about: ["Meijer's basilisk is not a true basilisk, and is named instead for its petrifying gaze, which is so often attributed to cockatrices and true basilisks by the uninformed. Unlike many of its draconid kin, Meijer's basilisk is cold-blooded, sluggish, and lazy. It prefers to bask through long days on hot rocks, shifting only in the evening to hunt. However, this should not be mistaken for an easy kill, the eyes of the creature are terrible, and should one look upon them, one's body shall rapidly begin to turn to stone.", "They can also be difficult to track, as they climb well, and prefer to stick to rocky outcrops where they may lie camouflaged against the stone. Their pit organs allow them to detect a creature's body heat, allowing them to avoid danger or stalk prey in any condition."]
+    },
+    plumard: 
+    {
+        active: true,
+        name: "Plumard",
+        image: GetImage(""),
+        category: categories.vampire.name,
+        type: types.monstrosity,
+        size: sizes.small,
+        overview: ["Lesser Vampire in the form of a small bat-like creature with leathery wings and a hairless rat-like tail. Covered in short, thick fur, with large ears and sharp needle-like teeth. Found in large flocks that roost in a dark location out of the sun, such as caves, mines, barns, or ruins."],
+        strengths: "Resistant to non-silver weaponry, necrotic, cold damage; quick and agile in the air; nest in large numbers which swarm victims together to overwhelm them; sharp teeth drain blood from their victims",
+        weaknesses: "Vulnerable to radiant damage; extremely sensitive to sunlight, rapidly charring and burning until death; least intelligent of all Vampires, driven by very instincts",
+        peculiarities: "If a member of a Plumard flock is captured, the flock will usually seek them out after a few days, attempting to free them if possible.",
+        lures: ["Fresh blood from a pig"],
+        harvesting: ["Nothing of value"],
+        about: ["The least of all Vampires, the humble Plumard is little more than a flying rat, far removed from the terrifying power of their more famous kin. Driven by base instinct, they hunt by night for unwary livestock, or unfortunate travellers to drain of blood, latching on with claws and wings and refusing to dislodge until they have drunk their fill. Although a single Plumard is little threat to even an untrained peasant with a net, Plumards swarm together in flocks that may range in size from barely ten to over sixty. When hunting together, the flock will overwhelm even larger victims with sheer numbers, so many creatures latching on to their prey that the unfortunate victim may not even be able to stand under their combined weight. Against such numbers, it may be necessary to find other ways of dealing with a flock instead of confronting them head-on, as every Plumard felled will be quickly replaced by many more.", "Since they cannot endure the light of the sun for long, a flock of Plumards hunts in only a relatively small area around their lair, which by necessity will be some dark, sunless corner of a cave or building. If a flock becomes large enough that the area cannot support their feeding requirements, the flock may migrate - sometimes splitting into multiple groups - to find new territory."]
+    },
+    slyzard:
+    {
+        active: true,
+        name: "Slyzard",
+        image: GetImage(""),
+        category: categories.draconid.name,
+        type: types.dragon,
+        size: sizes.huge,
+        overview: ["Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Powerful build with a heavy spiked tail and large elongated head with massive jaws that swallow prey whole and breath forth fire.", "Found in tall, open forests - where they have enough room to take off and land - and wetland, but may roam farther afield. They are so large that their nests are often made on the forest floor, or in swamps, rather than lofty cliff-faces."],
+        strengths: "Immune to fire, thunder, lightning damage; resistant to bludgeoning, slashing, poison, radiant, cold damage; potent fire breath; powerful tail with vicious spikes; wing bones are strong and sharp; loud roar can stagger or daze at short range; extremely aggressive and fearless; surprisingly fast and agile on the ground",
+        weaknesses: "Vulnerable to acid damage; slow to take off from the ground, requiring a running start; they swallow prey whole and are more lethargic while digesting; blocking one's ears may reduce the effects of their roars; they are less agile in the air than their smaller relatives, making them an easier target for projectiles, especially siege weaponry",
+        peculiarities: "They require a high sulphur intake and have been observed ingesting raw sulphur when it is available; approximately one hour after fighting, the Slyzard's adrenaline rush will subside, leaving it tired and less alert for up to 12 hours",
+        lures: ["Large bovine carcass stuffed with sulphur"],
+        harvesting: ["Draconid Claws", "Adrenal Gland", "Sulphur"],
+        about: ["The Slyzard, also called a Dracolizard is the largest Draconid, excepting True Dragons, with the oldest recorded specimens nearly reaching the size of a Green Dragon. Unlike Dragons however, the Slyzard is not truly intelligent, and is extremely aggressive, seeing all creatures as prey. They have enlarged adrenal glands and an extremely high pain tolerance, causing them to act with unrelenting fearlessness. Once engaged, a Slyzard will not flee, but will fight bitterly until either it or its opponents are dead.", "When not mistake for a Dragon, the Slyzard can be confused with the Wyvern or Forktail by the layman, but this is a dangerous error for the Slyzard is far more dangerous than its smaller relatives. Although not venomous, its tail is heavy and spiked and can easily break one's body with a single strike. Their huge jaws can swallow prey whole, and their wings can be used offensively, striking with sharp bone spurs to ward off attackers while on the ground. Above all however, it is their fiery breath that makes the Slyzard so dangerous. While not as devastating as the breath of a true Red Dragon, the heat from their breath can easily roast a knight in their armour, or turn a village into ash.", "They have rarely been observed eating raw sulphur, firmly disproving any notions of killing them with sulphur-stuffed carcasses, as folktales would have one do with Dragons. It has been suggested that their high sulphur intake is connected to their ability to breath fire. Whatever the reason, their lairs - and the beasts themselves - often stink of sulphur."]
     },
     umberHulk: 
     {

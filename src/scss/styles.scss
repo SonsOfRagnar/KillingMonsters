@@ -4,7 +4,8 @@
 
 $primary: #221d1d;
 $secondary: #25201d;
-$tertiary: #f1e4c4;
+$tertiary: #f1e4c4; // Original
+//$tertiary: #f0deb2; // Tweaked to work with paper texture.
 
 $textPrimary: #dfd6c4;
 $textPrimarySubdued: #dfd6c4c2;
@@ -153,6 +154,9 @@ $fontBranding: "Kurale";
 body {
     //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     background-color: $primary !important;
+
+    //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
     color: $textPrimary !important;
 }
 
