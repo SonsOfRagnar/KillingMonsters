@@ -43,7 +43,7 @@ const categories =
         name: "Cursed One",
         pluralName: "Cursed Ones",
         image: GetImage("CursedOnesDiagram.png"),
-        overview: ["These monsters were once men, or other natural folk, before a magical curse or ancient hex transformed them. In rare cases, their curse may have been passed on from parent to child, or from attacker to victim through a wound. Due to the powerfully magical nature of Cursed Ones, one should take care to approach each case individually, being wary of assumptions or past experiences. Some curses may follow reliable patterns - such as that of the Striga - but even then some details may vary, along with the strength of the curse.", "Many cases can be cured through the proper dispelling of the curse. Some curses have known cures, although enacting them may be tricky, while others often require the meeting of certain conditions unique to the circumstances under which the afflicted was cursed. Gathering information on how they came to be cursed is often vital.", "If all else fails, death is the surest cure, although it may not come easily to them, as their curses often bestow terrible strength upon them."]
+        overview: ["These monsters were once men, or other natural folk, before a magical curse or ancient hex transformed them. In rare cases, their curse may have been passed on from parent to child, or from attacker to victim through a wound. Due to the powerfully magical nature of Cursed Ones, one should take care to approach each case individually, being wary of assumptions or past experiences. Some curses may follow reliable patterns - such as that of the Striga - but even then some details may vary, along with the strength of the curse.", "Many cases can be cured through the proper dispelling of the curse. Some curses have known cures, although enacting them may be tricky, while others often require the meeting of certain conditions unique to the circumstances under which the afflicted was cursed. Gathering information the exact nature of the curse is usually vital. How were they cursed, by whom, and why? The wording of curses can be especially important, as finding ways to fulfil a curse's parameters while subverting the intended effects can break their power. There is more power in words than many know, and one does not need to be a great mage to invoke powers beyond their understanding with and ill-spoken curse or threat.", "If all else fails, death is a swift cure for most cursed ones, although it may not come easily to them, as their curses often bestow terrible strength upon them."]
     },
     draconid:     
     {
@@ -100,17 +100,19 @@ const categories =
     },
     spectre:
     {
-        active: false,
+        active: true,
         name: "Spectre",
         pluralName: "Spectres",
-        overview: []
+        image: GetImage("Spectres.webp"),
+        overview: ["Spectres is a broad term for the undead, the restless spirits of the deceased who cannot - or will not - give up their grip on life. Spectres take many forms, and even within a given classification there may be significant variety. The undead are not species of creature, like most of the monsters covered within these pages, but a projection of the spirit onto the material world. They are shaped more by their own experience, memories, and trauma than they are by rules of nature, and their abilities, motivations, and weaknesses may vary accordingly.", "Many Spectres retain some level of sentience and can be reasoned with, communicated with, and even collaborated with, as some may wish to peacefully move on at last. Others are violent and bloodthirsty, or bring pestilence, nightmares, and sorrow. One should be wary of jumping straight to a drawn sword however, as not all Spectres can be simply defeated. Many require the meeting of certain conditions - much like the lifting of a curse - to be dispelled."]
     },
     vampire:
     {
         active: true,
         name: "Vampire",
         pluralName: "Vampires",
-        overview: []
+        image: GetImage("Vampires.webp"),
+        overview: ["Vampires are an enigmatic and elusive family of creatures, about which little is known. Even the extent to which the different kinds of vampires are related to one another is contested, however they all share in common one trait, a desire - sometimes a need - to drink blood, particularly the blood of humanoids. In some Vampires this is necessary for their survival, and they subsist on little else, while in others blood is merely a delicacy, or craving, which is satiated at their whim.", "Vampires can be roughly divided into two categories, Greater and Lesser, based on their intelligence. Generally speaking, Greater Vampires possess full intelligence and are usually able to assume a humanoid form. Most of these Vampires still need to feed on blood to survive, while being able to control their thirst and feed only when necessary or advantageous. Greater Vampires are also less likely to be susceptible to sunlight. In contrast, Lesser Vampires are animalistic, driven by a predator's instincts and their need to feed. Lesser Vampires generally have only one form - usually monstrous -  and are also nocturnal, being either highly sensitive to sunlight, or completely unable to stand it without death.", "Of the Greater Vampires, one type stand apart: the Higher - or True - Vampires. Higher Vampires are vastly more powerful than their brethren, nigh indestructible, and are fully detached from the necessity of drinking blood to survive - though that does not stop them from indulging despite this. No author, scholar, or warrior is qualified to teach one how to defeat a Higher Vampire, or even to survive an encounter with one that wishes you harm. Should you ever meet one, pray they are amicable."]
     }
 }
 
@@ -164,7 +166,7 @@ const entries =
     {
         active: true,
         name: "Aeschna",
-        image: GetImage(""),
+        image: GetImage("Aeschna.webp"),
         category: categories.insectoid.name,
         type: types.monstrosity,
         size: sizes.large,
@@ -180,7 +182,7 @@ const entries =
     {
         active: true,
         name: "Bruxa",
-        image: GetImage(""),
+        image: GetImage("Bruxa.webp"),
         category: categories.vampire.name,
         type: types.monstrosity,
         size: sizes.medium,
@@ -228,7 +230,7 @@ const entries =
     {
         active: true,
         name: "Forktail",
-        image: GetImage(""),
+        image: GetImage("Forktail.webp"),
         category: categories.draconid.name,
         type: types.dragon,
         size: sizes.large,
@@ -276,7 +278,7 @@ const entries =
     {
         active: true,
         name: "Kruthik",
-        image: GetImage(""),
+        image: GetImage("AdultKruthik.png"),
         category: categories.insectoid.name,
         type: types.monstrosity,
         size: sizes.medium,
@@ -324,7 +326,7 @@ const entries =
     {
         active: true,
         name: "Plumard",
-        image: GetImage(""),
+        image: GetImage("Plumard.webp"),
         category: categories.vampire.name,
         type: types.monstrosity,
         size: sizes.small,
@@ -340,7 +342,7 @@ const entries =
     {
         active: true,
         name: "Slyzard",
-        image: GetImage(""),
+        image: GetImage("Slyzard.webp"),
         category: categories.draconid.name,
         type: types.dragon,
         size: sizes.huge,
@@ -377,12 +379,28 @@ const entries =
         type: types.humanoid,
         size: sizes.medium,
         overview: ["Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite. Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra."],
-        strengths: "Immune to non-silver weapons, cold damage; resistant to poison, necrotic, thunder, force damage, frightened, charmed. Excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast agressive attacks; intelligent",
-        weaknesses: "Harmed by silver, vulnerable to a spear tipped with a sprig of Aconite, left under the full moon for an hour.",
-        peculiarities: "Potion of Aconite, Hemlock, and silver powder can prevent transformation for one - four hours; some cases of lycanthropy may be cured by removing the curse that first transformed them; bites should be treated with a poultice of rue, wormwood, and silver powder, although chance of infection is low.",
+        strengths: "Immune to non-silver weaponry, cold damage, frightened; resistant to poison, necrotic, thunder, force damage, charmed; excellent hearing and smell; rapid regeneration; very fast, strong, and agile; very fast aggressive attacks; intelligent",
+        weaknesses: "Harmed by Silver; vulnerable to a silver spear tipped with a sprig of Wolfsbane, left under the full moon for an hour; application of Moondust can halt their regenerative ability",
+        peculiarities: "Potion of Wolfsbane, Hemlock, and silver powder can prevent transformation for 1 - 4 hours; some cases of lycanthropy may be cured by removing the curse that first transformed them; bites should be treated with a poultice of rue, wormwood, and silver powder, although the chance of infection is low; cats hate werewolves while dogs may show enthusiasm, fearful respect, or obedient loyalty to them;",
         lures: ["Blood of a child under five years of age", "Heart of one the werewolf loves"],
         harvesting: ["Werewolf Teeth: valuable", "Werewolf Blood: used in potions"],
-        about: ["A humanoid cursed with lycanthropy, instilling a thirst for blood and granting the ability to transform into a terrible wolf. Lycanthropes may be either direct results of a magical Curse, born as the offspring of two lycanthropes, or infected when bitten by one already afflicted by lycanthropy. However this last is far rarer than superstition would have you believe as most bites do not transmit the disease. However it is still a possibility and one especially relevant to those who may encounter and fight lycanthropes often.", "In the case of cursed werewolves, there is a possibility of lifting the curse, although as with all curses, it will be likely be unique, and require a unique solution to lift it, if it is at all possible to lift.", "Regardless of the source of their lycanthropy, each werewolf is invariably unique, as they are humanoids cursed or diseased with a terrible burden. Some may be unwilling hosts to the bloodlust, while others may embrace it, or even deliberately use it to their advantage. Some may be fully lucid during transformation, while others may remember only fragments, or believing the episodes to be vivid dreams."]
+        about: ["A humanoid cursed with lycanthropy, instilling a thirst for blood and granting the ability to transform into a terrible wolf. Lycanthropes may be either direct results of a magical Curse, born as the offspring of two lycanthropes, or infected when bitten by one already afflicted by lycanthropy. However this last is far rarer than superstition would have you believe as most bites do not transmit the disease. However it is still a possibility and one especially relevant to those who may encounter and fight lycanthropes often.", "In the case of cursed werewolves, there is a possibility of lifting the curse, although as with all curses, it will be likely be unique, and require a unique solution to lift it, if it is at all possible to lift. Those cursed with lycanthropy - rather than being born to it - have little control over their transformation, and are driven by a terrible bloodlust and hunger. Most have no recollection of their actions while under its effects (perhaps a blessing) and only a few with iron wills are able to restrain themselves enough to communicate while transformed.", "Regardless of the source of their lycanthropy, each werewolf is invariably unique, as they are humanoids cursed or diseased with a terrible burden. Some may be unwilling hosts to the bloodlust, while others may embrace it, or even deliberately use it to their advantage. Some may be fully lucid during transformation, while others may remember only fragments, or believing the episodes to be vivid dreams.", "In combat, a werewolf is very dangerous, and possessed of an apex predator's murderous instincts. They have been recorded to single out weak foes and viciously focus on them until they fall, slowly picking apart a group until the stronger members stand alone. They can leap great distances and seize upon any weakness to strike swiftly, preferring bites to the throat to quickly finish an opponent, although they are said to rip out the hearts of those they kill as well. They are not known to flee."]
+    },
+    wraith: 
+    {
+        active: true,
+        name: "Wraith",
+        image: GetImage("Wraith.webp"),
+        category: categories.spectre.name,
+        type: types.undead,
+        size: sizes.medium,
+        overview: ["The spectre of a dead humanoid who has lingered beyond their time due to trauma, a desire for vengeance, a curse, or some other reason. Manifest in diverse forms, usually similar to the form they had in life, twisted to some extent by the force that keeps them from their rest. Often appear shrouded, hooded, or cloaked.", "Found near their bodies, commonly in graveyards, crypts, and battlefields."],
+        strengths: "Immune to non-silver weaponry, cold, necrotic, poison damage, frightened, charmed, exhaustion; resistant to acid, lightning damage; short-range teleportation; ability to turn intangible, becoming invulnerable to harm; can move through walls and other objects; attacks carry the freezing chill of the grave and can sap the strength from victims",
+        weaknesses: "Vulnerable to fire damage; unable to move too far from where their body lies; burning a lock of the wraith's hair while speaking their true name will anchor them more firmly to the world of the living, preventing them from becoming intangible; burning fresh rosemary and rue can weaken a wraith, shrouding them in memory and sorrow",
+        peculiarities: "If a wraith is not manifest, ringing a silver bell and calling the deceased name will summon them if they are present; wraiths move very slowly over running water and cannot become intangible while crossing, they cannot teleport over running water",
+        lures: ["Wraiths are not lured as conventionally as many other creatures. The wraith is already bound to a location, near its body and cannot roam too far beyond that, no matter the lure. Items, smells, sounds etc. that were important to the wraith in life, or are related to its reason for lingering can potentially attract it and keep it present for a time."],
+        harvesting: ["Essence of Death", "Grave Dirt"],
+        about: ["Wraiths are the quintessential Spectre, a deceased humanoid that has for whatever reason, been unable to pass on in peace, instead lingering and haunting the final resting place of their material bodies. The disposition of a Wraith may depend on the reason for its existence. Wraiths born of violent deaths, vengeful rage, unfinished vendettas, or a love of war are likely to be more aggressive, while those lingering from sorrows, lost loves, unfinished business, or unresolved trauma may be communicative and non-hostile. In this way, Wraiths - like many Spectres - exhibit considerable overlap with Cursed Ones, as many can be dealt with by resolving their reason for lingering. They can of course also be the direct product of a curse, which may bind a Wraith to this world long after they are ready to move on. If a Wraith is not cooperative, it may need to be defeated first, to dispel it for long enough for you to work.", "Wraiths - more so than other Spectres - are directly bound to earthly remains, unable to stray too far from them. They still have a substantial range, enough to haunt a village or city quarter, or area of woodland but cannot for travel to a different city or village for example. Within this range, the Wraith can move at will, both moving through solid objects with ease and even vanishing in place, only to reappear somewhere else. They prefer to linger in places of personal significance (most commonly their resting place), and can be compelled to stay in one place by invoking memories from life, usually through belongings, scents, etc.", "In addition to this, a Wraith may not always be physically manifest, instead resting in a form of sleep-like trance, completely invisible and undetectable to the human eye. They can be woken simply by speaking to them, or intruding upon their resting place, but a silver bell and their name can be used to compel them to reveal themselves even against their will. This is not to be confused with Necromancy. The Wraith is not summoned up from death, but merely woken from their resting place to converse with the caller. As a final note of caution, one may be tempted to simply destroy the remains of a Wraith, thinking that this will force it to move on. This would be a grave error. Destroying a Wraith's physical remains merely strips it of the little humanity it had left, leaving an undead husk that will return in time as another, more twisted form of Spectre, no longer to be reasoned with."]
     },
     wyvern:
     {
