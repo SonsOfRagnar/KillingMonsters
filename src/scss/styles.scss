@@ -60,6 +60,8 @@ $card-color: $textSecondary;
     --bs-list-group-color: #{$textSecondary};
 }
 
+// Nunito Sans, Cinzel Decorative, Grenze Gotisch
+
 // $fontMenu: "KronaOne-Regular"; //No
 // $fontMenu: "PaytoneOne-Regular"; // No
 // $fontMenu: "RobotoCondensed"; //Maybe
@@ -127,11 +129,20 @@ $fontBranding: "Kurale";
 @media (min-width: 992px) {
     .nav-link:hover:not(.active) {
         box-shadow: 0px -3px 0px 0px $textHighlight inset;
-        font-weight: 300 !important;
+        //font-weight: 600 !important;
+        text-decoration: none;
+
+        text-shadow: -.25px -.25px 0 rgb(255, 255, 255), .25px .25px rgb(255, 255, 255);
+        //text-shadow: -.25px -.25px 0 rgb(255, 255, 255);
+
+    }
+    .nav-link:hover{
+        text-decoration: none;
     }
     .nav-link.active {
         box-shadow: 0px -5px 0px 0px $textHighlight inset;
         font-weight: 600 !important;
+        //text-shadow: -.25px -.25px 0 rgb(255, 255, 255), .25px .25px rgb(255, 255, 255);
     }
 }
 // Nav link interaction on phone
