@@ -22,8 +22,8 @@ function ImportBestiaryImages()
 
 function GetImage(imageName)
 {
-    console.log("GetImage called for " + imageName);
-    console.log(images.get(imageName));
+    //console.log("GetImage called for " + imageName);
+    //console.log(images.get(imageName));
     return images.get(imageName);
 }
 
@@ -112,7 +112,12 @@ const categories =
         name: "Vampire",
         pluralName: "Vampires",
         image: GetImage("Vampires.webp"),
-        overview: ["Vampires are an enigmatic and elusive family of creatures, about which little is known. Even the extent to which the different kinds of vampires are related to one another is contested, however they all share in common one trait, a desire - sometimes a need - to drink blood, particularly the blood of humanoids. In some Vampires this is necessary for their survival, and they subsist on little else, while in others blood is merely a delicacy, or craving, which is satiated at their whim.", "Vampires can be roughly divided into two categories, Greater and Lesser, based on their intelligence. Generally speaking, Greater Vampires possess full intelligence and are usually able to assume a humanoid form. Most of these Vampires still need to feed on blood to survive, while being able to control their thirst and feed only when necessary or advantageous. Greater Vampires are also less likely to be susceptible to sunlight. In contrast, Lesser Vampires are animalistic, driven by a predator's instincts and their need to feed. Lesser Vampires generally have only one form - usually monstrous -  and are also nocturnal, being either highly sensitive to sunlight, or completely unable to stand it without death.", "Of the Greater Vampires, one type stand apart: the Higher - or True - Vampires. Higher Vampires are vastly more powerful than their brethren, nigh indestructible, and are fully detached from the necessity of drinking blood to survive - though that does not stop them from indulging despite this. No author, scholar, or warrior is qualified to teach one how to defeat a Higher Vampire, or even to survive an encounter with one that wishes you harm. Should you ever meet one, pray they are amicable."]
+        overview: ["Vampires are an enigmatic and elusive family of creatures, about which little is known. Even the extent to which the different kinds of vampires are related to one another is contested, however they all share in common one trait, a desire - sometimes a need - to drink blood, particularly the blood of humanoids. In some Vampires this is necessary for their survival, and they subsist on little else, while in others blood is merely a delicacy, or craving, which is satiated at their whim.", "Vampires can be roughly divided into two categories, Greater and Lesser, based on their intelligence. Generally speaking, Greater Vampires possess full intelligence and are usually able to assume a humanoid form. Most of these Vampires still need to feed on blood to survive, while being able to control their thirst and feed only when necessary or advantageous. Greater Vampires are also less likely to be susceptible to sunlight. In contrast, Lesser Vampires are animalistic, driven by a predator's instincts and their need to feed. Lesser Vampires generally have only one form - usually monstrous -  and are also nocturnal, being either highly sensitive to sunlight, or completely unable to stand it without death.", "Of the Greater Vampires, one type stand apart: the Higher - or True - Vampires. Higher Vampires are vastly more powerful than their brethren, nigh indestructible, and are fully detached from the necessity of drinking blood to survive - though that does not stop them from indulging despite this. No author, scholar, or warrior is qualified to teach one how to defeat a Higher Vampire, or even to survive an encounter with one that wishes you harm. Should you ever meet one, pray they are amicable."],
+        subcategories:
+        {
+            lesser: "Lesser",
+            greater: "Greater"
+        }
     }
 }
 
@@ -151,7 +156,7 @@ const entries =
         active: false,
         name: "Template",
         image: GetImage(""),
-        category: categories.cursed.name,
+        category: categories.cursed,
         type: types.humanoid,
         size: sizes.medium,
         overview: [""],
@@ -167,7 +172,7 @@ const entries =
         active: true,
         name: "Aeschna",
         image: GetImage("Aeschna.webp"),
-        category: categories.insectoid.name,
+        category: categories.insectoid,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["An aquatic arthropod, up to twelve feet long, with ten sharp, pointed legs, the front two of which are adapted into large grasping pincers like those of a crab. Thick, mottled shell plating on the top of its body, with a long, flat tail. Jaws are large and flanked by sickle-shaped mandibles.", "Found in slow-flowing or stagnant water, river deltas, swamps, and other wetlands. Often found in areas frequented by boats and fishermen, where refuse and waste products provide accessible food."],
@@ -178,17 +183,34 @@ const entries =
         harvesting: ["Chitin", "Aeschna Claws"],
         about: ["The Aeschna - known more colloquially as the Glustyworp - is a large, aquatic arthropod resembling in many ways an overgrown prawn. From above, they are easily mistaken for floating logs, as their shells are usually overgrown with moss and weeds, and they drift lazily in the water when not active. Their shell provides protection as well as camouflage, being incredibly resilient. The creatures possess a soft underbelly however, and if one is able to reach it, a spear or other thrusting weapon can easily penetrate their vital organs.", "They hunt primarily with their enlarged forelimbs, which end in sharp claws which can grip with vice-like strength. Once prey is grasped, it is brought to the creatures jaws, where two pairs of mandibles, razor-sharp and sickle-like eviscerate the victim so the creature can feed. Despite their size, they are surprisingly fast and can burst from the water to catch prey on boats, bridges, and riverbanks. If caught in the creature's grip, one's first priority should be escape, as the Aeschna will ignore any futile attacks on its hard shell, and simply devour you.", "Although their primary prey has traditionally been river porpoises, as cities have expanded and overfishing has reduced porpoise numbers, Aeschna have learned to hunt livestock, as well as human passengers on boats crossing crowded waterways. In between actively hunting, Aeschna also feed off sewage and waste from cities, growing larger and larger each year."]
     },
+    alghoul: 
+    {
+        active: true,
+        name: "Alghoul",
+        image: GetImage(""),
+        category: categories.necrophage,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["Hairless quadruped with brown or black leathery skin - often striped or banded - and a twisted, humanoid face. Body is covered in long, sharp spines that can be erected when threatened.", "Found commonly in graveyards and battlefields where carrion can be scavenged or dead bodies dug up. May range farther afield looking for living prey, including into small settlements."],
+        strengths: "Resistant to non-silver weaponry, cold, necrotic, poison damage; strong and quick; coordinates with other necrophages to bring down dangerous prey; spines can cause damage to attackers at close range; rudimentary intelligence and cunning; extremely aggressive and become more so when enraged; fast, and has a powerful leap",
+        weaknesses: "Vulnerable to radiant damage; a powder of silver and dried lavender can weaken the creature enough to force it to retract its spines - in the unlikely event that one can charm them, it will have the same effect; when enraged they dangerous, but much easier to hit, as they make little attempt to avoid attacks",
+        peculiarities: "Commonly found leading packs of Ghouls which it may drive to aggressively seek out living prey, rather than simply scavenging in graveyards; they dislike the sound of bells, particularly large bells such as those in churches, and prefer to avoid confrontation while they can hear them",
+        lures: ["Fresh corpses"],
+        harvesting: ["Necrophage tissue", "Alghoul spines"],
+        about: ["Closely related to the far more common and numerous Ghouls, an Alghoul is often confused for its lesser kindred by the untrained. Although physically similar, Alghouls are stronger and more muscular, possess a longer tail, and are usually darker in colour that their cousins, with dark brown or black hides often striped with dark, mottled green bands. Their most distinctive feature however, is their spines, which cover their shoulders and lower back, and may be erected at will to create bristling coat of sharp points. These spines make fighting at close quarters extremely difficult, as every swing is likely to impale your own hand on their spines.", "Alghouls possess a rudimentary intellect, which they often use to seize control of Ghoul packs and organise them into a bolder, more aggressive group which can proactively seek out prey to satisfy the Alghoul's voracious appetite. For this reason, one is unlikely to encounter a lone Alghoul, although it is not unknown. Despite their intelligence, they are highly aggressive necrophages, and usually prefer to rapidly close distance with prey or perceived threats to attack them, trusting their spines to protect them while they savage attackers with a flurry of claws and teeth. They can be easily provoked into a murderous rage when injuring them, during which they attack with reckless fury, aiming to incapacitate their prey rapidly, caring little if they are injured in the process.", "Intriguingly for such fearlessly aggressive creatures, they appear deeply disturbed by the sound of large bells ringing, and become much less willing to attack while they can hear them. Small hand bells have a severely diminished effect while multiple large bells - such as those of a church - are far more effective. This has given rise to the superstition that Ghouls and Alghouls are unholy creatures that cannot abide the sound of blessed church bells, however any large bells seem to have a comparable effect, churches are simply the most common place to find such bells."]
+    },
     bruxa: 
     {
         active: true,
         name: "Bruxa",
         image: GetImage("Bruxa.webp"),
-        category: categories.vampire.name,
+        category: categories.vampire,
+        subcategory: categories.vampire.subcategories.greater,
         type: types.monstrosity,
         size: sizes.medium,
-        overview: ["Greater vampire appearing as either a pale humanoid or large bat. Most commonly they appear as female, although this is not guaranteed. They live in the wild, usually in forests, although they may be drawn nearer to inhabited areas in order to prey on dreamers."],
+        overview: ["Extremely dangerous vampire which appears as either a pale humanoid or large bat and can change form at will. Most commonly they appear as female, although this is not guaranteed. They live in the wild, usually in forests, although they may be drawn nearer to inhabited areas in order to prey on dreamers."],
         strengths: "Immune to non-silver weaponry, cold, necrotic, psychic, poison, and thunder damage; resistant to slashing damage; completely unaffected by the sun; strong, and extremely fast; their shrill screams can fracture bones and leave those who hear it stunned; able to shape-shift into a large bat; ability to hypnotise people during their dreams, inducing sleepwalking",
-        weaknesses: "Application of Moon Dust can dampen their regenerative abilities; they are averse to monkshood - also called wolfsbane - especially when burnt on a fire; some of the effect of their screams may be mitigated if one cannot hear it, although the sheer force can still cause damage; massive piercing damage with a wooden object - especially rowan wood - may weaken them",
+        weaknesses: "Application of Moon Dust can dampen their regenerative abilities; they are averse to monkshood - also called wolfsbane - especially when burnt on a fire; some of the effect of their screams may be mitigated if one cannot hear it, although the sheer force can still cause damage; massive piercing damage with a wooden object - especially rowan wood - may weaken them; Black Blood potions may be effective it the Bruxa attempts to feed upon you",
         peculiarities: "Though they are intelligent, and in theory capable of speech, Bruxae rarely do so, instead preferring to sing after they feed, usually in their own language; they love birds, and birds seem undaunted by their presence; they possess a form of telepathy and can project their words or song directly into one's mind",
         lures: ["Sleeping Humanoid - Bruxae are individuals, and what draws them to a potential victim is unique. Some might prefer the rich and powerful for their value as thralls, others might take pleasure in draining the life from strong warriors. If a Bruxa already has a favourite victim however, they can be used much more reliably as a lure, for the Bruxa will likely return to them regularly to feed and reestablish their bond."],
         harvesting: ["Vampire Dust"],
@@ -199,7 +221,7 @@ const entries =
         active: true,
         name: "Catoblepas",
         image: GetImage("Catoblepas.png"),
-        category: categories.necrophage.name,
+        category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["Stocky, shaggy-haired quadruped with cloven hooves and high shoulders. Long sagging neck with a head like a boar's. Curved tusks. Tail is long and ends in a heavy bone club. Tiny, wrinkled third eye nestled in skin folds on forehead.", "Most often found in Swamps, Battlegrounds, Graveyards"],
@@ -215,7 +237,7 @@ const entries =
         active: true,
         name: "Chort",
         image: GetImage("Chort.png"),
-        category: categories.relict.name,
+        category: categories.relict,
         type: types.fiend,
         size: sizes.large,
         overview: ["Bristle-furred biped on cloven-hoofed hind legs, often walks on all fours, with claw-like hands. Curling horns like a ram's above three yellow eyes like those of a goat. The third is set into the forehead. A long, furry tail.", "Found in deep forests, old hills, and near settlements built on crossroads."],
@@ -226,12 +248,62 @@ const entries =
         harvesting: ["Chort Eye: Potent magical powers. Valuable to mages.", "Chort Horn: Powdered as an alchemy ingredient, aphrodisiac."],
         about: ["Chorts are highly dangerous and very old creatures, close brethren to bies - or fiends as they are commonly known - and bukavacs, these monsters are often believed to be evil gods or demons of the deep forests. This is obviously untrue, for a chort can be slain sure as any monster, however the tales of their power are not to be dismissed. While not as deadly as bies, the chort is extremely strong while still displaying remarkable agility, able to leap upon their victims with alarming speed. It is also very hard to kill, with even magic seeming to glance off its bristly hide, and the third eye is capable of bewitching or cursing those it falls upon.", "Chorts are particularly reviled for their love of stealing babies, something they seem to take great delight in. In is unknown why they do this, as they do not seem to eat them. Nevertheless, an infant taken by a chort has never been found. Villages build near crossroads seem to be disproportionally affected by this behaviour. When not taking children, a chort is often secretive and elusive, only rarely attacking humanoids for food, preferring to survive off large game such as deer and boar. A chort will use their third eye to charm targets, and quickly finish them with their claws.", "Some claim that chorts do not steal children, but are in fact given them by evil souls who wish to bargain with the monster for terrible powers."]
     },
+    drowner: 
+    {
+        active: true,
+        name: "Drowner",
+        image: GetImage(""),
+        category: categories.necrophage,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["A bipedal, aquatic humanoid that may bear some resemblance to a drowned corpse. Slimy, mottled skin that may be shades of green, blue, brown, or white. Humanoid, webbed hands and feet with sharp nails. Large, bulbous eyes. Needle-like teeth.", "Widespread in many bodies of water, including rivers, swamps, lakes, and the sea. Often found near well-travelled areas or settlements where food can be found."],
+        strengths: "Immune to charmed; resistant to non-silver weaponry, cold, and acid damage; slimy skin makes them hard to grapple; amphibious, breathing both air and water; stealthy and well camouflaged when in water; work together in groups to bring down prey; surprisingly good climbers",
+        weaknesses: "Vulnerable to fire damage; bulbous eyes are sensitive to bright lights; skittish while on land and quick to flee; individually weak",
+        peculiarities: "Particularly active during rainstorms; dislike hot sunlight which dries them out and can leave them disoriented",
+        lures: ["Well-rotten flesh submerged in the body of water inhabited by the Drowner"],
+        harvesting: ["Necrophage tissue", "Drowner Brain"],
+        about: ["Drowners are a common and widespread Necrophage that inhabit all manner of water, from muddy pools and swamps, to rivers, lakes, and even the sea itself, although they are less common in faster-flowing, or shallow waters. Although they are often mistake for the risen corpses of those who drowned, they are - like all necrophages - living creatures which feast on rotten flesh. Their name more accurately refers to their hunting methods, for although they are scavengers, they also hunt more actively than many necrophages, seeking to drag prey beneath the water and drown them.", "Drowners prefer to lie beneath the water of mud and ambush passing prey where they can easily be dragged down, but they are amphibious creatures and frequently roam onto dry land to seek victims. They are most active during the night, and at dusk, and prefer to leave the water during rainstorms to avoid their slimy hides drying out and to mask the squelching sound their damp, webbed feet make on dry land. When hunting out of the water, Drowners almost always move in large packs of ten to fifteen creatures, as they are individually little stronger than a man. Despite these numbers, they will usually retreat to the water as soon as one or two victims have been caught, as they are very wary and cautious when outside of the water.", "Victims are usually drowned, but if caught some distance from the water then they may be bitten to death before they are dragged back to the Drowners' home. Drowners prefer meat that has rotten underwater, bloating and stretching under layers of wrinkly, softened skin. Fresh victims are usually tangled in pond weed, old logs, kelp, or weighed down with stones to prevent them floating to the surface, and kept until they are sufficiently aged. Even after a group of Drowners are killed, their underwater larder may draw other monsters, including new Drowners. For this reason, it is imperative that these corpses are removed after dealing with a Drowner infestation. Drowners are sometimes confused with other water-dwelling creatures such as Vodyanois, Vodniks, and Rusalkas."]
+    },
+    ekimmara: 
+    {
+        active: true,
+        name: "Ekimmara",
+        image: GetImage(""),
+        category: categories.vampire,
+        subcategory: categories.vampire.subcategories.lesser,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["A bipedal, bat-like creature with taut, leathery skin that varies widely in colour including white, grey, blue, and red. Patches of shaggy fur, especially around neck and head. Long, spindly limbs, wiry body, and vestigial wing-membranes between torso and arms. Triangular mouth filled with small teeth, below an elaborate nose-leaf and enlarged ears.", "Widespread in areas of wilderness populated with wildlife, where they feed on animals, and may be drawn to settlements where they lair in barns, crypts, sewers, and other dark corners."],
+        strengths: "Resistant to non-silver weapons, cold, and lightning damage; echolocation allows it to find prey even in pitch black conditions; agile and fast; aggressive; very sharp slashing claws used to sever arteries; moderate innate regeneration",
+        weaknesses: "Vulnerable to thunder damage; very loud, erratic noises (such as drums, cymbals, horns) can disorient and partially blind the creature; application of Moondust dampens their regenerative abilities; susceptible to sunlight which weakens them, halts their regeneration, and causes burns on their skin; Black Blood potions may be somewhat effective against the Ekimmara, but as they only lap spilt blood after inflicting grievous wounds, it may not help in time",
+        peculiarities: "Unlike many vampires, Ekimmaras have been known to hunt in groups of three or four to bring down larger prey",
+        lures: ["Fresh blood splashed out across the ground, especially that of horses or humans"],
+        harvesting: ["Ekimmara claws", "Ekimmara larynx"],
+        about: ["Of all the Lesser Vampires - excluding of course the lowly Plumard - Ekimmaras, also called Ekimmas, are the smallest, and perhaps the most bestial. This may lead one to assume that they are a mere nuisance and easily dealt with, but this would be a most dangerous assumption. Although smaller, and individually weaker than most other Vampires, the Ekimmara is a voracious predator with a powerful thirst for blood. Unlike more refined Greater Vampires, Ekimmara do not sip blood from delicate puncture wounds, but slash open the arteries of their prey and lap up the blood wherever it sprays, often even ignoring the dying victim in their haste to taste the fresh-spilt blood. They possess long, extremely sharp claws for this purpose, which continue to grow throughout their lives, thus requiring periodic wearing down to prevent them becoming unwieldy. They seem to prefer to use stone for this, although claw marks have also been found on thick tree bark.", "Ekimmaras are exclusively nocturnal creature, and rely heavily on a sophisticated echolocation system to navigate and pinpoint prey, although they also have a keen nose for fresh blood. Although their oversized ears give them excellent perception of their environment, it can prove a weakness when near loud noises, which can disorient and confuse the creature, possibly causing them to flee. This also explains their aversion to thunderstorms, during which they prefer to lurk in whatever dark lair they have found for themselves. It should be noted that Ekimmaras are more social than many other Vampires, both Lesser and Greater, who usually hunt alone. Small hunting group of up to four Ekimmaras have been observed working together to kill large prey including cattle, although squabbling and infighting are not uncommon.", "These vampires are widespread and can inhabit most areas, as long as there is somewhere for them to hide during the day. Caves, hollow trees, dense reed beds, barns, crypts, and sewers are all common places to stumble upon a resting Ekimmara, and unlike some other species of Vampire, they rarely stray too far from their lair, afraid to get caught in the sun."]
+    },
+    fleder: 
+    {
+        active: true,
+        name: "Fleder",
+        image: GetImage(""),
+        category: categories.vampire,
+        subcategory: categories.vampire.subcategories.lesser,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Long-limbed, bat-like aerial quadruped with forelimbs used as wings. Leathery skin in brown, grey, black, and dark red with shaggy fur along the shoulders and upper back. Blunt head with long fangs and tall triangular ears.", "Found in mountain caves, old growth forest, and steep valleys but can range long distances in a single night looking for prey. Increasingly found in developed settlements with tall buildings."],
+        strengths: "Resistant to non-silver weaponry, charmed, cold, lightning, and fire damage; agile and silent fliers; excellent climbers; cunning and stealthy; excellent hearing and smell makes it very hard to take by surprise; bite contains a soporific venom which induces drowsiness if awake, or deep sleep if already sleeping; moderate innate regeneration",
+        weaknesses: "Vulnerable to thunder damage; application of Moondust dampens their regenerative abilities; their aerial agility is limited in confined spaces, which can make it difficult for the Fleder to launch itself into flight; weighted nets or firmly anchored bear traps may be able to keep it grounded; susceptible to sunlight, which weakens them and halts their regeneration; Black Blood potions may be effective, especially if used by a sleeping victim",
+        peculiarities: "Very loud, erratic noises (such as drums, cymbals, horns) discomfort the creature, and may drive it into a rage, but do not disorient or blind the Fleder in the same way they do with its cousin, the Ekimmara; the soporific poison from their bite is mild, and can be counteracted with potions, those fully asleep can be shaken awake",
+        lures: ["Warm-blooded, sleeping creature, preferably human or pig"],
+        harvesting: ["Fleder Venom", "Fleder Saliva"],
+        about: ["Fleders, also known as Kites (not to be confused with the Flying Drake) are large flying Vampires who lack the clawed hands of their kin - the Ekimmara and Garkain - but are able to achieve true flight despite their powerful build. Despite their size they are silent when flying, and highly agile, able to flit between trees or buildings, or dive at terrifying speed upon prey. When not in the air, their powerful wings are used to crawl along the ground or climb at surprising speed, and retain enough dexterity to hook open windows or doors.", "Although still dangerous in combat, the Fleder prefers to avoid direct confrontation, using its flight and stealth to come upon sleeping victims to drink from. The bite of a Fleder injects a soporific venom which ensures the prey does not wake from sleep, however against an already awake foe, the venom merely causes drowsiness and disorientation. After biting a sleeping animal or person, the Fleder feeds until satiated, slurping blood from the jagged wound created by its long fangs. Bites are usually made over the heart, although may also occur on the neck, wrist or ankle. Victims rarely survive being fed upon by a Felder, although in a few cases, particularly sturdy victims have been found the next morning still alive, emaciated from extreme blood loss. Recovery is rare however and medical attention is required at once.", "If unable to find a sleeping victim (or if the victim awakens before bitten) the Fleder is more than capable of simply overpowering its prey and incapacitating it with a powerful bite to the throat. A Fleder hunting in this manner will usually try to swoop down from above and knock the prey to the ground, pinning it and killing it quickly. They are wary creatures and will quickly attempt to escape if the victim cannot be quicky silenced or manages to injure the Fleder. Like other Vampires, the Fleder is quite at home in cities, where it has a large stock of potential victims. They prefer to nest in elevated location such as church spires, castle roofs, or tall buildings, although they may also nest outside the city, in tall trees or mountain caves, making long journeys each night to feed."]
+    },
     forktail:
     {
         active: true,
         name: "Forktail",
         image: GetImage("Forktail.webp"),
-        category: categories.draconid.name,
+        category: categories.draconid,
         type: types.dragon,
         size: sizes.large,
         overview: ["Aerial biped with sharp, three-toed claws. Short, heavy neck and large blunt head with conical teeth. Extremely long, whip-like tail with forked end. Females are larger with longer tails, while males have coloured neck-frills.", "Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],
@@ -242,12 +314,29 @@ const entries =
         harvesting: ["Draconid Scales", "Draconid Claws"],
         about: ["The Forktail is a winged Draconid that is often mistaken for their close kin the Wyvern. They derive their name from their tails, which split into two very long, whip-like sections of sharp, scaly ridges. The split tail is not present in very young Forktails, developing as they age. In juveniles, these whips may be only a foot long, but in adults can measure up to six feet long, and strike with deadly, accuracy, opening terrible slashing wounds and cause horrible bleeding. Strikes with this tail is the Forktail's preferred method of attack, usually severing a vital artery, allowing the Forktail to remain airborne until the prey has bled out.", "Unlike Wyverns, the Forktail has a short neck and legs, and they rarely carry their prey aloft, instead alighting nearby once their prey is dead and tearing chunks from the carcass. They are also more social animals than many Draconids, commonly forming mated pairs, or even larger groups, which hunt together and share kills. In a given pair or group, the largest, oldest female is the leader and eats first after kills are made. She coordinates hunting efforts and keeps younger members in line, preventing infighting. In a mated pair, the female is always the more dangerous and fearless of the two."]
     },
+    garkain: 
+    {
+        active: true,
+        name: "Garkain",
+        image: GetImage(""),
+        category: categories.vampire,
+        subcategory: categories.vampire.subcategories.lesser,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Hulking, bat-like biped with muscular arms. Leathery wings between arms and torso.  Blunt, squashed snout with long, prominent fangs. Fleshy, bulbous, hemispherical growths  on either side of the rear of the skull.", "Found natively in forests and mountainous areas, but may range farther afield. Increasingly found in developed settlements that include tall buildings."],
+        strengths: "Immune to non-silver weaponry, charmed, and frightened; resistant to bludgeoning, cold, fire, and acid damage; very strong and aggressive; limited flight, able to glide and dive from elevation; powerful legs allow impressive leaps; strong teeth; bulbus glands on the skull grant limited telepathy to project terrifying visions into the minds of prey",
+        weaknesses: "Vulnerable to lightning and psychic damage; susceptible to sunlight which prevents them using their telepathy and impacts their vision; an amulet of rowan inscribed with a warding spell and bathed in running water can fortify one against the effects of the Garkain's telepathy",
+        peculiarities: "They do not possess the rapid regenerative abilities of many other vampires, but enter a state of torpor during the day if wounded, during which wounds are healed at an increased rate, while their senses are dulled; Black Blood potions are unlikely to be effective in a timely manner, as Garkains kill and disembowel their victims before feeding.",
+        lures: ["Mammalian liver, heart, and pancreas, soaked in fresh blood."],
+        harvesting: ["Terror gland", "Vampire fangs"],
+        about: ["The most humanoid-looking of the Lesser Vampires, the Garkain combines the aggressive ferocity of the Ekimmara and the swift ambush of the Fleder into a uniquely dangerous hunting style. They possess leathery wings that stretch between their lower torso and wrists but unlike the Fleder, they retain their clawed hands and bipedal movement. Due to this their wings are not strong enough for true flight, but allow the Garkain to glide between trees or rooftops, and dive from above to land upon unsuspecting prey. Once on the ground, the Garkain reverts to aggressive attacks with claws and teeth, using their powerful legs to leap onto victims and crush them to the ground. An unusual feature of the Garkain is the ability to project terrifying hallucinations directly into the mind of their prey using two fleshy glands on either side of their wide skull. Victims who succumb to these visions may freeze in terror, or attempt to flee, both response leaving them vulnerable to the Garkain. An amulet of rowan wood can be worn to fortify one against the terror these visions induce. Carve a piece of rowan wood into an rectangular amulet and inscribe the given warding spell upon it with ink mixed with silver, then wash away the writing in running water. The amulet's protection will hold for one turn of the moon, or until it is touched by sunlight, at which time it will fade.", "Unlike most Vampires, the Garkain does not survive exclusively on mere blood, but consumes the blood-drenched organs of its prey, particularly the heart, pancreas, and liver. The extraction of these organs - and any other the creature may feel inclined to devour - is extremely messy, with little precision. The Garkain tears open its victims, snapping bones with brute strength, and hooks out chosen organs with short, powerful claws. In almost all observed cases, the intestines were torn out, but not consumed. Once fed, the Garkain may leave the remains where they lie, although they sometimes drag the corpse back to their lair, for future consumption. Although originally found in forests and mountainous areas, the Garkain - like many other vampires - has adapted well to hunting in larger cities, where tall buildings provide perfect vantage points to drop onto victims below.", "The Garkain differs from its kin in several other ways. They do not possess the innate rapid regeneration displayed by Ekimmaras and Fleders (and all Greater Vampires), although in turn they are exceptionally hardy, shrugging off wounds from steel blades with barely a scratch. A wounded Garkain will instead enter a state of torpor during the day, hidden in its lair, during which it will heal wounds at an increased rate. The creature is vulnerable in this state though, its senses dulled as it expends energy on healing. Another notable difference is that Garkains are less afraid of the sun than some of their brethren, although they are still nocturnal. The sunlight hurts their sharp eyes, and interferes with their ability to produce visions of terror in prey, but their fearsome strength is otherwise unchanged."]
+    },
     ghast: 
     {
         active: true,
         name: "Ghast",
         image: GetImage("Ghast.webp"),
-        category: categories.necrophage.name,
+        category: categories.necrophage,
         type: types.aberration,
         size: sizes.medium,
         overview: ["Pale, hairless biped on powerful hind legs with large flat, three-toed feet. Squat and heavyset below the waist, hunched and frail above. Small vestigial arms with tiny claws. Bony, protruding head with bulbous eyes and a wide mouth full of short teeth. Short fleshy tail.", "Found near or within inhabited settlements"],
@@ -258,12 +347,28 @@ const entries =
         harvesting: ["Ghast Grease: Contains paralytic agents", "Ghast Hide: Flexible and waterproof", "Tarnowski's Gland: Valuable to mages"],
         about: ["Ghasts are strange, even for necrophages. They seem to have slipped through into our world later than their relatives, and possess human-level intellects. They also seem adapted for predation on human and non-human communities, able to take on the forms of most humanoid corpses that they consume. The ghast then lurks in the community for up to three months - the maximum extent of the transformation - before searching for a new victim. While still disguised, the ghast will often proactively seek out a suitable target, stalk them, and kill them, before taking on their shape and life.", "The ghast's transformation takes place over the course of an hour, during which the ghast's flesh bubbles and stretches, a new layer of skin growing over the old. The transformation is more than skin deep however, with the creature taking on the voice and some memories of the victim as well as their form. Once transformed, the ghast may shed its outer layer in an emergency, slithering out of it like a new-birthed foal.", "When in their natural shape, the ghast moves by hopping on its powerful hind legs, and can make incredible leaps for its size. Like many other necrophages, it emits a powerful corpse-stink, poisonous to those around it, while its claws secrete a paralytic grease that freezes the muscle of those it strikes. It is also unusually fearless, perhaps as a result of its intelligence, and cannot be easily frightened, save by bunches of dried thistles, which it desperately avoids."]
     },
+    ghoul: 
+    {
+        active: true,
+        name: "Ghoul",
+        image: GetImage(""),
+        category: categories.necrophage,
+        type: types.monstrosity,
+        size: sizes.medium,
+        overview: ["Hairless quadruped with brown or pale leathery skin and a twisted, humanoid face. Strong claws for digging, long sharp claw on thumb of each forelimb containing toxin.", "Found commonly in graveyards and battlefields where carrion can be scavenged or dead bodies dug up."],
+        strengths: "Resistant to non-silver weaponry, cold, necrotic damage; claws carry a paralysing neurotoxin that rapidly stiffens limbs and leaves victim helpless; move in packs which work together when hunting living prey",
+        weaknesses: "Vulnerable to radiant damage; scared by fire, avoiding it where possible and becoming increasingly panicked in close proximity - if backed into a corner this panic may turn into desperate aggression; if a powerful necrophage is leading the pack, its death is likely to unnerve the pack",
+        peculiarities: "Nocturnal creatures, they generally shun the day, although may be driven to remain active during daylight by a more powerful necrophage such as a Leucrotta or Alghoul; as with others of their kind, Grave Tea counteracts the paralytic toxin of their claws, however potions which neutralise poisons have no affect",
+        lures: ["Decomposing corpses"],
+        harvesting: ["Necrophage tissue", "Ghoul toxin"],
+        about: ["The common Ghoul is an extremely widespread necrophage, and notoriously difficult to eradicate. Although individually not the most dangerous of monsters, Ghouls roam in packs which can range anywhere from three or four, to near two dozen, and are drawn to areas of plentiful carrion where they nest and breed rapidly. In these numbers, they pose significant threat to even the most hardened warriors should they choose to attack. Luckily, ghouls are generally wary creatures that prefer to scavenge from rotten corpses, though if unable to find carrion they may hunt more aggressively. They are also not unwilling to attack a lone traveller that has strayed from the road at night, if the risk seems low. However, Ghoul packs are often brought under the sway of stronger and more intelligent Necrophages, who may drive them to far bolder attacks and proactive hunting.", "When required to hunt live prey, the Ghouls' claws possess a strong paralytic venom that rapidly immobilising limbs and eventually the entire body of the victim, allowing the Ghoul to feed on the still-living creature. Ghouls have been observed wounding victims with their claws and then retreating, simply waiting for their foe to succumb to the paralysis, although they may also rush forward and use their numbers to overwhelm opponents.", "Like all necrophages, Ghouls search out carrion, and are commonly found in graveyards or other areas containing humanoid remains. Troublingly, Ghouls are likely to nest in these areas, digging shallow, circular dens into soft earth - often near the roots of large trees - and using branches, foliage, and corpses to create a mound over the top. Ghouls breed fairly rapidly, and use their nests to shelter their young, and provide them a constant source of food through corpses that are added regularly. Unlike Graveirs, Ghouls do not eat bones, so over time the discarded bones are shifted to the outside of the nest, creating a grim carpet for any approaching. Fire is generally the best way to destroy a ghoul nest, although doing so may drive them into a frenzy as they launch a desperate attack to defend their young."]
+    },
     gorgon: 
     {
         active: true,
         name: "Gorgon",
         image: GetImage("GorgonClean.webp"),
-        category: categories.beast.name,
+        category: categories.beast,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["Muscular bovine quadruped with cloven hooves. Covered in overlapping iron scales. Massive shoulders supporting a stocky neck and short, heavy head. Usually possesses horns, which may range in size and shape. Smooth muscular tail.", "Most often found in Forests, Grasslands, Hills"],
@@ -274,12 +379,28 @@ const entries =
         harvesting: ["Gorgon Scales: High-quality iron"],
         about: ["Once thought to be magical in nature, these large bovines merely have unique natural adaptations. They have evolved hard iron scales that protect them from harm, which they maintain by ingesting magnetite deposits inside caves. While their sharp horns and strong kicks are usually enough to deter or maim any that threaten them, they can also exhale petrifying fumes from a sac deep inside the throat. These vapours will rapidly turn any caught within them to stone.", "Due to their iron scales, the Gorgon is extremely sensitive to magnetic fields."]
     },
+    graveir: 
+    {
+        active: true,
+        name: "Graveir",
+        image: GetImage(""),
+        category: categories.necrophage,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["Powerfully built biped which often moves on all four using long arms. Blunt snout ending in squirming papillae. Long sinewy arms ending in long, wide digging claws. Short, thick teeth, and long tongue. Three distinctive, bony combs on head.", "Found near buried corpses, especially in graveyards, where they tunnel into the soil and lair amongst the dead."],
+        strengths: "Resistant to non-silver weaponry, cold, necrotic, poison, and acid damage; extremely strong, strong jaws can crack bone; bite contains potent toxins leading to rapid poisoning; long, prehensile tongue can pull victims towards jaws",
+        weaknesses: "Vulnerable to fire; the smoke from burning a bundle of wormwood and juniper produces a potent allergic reaction, weakening the creature; fast moving when charging but unable to change directions quickly ",
+        peculiarities: "Nocturnal, although unharmed by daylight; fiercely territorial of other Graveirs, but may coexist with other - lesser - necrophages; cadaverine toxin causes serious blood poisoning which can only be fully alleviated by Golden Oriole, although continued imbibing of lesser potions may stave off death long enough for the body to purge itself over the course of several days",
+        lures: ["Decaying bone marrow"],
+        harvesting: ["Necrophage tissue", "Cadaverine"],
+        about: ["Graveirs are relatives to Ghouls and Alghouls, but are - on an individual scale - far more powerful than either. Extremely strong and heavy creatures that can stand up to 8 ft. tall on two legs, although they usually move around on all fours, using their bony knuckles. In this fashion they can move surprisingly fast for their bulk, charging down victims and snatching them with long claws or tongue. They are burrowing creatures, preferring to rest underground rather than on the surface, and they use their long, wide claws to dig messy tunnels into the soil of graveyards where they sleep through the day.", "They prefer to crack old bones and suck the decaying marrow from them with their long tongue, and thus may appear fairly passive compared to other necrophages. The Graveir may lie dormant beneath a grave or killing ground, crunching through the bones of the buried dead without needing to emerge for long periods of time. Make no mistake however - if disturbed, or when it runs out of bones, or when some unlucky family is burying their dead, the beast can be terrible to behold, tearing limbs and grinding still-living bone to splinters. Even if one should escape from its onslaught, a bite from the creature will likely lead to fatal blood-poisoning, for their teeth are saturated in cadaverine, one of the alchemical compounds responsible for the putrefaction of decaying flesh.", "Although Graveirs are solitary amongst their own kind, and suffer no other to dwell near them, they are not averse to coexisting with other necrophages. They no more intelligent than the common Ghoul, but their size, strength, and terrible ferocity when roused grant them a natural sway over lesser necrophages. A Graveir will often take first pick from the kills or scavenged finds of other Necrophages, tearing out the choicest bones and organs before leaving the rest."]
+    },
     kruthik: 
     {
         active: true,
         name: "Kruthik",
         image: GetImage("AdultKruthik.png"),
-        category: categories.insectoid.name,
+        category: categories.insectoid,
         type: types.monstrosity,
         size: sizes.medium,
         overview: ["Small - Large Insectoid (Monstrosity): Communal burrowing hexapod. Front and rear leg pairs are long and very sharp, while central leg pair is shorter and more dextrous. Legs and upper side of body covered in dark blue-black chitin, underbelly is softer. Long, narrow head with needle-like teeth.", "Found in mountains, hills, deserts, and underground cave systems. Prefers hot climates, but can inhabit temperate ones."],
@@ -295,7 +416,7 @@ const entries =
         active: true,
         name: "Leucrotta",
         image: GetImage("Leucrotta.png"),
-        category: categories.necrophage.name,
+        category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["Short-furred quadruped with cloven hooves and a long tail. Blunt head with short snout like an ugly dog, and a thick hairless skull. Sharp, ridged bone plates instead of teeth.", "Most often found in Graveyards, Swamps, Forests, Caves."],
@@ -311,7 +432,7 @@ const entries =
         active: true,
         name: "Meijer's Basilisk",
         image: GetImage("MeijerBasilisk.png"),
-        category: categories.draconid.name,
+        category: categories.draconid,
         type: types.monstrosity,
         size: sizes.medium,
         overview: ["Long-bodied eight-legged lizard with wide four-toed claws and a leathery hide, usually slate grey or blue. Reddish spines run the length of the back and thick tail. A blunt, wide head with strong jaws and triangular tearing teeth. Large blue eyes.", "Extremely adaptable with subspecies found in arid, temperate and tropical climes. All prefer rough terrain and mountainous areas. Not found in areas colder than temperate."],
@@ -327,12 +448,13 @@ const entries =
         active: true,
         name: "Plumard",
         image: GetImage("Plumard.webp"),
-        category: categories.vampire.name,
+        category: categories.vampire,
+        subcategory: categories.vampire.subcategories.lesser,
         type: types.monstrosity,
         size: sizes.small,
         overview: ["Lesser Vampire in the form of a small bat-like creature with leathery wings and a hairless rat-like tail. Covered in short, thick fur, with large ears and sharp needle-like teeth. Found in large flocks that roost in a dark location out of the sun, such as caves, mines, barns, or ruins."],
         strengths: "Resistant to non-silver weaponry, necrotic, cold damage; quick and agile in the air; nest in large numbers which swarm victims together to overwhelm them; sharp teeth drain blood from their victims",
-        weaknesses: "Vulnerable to radiant damage; extremely sensitive to sunlight, rapidly charring and burning until death; least intelligent of all Vampires, driven by very instincts",
+        weaknesses: "Vulnerable to radiant damage; extremely sensitive to sunlight, rapidly charring and burning until death; least intelligent of all Vampires, driven by very instincts; Black Blood potions can be used effectively if one is willing to endure many bites",
         peculiarities: "If a member of a Plumard flock is captured, the flock will usually seek them out after a few days, attempting to free them if possible.",
         lures: ["Fresh blood from a pig"],
         harvesting: ["Nothing of value"],
@@ -343,7 +465,7 @@ const entries =
         active: true,
         name: "Slyzard",
         image: GetImage("Slyzard.webp"),
-        category: categories.draconid.name,
+        category: categories.draconid,
         type: types.dragon,
         size: sizes.huge,
         overview: ["Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Powerful build with a heavy spiked tail and large elongated head with massive jaws that swallow prey whole and breath forth fire.", "Found in tall, open forests - where they have enough room to take off and land - and wetland, but may roam farther afield. They are so large that their nests are often made on the forest floor, or in swamps, rather than lofty cliff-faces."],
@@ -359,7 +481,7 @@ const entries =
         active: true,
         name: "Umber Hulk",
         image: GetImage("UmberHulkHead.png"),
-        category: categories.insectoid.name,
+        category: categories.insectoid,
         type: types.monstrosity,
         size: sizes.large,
         overview: ["Burrowing biped with large spade-like feet. Usually moves with the knuckles of the forelimbs on the ground, like a great ape. Chitinous armour plating and sparse short hairs. Distinctive head with bulbous eyes, huge curved mandibles and smaller psychic organs on the forehead.", "Found where underground caves and tunnels surface, or intersect with cellars. They dislike water and marshy terrain."],
@@ -375,7 +497,7 @@ const entries =
         active: true,
         name: "Werewolf",
         image: GetImage("Werewolf.webp"),
-        category: categories.cursed.name,
+        category: categories.cursed,
         type: types.humanoid,
         size: sizes.medium,
         overview: ["Wolf-like bipeds with large hind paws and elongated limbs. Can run on all fours with long, clawed hands. Mix of leathery skin and thick wolf fur. Wolf's head and ruff protruding from shoulders. Standard canine jaw configuration, exceptionally strong bite. Found usually in settlements living as ordinary people when not transformed. More feral specimens may lair in forests or high tundra."],
@@ -391,7 +513,7 @@ const entries =
         active: true,
         name: "Wraith",
         image: GetImage("Wraith.webp"),
-        category: categories.spectre.name,
+        category: categories.spectre,
         type: types.undead,
         size: sizes.medium,
         overview: ["The spectre of a dead humanoid who has lingered beyond their time due to trauma, a desire for vengeance, a curse, or some other reason. Manifest in diverse forms, usually similar to the form they had in life, twisted to some extent by the force that keeps them from their rest. Often appear shrouded, hooded, or cloaked.", "Found near their bodies, commonly in graveyards, crypts, and battlefields."],
@@ -407,7 +529,7 @@ const entries =
         active: true,
         name: "Wyvern",
         image: GetImage("Wyvern.webp"),
-        category: categories.draconid.name,
+        category: categories.draconid,
         type: types.dragon,
         size: sizes.large,
         overview: ["Aerial biped with sharp, three-toed claws. Can use wing-tips as forelimbs for crawling and climbing. Long, agile neck with a small snake-like head filled with powerful conical teeth. Long thin tail ending in a very sharp, venomous barb.", "            Found in mountains, cliff-faces, open woodlands. More common in higher altitude areas, but have a wide distribution. Often drawn to pastures and open grassland in search of livestock."],

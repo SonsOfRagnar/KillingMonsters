@@ -51,7 +51,7 @@ function GenerateBestiaryContent()
     {
         if (!value.active || value.name == undefined) { continue; } // Skip entries that are not set to active or which have no valid name.
 
-        let sanitisedCategory = value.category.toLowerCase().split(" ").join("-");
+        let sanitisedCategory = value.category.name.toLowerCase().split(" ").join("-");
         let entryContainer = document.getElementById(`bestiary-content-category-${sanitisedCategory}`);
 
         if (entryContainer == null){console.log(sanitisedCategory); continue;}
@@ -82,7 +82,7 @@ function GenerateBestiaryEntryHTML(entryName)
         </div>
 
         <div class="col-lg order-lg-1 test-border">
-            <h4>${entryData.size} ${entryData.type} (${entryData.category})</h4>
+            <h4>${entryData.size} ${entryData.type} (${(entryData.subcategory != null ? entryData.subcategory + " " : "") + entryData.category.name})</h4>
                 ${ProcessArrayToParagraphs(entryData.overview)}
             
             <h4 class="bestiary-heading4">Strengths</h4>
@@ -165,7 +165,8 @@ function GenerateBestiarySidebarLinks()
     {
         if (!value.active) { continue; }
 
-        let sanitisedCategory = value.category.toLowerCase().split(" ").join("-");
+        console.log(value.category);
+        let sanitisedCategory = value.category.name.toLowerCase().split(" ").join("-");
         let sanitisedCreatureName = value.name.toLowerCase().split(" ").join("-").split("'").join("");
 
         let sidebarCategoryList = document.getElementById(`bestiary-sidebar-${sanitisedCategory}`);
