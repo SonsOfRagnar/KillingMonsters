@@ -187,7 +187,7 @@ const entries =
     {
         active: true,
         name: "Alghoul",
-        image: GetImage(""),
+        image: GetImage("Alghoul.webp"),
         category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.medium,
@@ -198,6 +198,22 @@ const entries =
         lures: ["Fresh corpses"],
         harvesting: ["Necrophage tissue", "Alghoul spines"],
         about: ["Closely related to the far more common and numerous Ghouls, an Alghoul is often confused for its lesser kindred by the untrained. Although physically similar, Alghouls are stronger and more muscular, possess a longer tail, and are usually darker in colour that their cousins, with dark brown or black hides often striped with dark, mottled green bands. Their most distinctive feature however, is their spines, which cover their shoulders and lower back, and may be erected at will to create bristling coat of sharp points. These spines make fighting at close quarters extremely difficult, as every swing is likely to impale your own hand on their spines.", "Alghouls possess a rudimentary intellect, which they often use to seize control of Ghoul packs and organise them into a bolder, more aggressive group which can proactively seek out prey to satisfy the Alghoul's voracious appetite. For this reason, one is unlikely to encounter a lone Alghoul, although it is not unknown. Despite their intelligence, they are highly aggressive necrophages, and usually prefer to rapidly close distance with prey or perceived threats to attack them, trusting their spines to protect them while they savage attackers with a flurry of claws and teeth. They can be easily provoked into a murderous rage when injuring them, during which they attack with reckless fury, aiming to incapacitate their prey rapidly, caring little if they are injured in the process.", "Intriguingly for such fearlessly aggressive creatures, they appear deeply disturbed by the sound of large bells ringing, and become much less willing to attack while they can hear them. Small hand bells have a severely diminished effect while multiple large bells - such as those of a church - are far more effective. This has given rise to the superstition that Ghouls and Alghouls are unholy creatures that cannot abide the sound of blessed church bells, however any large bells seem to have a comparable effect, churches are simply the most common place to find such bells."]
+    },
+    amphisbaena: 
+    {
+        active: true,
+        name: "Amphisbaena",
+        image: GetImage("Amphisbaena.webp"),
+        category: categories.beast,
+        type: types.monstrosity,
+        size: sizes.large,
+        overview: ["A large freshwater aquatic snake with a second head in place of its tail. Green, brown, or blue scales form banded patterns. Each head has a blunt snout with nostrils located dorsally and large front fangs.", "Found in freshwater rivers and lakes, usually in temperate or warm areas."],
+        strengths: "Resistant to poison, and bludgeoning damage; fast, agile swimmers; dual heads move and strike independently of one another; venom causes drowsiness and lethargy followed by sleep; strong body can be used to wrap and crush prey",
+        weaknesses: "Vulnerable to cold damage; much slower outside of the water and struggles to avoid blows; if a head is grappled, it cannot use its fangs; damage to the central body affects both heads",
+        peculiarities: "Each head acts independently but in coordination with its partner, conditions and damage affect each head separately; the smell of vinegar mixed with rosemary is disliked by the creature and it will generally avoid areas coated in it; venom is strong but can be counteracted by potions",
+        lures: ["Live waterfowl moving in the water"],
+        harvesting: ["Serpent scales", "Amphisbaena venom"],
+        about: ["The Amphisbaena is a curious beast which closely resembles a common serpent, save for the presence of a second head where the tail should be. It is unclear if one head takes precedence over the other, and the Amphisbaena has been observed moving comfortably in either direction, without ever contradicting itself, suggesting that each head is in perfect coordination with the other. Each head moves independently and is unaffected by anything done to the other, including mortal wounds. Thus one must slay both heads of the serpent, or sever its central body with haste, although this may be more difficult that first imagined. The Amphisbaena is cunning, and rarely leaves the water, concealing the majority of its coiling bulk below the surface until prey has been subdued by its fangs. A common attack involves the snake swimming beneath prey, and then rearing up with both heads to attack from opposite sides, while the body remains submerged. Once prey has been incapacitated, the body quickly entangles the victim and drags it below the water for feeding.", "Although not the most dangerous of monsters, the Amphisbaena is fairly widespread (excluding particularly cold regions) and can be difficult to detect prior to attacks taking place. The serpent sleeps in the deepest areas of water available, and spends most of its time submerged. They are not amphibious and as such must surface to breath, however their nostrils are located dorsally and thus they need only expose the tip of their snout when surfacing. They can remain submerged for six to eight hours at a time, and are strong swimmers, able to move rapidly even against currents. Unlike true Sea Serpents, the Amphisbaena lays long, pale eggs in clutches of up to five, rather than giving birth to live young. When laying eggs, the snake will leave the water and find a secluded area nearby to lay their eggs, usually under rocks, riverbanks, fallen logs, or tree roots."]
     },
     bruxa: 
     {
@@ -252,7 +268,7 @@ const entries =
     {
         active: true,
         name: "Drowner",
-        image: GetImage(""),
+        image: GetImage("Drowner.webp"),
         category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.medium,
@@ -268,7 +284,7 @@ const entries =
     {
         active: true,
         name: "Ekimmara",
-        image: GetImage(""),
+        image: GetImage("Ekimmara.webp"),
         category: categories.vampire,
         subcategory: categories.vampire.subcategories.lesser,
         type: types.monstrosity,
@@ -285,7 +301,7 @@ const entries =
     {
         active: true,
         name: "Fleder",
-        image: GetImage(""),
+        image: GetImage("Fleder.webp"),
         category: categories.vampire,
         subcategory: categories.vampire.subcategories.lesser,
         type: types.monstrosity,
@@ -318,7 +334,7 @@ const entries =
     {
         active: true,
         name: "Garkain",
-        image: GetImage(""),
+        image: GetImage("Garkain.webp"),
         category: categories.vampire,
         subcategory: categories.vampire.subcategories.lesser,
         type: types.monstrosity,
@@ -351,7 +367,7 @@ const entries =
     {
         active: true,
         name: "Ghoul",
-        image: GetImage(""),
+        image: GetImage("Ghoul.webp"),
         category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.medium,
@@ -383,7 +399,7 @@ const entries =
     {
         active: true,
         name: "Graveir",
-        image: GetImage(""),
+        image: GetImage("Graveir.webp"),
         category: categories.necrophage,
         type: types.monstrosity,
         size: sizes.large,
